@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "src/main.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/src/routers/api.router.js"
+    }
+  ],
+  "env": {
+    "MONGODB_URI": "mongodb+srv://fermodmen:Feer1688NenuCo2307@clusterdata.xlbloof.mongodb.net/ApiMenuInteractivo"
+  }
+}
