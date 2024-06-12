@@ -13,3 +13,6 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 app.use('/api', apiRouter)
+app.get('/', (req, res) => {
+    res.send('Api en Vercel funcionando OK')
+})
