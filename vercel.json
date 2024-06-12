@@ -13,6 +13,6 @@
     }
   ],
   "env": {
-    "MONGODB_URI": "mongodb+srv://fermodmen:Feer1688NenuCo2307@clusterdata.xlbloof.mongodb.net/ApiMenuInteractivo"
+    
   }
 }
