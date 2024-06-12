@@ -1,0 +1,16 @@
+{
+    "version": 2,
+    "routes": [
+      { "handle": "filesystem" },
+      { "src": "/api/(.*)", "dest": "/src/app/$1" },
+      { "src": "/(.*)", "dest": "/src/main.js" }
+    ],
+    "builds": [
+      { "src": "/src/main.js", "use": "@vercel/node" }
+    ],
+    "env": {
+      "NODE_ENV": "production",
+      "PORT": 8080
+    },
+    "functions": { "api": { "memory": 512 } }
+}
