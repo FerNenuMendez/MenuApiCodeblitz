@@ -11,6 +11,5 @@
     "env": {
       "NODE_ENV": "production",
       "PORT": 8080
-    },
-    "functions": { "api": { "memory": 512 } }
+    }
 }
