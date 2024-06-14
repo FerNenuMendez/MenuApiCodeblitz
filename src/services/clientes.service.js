@@ -1,9 +1,9 @@
 import { getDaoClientes } from '../models/clientes/clientes.dao.js'
-import { getDaoUser } from '../models/user/user.dao.js'
-import { getDaoTiendas } from '../models/tiendas/tienda.dao.js'
+// import { getDaoUser } from '../models/user/user.dao.js'
+// import { getDaoTiendas } from '../models/tiendas/tienda.dao.js'
 
 const clientesDao = await getDaoClientes()
-const userDao = getDaoUser()
+// const userDao = getDaoUser()
 
 class ClientesService {
     async registrar(data) {
@@ -37,26 +37,26 @@ class ClientesService {
         return await clientesDao.readMany(query);
     }
 
-    async crearUsuario(datosUsuario, clienteId) {
-        const nuevoUsuario = await userDao.create(datosUsuario);
-        const clienteActualizado = await clientesDao.updateOne({ _id: clienteId }, { userID: nuevoUsuario._id });
-        return clienteActualizado;
-    }
+    // async crearUsuario(datosUsuario, clienteId) {
+    //     const nuevoUsuario = await userDao.create(datosUsuario);
+    //     const clienteActualizado = await clientesDao.updateOne({ _id: clienteId }, { userID: nuevoUsuario._id });
+    //     return clienteActualizado;
+    // }
 
-    async crearTienda(clienteId, datosTienda) {
-        const cliente = await clientesDao.readOne({ _id: clienteId });
-        if (!cliente) {
-            throw new Error('Cliente no encontrado');
-        }
-        const nuevaTienda = await tiendasDao.create(datosTienda);
-        const usuario = await userDao.readOne({ _id: cliente.userID });
-        if (!usuario) {
-            throw new Error('Usuario no encontrado');
-        }
-        usuario.tiendas.push({ tiendaID: nuevaTienda._id });
-        await userDao.updateOne({ _id: usuario._id }, { tiendas: usuario.tiendas });
-        return nuevaTienda;
-    }
+    // async crearTienda(clienteId, datosTienda) {
+    //     const cliente = await clientesDao.readOne({ _id: clienteId });
+    //     if (!cliente) {
+    //         throw new Error('Cliente no encontrado');
+    //     }
+    //     const nuevaTienda = await tiendasDao.create(datosTienda);
+    //     const usuario = await userDao.readOne({ _id: cliente.userID });
+    //     if (!usuario) {
+    //         throw new Error('Usuario no encontrado');
+    //     }
+    //     usuario.tiendas.push({ tiendaID: nuevaTienda._id });
+    //     await userDao.updateOne({ _id: usuario._id }, { tiendas: usuario.tiendas });
+    //     return nuevaTienda;
+    // }
 
     async darDeBaja(clienteId) {
         const cliente = await clientesDao.readOne({ _id: clienteId });
