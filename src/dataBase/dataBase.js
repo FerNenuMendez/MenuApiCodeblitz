@@ -1,7 +1,7 @@
 import { connect as connectToMongoose } from 'mongoose';
 import { MODO_EJECUCION } from '../config/config.js';
 import dotenv from 'dotenv';
-
+import logger from "../middlewares/logger.js"
 
 dotenv.config();
 
@@ -11,9 +11,9 @@ export async function connect() {
     try {
         if (MODO_EJECUCION === 'online') {
             await connectToMongoose(MONGODB_CNX_STR);
-            console.log('Base de datos conectada a MongoDB');
+            logger.info('Base de datos conectada a MongoDB');
         } else {
-            console.log('Trabajando con persistencia local');
+            logger.info('Trabajando con persistencia local');
         }
     } catch (error) {
         console.error('Error al conectar a la base de datos:', error);
@@ -24,7 +24,7 @@ export async function connect() {
 export async function disconnect() {
     try {
         await mongoose.disconnect();
-        console.log('Desconectado de MongoDB');
+        logger.info('Desconectado de MongoDB');
     } catch (error) {
         console.error('Error al desconectar de la base de datos:', error);
     }
