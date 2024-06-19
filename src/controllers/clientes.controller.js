@@ -6,7 +6,6 @@ import { capitalize } from "../models/utils/utils.js";
 export async function getController(req, res, next) {
     try {
         const clientes = await clientesService.buscarTodos()
-        //console.log(clientes);
         logger.info(clientes)
         res.created(clientes)
     } catch (error) {

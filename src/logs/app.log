@@ -16,3 +16,9 @@
 2024-06-19 14:43:16 [32minfo[39m: persistiendo Tiendas en: mongoDB
 2024-06-19 14:43:16 [32minfo[39m: persistiendo Consumidor en: mongoDB
 2024-06-19 14:43:16 [32minfo[39m: Base de datos conectada a MongoDB
+2024-06-19 15:57:17 [32minfo[39m: Cargando configuracion:
+2024-06-19 15:57:18 [32minfo[39m: persistiendo Clientes en: mongoDB
+2024-06-19 15:57:18 [32minfo[39m: persistiendo User en: mongoDB
+2024-06-19 15:57:18 [32minfo[39m: persistiendo Tiendas en: mongoDB
+2024-06-19 15:57:18 [32minfo[39m: persistiendo Consumidor en: mongoDB
+2024-06-19 15:57:48 [32minfo[39m: Base de datos conectada a MongoDB
