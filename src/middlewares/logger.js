@@ -1,12 +1,15 @@
 import { createLogger, format, transports } from 'winston';
+import path from 'path';
 
 const { combine, timestamp, printf, errors } = format;
 
-//formato del msj del log
+// Formato del mensaje del log
 const formatoLog = printf(({ level, message, timestamp, stack }) => {
     return `${timestamp} ${level}: ${stack || message}`;
 });
 
+
+const logDir = path.resolve('./src/logs');
 
 const logger = createLogger({
     format: combine(
@@ -17,10 +20,10 @@ const logger = createLogger({
     ),
     transports: [
         new transports.Console(),
-        new transports.File({ filename: './src/logs/app.log' })
+        new transports.File({ filename: path.join(logDir, 'app.log') })
     ],
     exceptionHandlers: [
-        new transports.File({ filename: './src/logs/exceptions.log' })
+        new transports.File({ filename: path.join(logDir, 'exceptions.log') })
     ]
 });
 
