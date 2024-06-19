@@ -9,8 +9,8 @@ export async function getController(req, res, next) {
         logger.info(JSON.stringify(clientes))
         res.created(clientes)
     } catch (error) {
-        next(error)
         logger.error(error)
+        next(error)
     }
 }
 export async function getControllerID(req, res, next) {
@@ -20,8 +20,8 @@ export async function getControllerID(req, res, next) {
         logger.info(JSON.stringify(cliente))
         res.result(cliente)
     } catch (error) {
-        next(error)
         logger.error(error)
+        next(error)
     }
 }
 export async function postController(req, res, next) {
@@ -31,8 +31,8 @@ export async function postController(req, res, next) {
         logger.info(JSON.stringify(cliente))
         res.result(cliente)
     } catch (error) {
-        next(error)
         logger.error(error)
+        next(error)
     }
 }
 export async function deleteController(req, res, next) {
@@ -41,7 +41,7 @@ export async function deleteController(req, res, next) {
         const cliente = await clientesService.darDeBaja(id)
         res.result(cliente)
     } catch {
-        next(error)
         logger.error(error)
+        next(error)
     }
 }
