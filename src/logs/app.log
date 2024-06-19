@@ -28,3 +28,75 @@
 2024-06-19 18:06:14 [32minfo[39m: persistiendo Tiendas en: mongoDB
 2024-06-19 18:06:14 [32minfo[39m: persistiendo Consumidor en: mongoDB
 2024-06-19 18:06:16 [32minfo[39m: Base de datos conectada a MongoDB
+2024-06-19 18:19:46 [32minfo[39m: Cargando configuracion:
+2024-06-19 18:19:47 [32minfo[39m: persistiendo Clientes en: mongoDB
+2024-06-19 18:19:47 [32minfo[39m: persistiendo User en: mongoDB
+2024-06-19 18:19:47 [32minfo[39m: persistiendo Tiendas en: mongoDB
+2024-06-19 18:19:47 [32minfo[39m: persistiendo Consumidor en: mongoDB
+2024-06-19 18:19:48 [32minfo[39m: Base de datos conectada a MongoDB
+2024-06-19 18:19:53 [31merror[39m: MongoServerError: E11000 duplicate key error collection: ApiMenuInteractivo.clientes index: dni_1 dup key: { dni: 12245622 }
+    at InsertOneOperation.execute (C:\Users\FerM\Desktop\New Api\node_modules\mongodb\lib\operations\insert.js:51:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async executeOperation (C:\Users\FerM\Desktop\New Api\node_modules\mongodb\lib\operations\execute_operation.js:136:16)
+    at async Collection.insertOne (C:\Users\FerM\Desktop\New Api\node_modules\mongodb\lib\collection.js:155:16)
+2024-06-19 18:20:08 [31merror[39m: MongoServerError: E11000 duplicate key error collection: ApiMenuInteractivo.clientes index: userID_1 dup key: { userID: null }
+    at InsertOneOperation.execute (C:\Users\FerM\Desktop\New Api\node_modules\mongodb\lib\operations\insert.js:51:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async executeOperation (C:\Users\FerM\Desktop\New Api\node_modules\mongodb\lib\operations\execute_operation.js:136:16)
+    at async Collection.insertOne (C:\Users\FerM\Desktop\New Api\node_modules\mongodb\lib\collection.js:155:16)
+2024-06-19 18:20:32 [31merror[39m: ValidationError: clientes validation failed: userID: Cast to ObjectId failed for value "Nenucodonosor" (type string) at path "userID" because of "BSONError"
+    at Document.invalidate (C:\Users\FerM\Desktop\New Api\node_modules\mongoose\lib\document.js:3289:32)
+    at model.$set (C:\Users\FerM\Desktop\New Api\node_modules\mongoose\lib\document.js:1463:12)
+    at model.$set (C:\Users\FerM\Desktop\New Api\node_modules\mongoose\lib\document.js:1117:16)
+    at model.Document (C:\Users\FerM\Desktop\New Api\node_modules\mongoose\lib\document.js:166:12)
+    at model.Model (C:\Users\FerM\Desktop\New Api\node_modules\mongoose\lib\model.js:132:12)
+    at new model (C:\Users\FerM\Desktop\New Api\node_modules\mongoose\lib\model.js:4870:15)
+    at C:\Users\FerM\Desktop\New Api\node_modules\mongoose\lib\model.js:2989:20
+    at Array.map (<anonymous>)
+    at Function.create (C:\Users\FerM\Desktop\New Api\node_modules\mongoose\lib\model.js:2977:34)
+    at ClientesDaoMongoose.create (file:///C:/Users/FerM/Desktop/New%20Api/src/models/clientes/mongoose/clientes.dao.mongoose.js:16:50)
+2024-06-19 18:20:45 [31merror[39m: ValidationError: clientes validation failed: userID: Cast to ObjectId failed for value "2" (type string) at path "userID" because of "BSONError"
+    at Document.invalidate (C:\Users\FerM\Desktop\New Api\node_modules\mongoose\lib\document.js:3289:32)
+    at model.$set (C:\Users\FerM\Desktop\New Api\node_modules\mongoose\lib\document.js:1463:12)
+    at model.$set (C:\Users\FerM\Desktop\New Api\node_modules\mongoose\lib\document.js:1117:16)
+    at model.Document (C:\Users\FerM\Desktop\New Api\node_modules\mongoose\lib\document.js:166:12)
+    at model.Model (C:\Users\FerM\Desktop\New Api\node_modules\mongoose\lib\model.js:132:12)
+    at new model (C:\Users\FerM\Desktop\New Api\node_modules\mongoose\lib\model.js:4870:15)
+    at C:\Users\FerM\Desktop\New Api\node_modules\mongoose\lib\model.js:2989:20
+    at Array.map (<anonymous>)
+    at Function.create (C:\Users\FerM\Desktop\New Api\node_modules\mongoose\lib\model.js:2977:34)
+    at ClientesDaoMongoose.create (file:///C:/Users/FerM/Desktop/New%20Api/src/models/clientes/mongoose/clientes.dao.mongoose.js:16:50)
+2024-06-19 18:20:54 [31merror[39m: MongoServerError: E11000 duplicate key error collection: ApiMenuInteractivo.clientes index: userID_1 dup key: { userID: null }
+    at InsertOneOperation.execute (C:\Users\FerM\Desktop\New Api\node_modules\mongodb\lib\operations\insert.js:51:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async executeOperation (C:\Users\FerM\Desktop\New Api\node_modules\mongodb\lib\operations\execute_operation.js:136:16)
+    at async Collection.insertOne (C:\Users\FerM\Desktop\New Api\node_modules\mongodb\lib\collection.js:155:16)
+2024-06-19 18:21:40 [32minfo[39m: Cargando configuracion:
+2024-06-19 18:21:41 [32minfo[39m: persistiendo Clientes en: mongoDB
+2024-06-19 18:21:41 [32minfo[39m: persistiendo User en: mongoDB
+2024-06-19 18:21:41 [32minfo[39m: persistiendo Tiendas en: mongoDB
+2024-06-19 18:21:41 [32minfo[39m: persistiendo Consumidor en: mongoDB
+2024-06-19 18:21:43 [32minfo[39m: Base de datos conectada a MongoDB
+2024-06-19 18:22:22 [31merror[39m: MongoServerError: E11000 duplicate key error collection: ApiMenuInteractivo.clientes index: userID_1 dup key: { userID: null }
+    at InsertOneOperation.execute (C:\Users\FerM\Desktop\New Api\node_modules\mongodb\lib\operations\insert.js:51:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async executeOperation (C:\Users\FerM\Desktop\New Api\node_modules\mongodb\lib\operations\execute_operation.js:136:16)
+    at async Collection.insertOne (C:\Users\FerM\Desktop\New Api\node_modules\mongodb\lib\collection.js:155:16)
+2024-06-19 18:23:09 [31merror[39m: MongoServerError: E11000 duplicate key error collection: ApiMenuInteractivo.clientes index: userID_1 dup key: { userID: null }
+    at InsertOneOperation.execute (C:\Users\FerM\Desktop\New Api\node_modules\mongodb\lib\operations\insert.js:51:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async executeOperation (C:\Users\FerM\Desktop\New Api\node_modules\mongodb\lib\operations\execute_operation.js:136:16)
+    at async Collection.insertOne (C:\Users\FerM\Desktop\New Api\node_modules\mongodb\lib\collection.js:155:16)
+2024-06-19 18:23:15 [32minfo[39m: [object Object]
+2024-06-19 18:29:55 [32minfo[39m: Cargando configuracion:
+2024-06-19 18:29:56 [32minfo[39m: persistiendo Clientes en: mongoDB
+2024-06-19 18:29:56 [32minfo[39m: persistiendo User en: mongoDB
+2024-06-19 18:29:56 [32minfo[39m: persistiendo Tiendas en: mongoDB
+2024-06-19 18:29:56 [32minfo[39m: persistiendo Consumidor en: mongoDB
+2024-06-19 18:29:57 [32minfo[39m: Base de datos conectada a MongoDB
+2024-06-19 18:30:18 [32minfo[39m: Cargando configuracion:
+2024-06-19 18:30:18 [32minfo[39m: persistiendo Clientes en: mongoDB
+2024-06-19 18:30:18 [32minfo[39m: persistiendo User en: mongoDB
+2024-06-19 18:30:18 [32minfo[39m: persistiendo Tiendas en: mongoDB
+2024-06-19 18:30:18 [32minfo[39m: persistiendo Consumidor en: mongoDB
+2024-06-19 18:30:19 [32minfo[39m: Base de datos conectada a MongoDB

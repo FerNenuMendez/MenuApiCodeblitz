@@ -11,7 +11,7 @@ export const clientesSchema = new Schema({
     domicilio: { type: String, required: true },
     nacimiento: { type: Date, },
     eCivil: { type: String },
-    userID: { type: Schema.Types.ObjectId, ref: 'User', },
+    userID: { type: String, ref: 'User', },
     inventario: [{}]
 }, {
     strict: 'throw',
