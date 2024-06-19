@@ -1,6 +1,6 @@
 import { MODO_EJECUCION } from '../../config/config.js'
 import { TiendasDaoMongoose } from './mongoose/tiendas.dao.mongoose.js'
-import { TiendaDaoFiles } from './files/tiendas.dao.files.js'
+import { TiendasDaoFiles } from './files/tiendas.dao.files.js'
 import logger from '../../middlewares/logger.js'
 
 const RUTA_TIENDA_JSON = './db/tiendaFile/tienda.json'
@@ -14,7 +14,7 @@ if (MODO_EJECUCION === "online") {
         logger.info('persistiendo Tiendas en: mongoDB')
     }
 } else {
-    daoTienda = new TiendaDaoFiles(RUTA_TIENDA_JSON)
+    daoTienda = new TiendasDaoFiles(RUTA_TIENDA_JSON)
     logger.info('persistiendo Tiendas en: sistema de archivos')
 }
 export function getDaoTienda() {

@@ -1,5 +1,5 @@
 import { model } from 'mongoose'
-import { consumidorSchema } from './consumidors.model.mongoose.js'
+import { consumidorSchema } from './consumidor.model.mongoose.js'
 
 const ConsumidorModel = model('consumidor', consumidorSchema);
 class ConsumidorDaoMongoose {

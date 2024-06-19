@@ -1,6 +1,6 @@
 import { MODO_EJECUCION } from '../../config/config.js'
 import { ConsumidorDaoMongoose } from './mongoose/consumidor.dao.mongoose.js'
-import { ConsumidorDaoFiles } from './files/clientes.dao.files.js'
+import { ConsumidorDaoFiles } from './files/consumidor.dao.files.js'
 import logger from '../../middlewares/logger.js'
 
 const RUTA_CONSUMIDOR_JSON = './db/consumidorFile/consumidor.json'

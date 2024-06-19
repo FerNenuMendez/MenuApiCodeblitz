@@ -1,0 +1,2 @@
+2024-06-19 13:07:54 [31merror[39m: ReferenceError: getDaoTiendas is not defined
+    at file:///C:/Users/FerM/Desktop/New%20Api/src/services/clientes.service.js:10:20

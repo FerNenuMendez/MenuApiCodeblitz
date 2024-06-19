@@ -1,4 +1,4 @@
-import { User } from './user.model.file.js'
+import { User } from './user.model.files.js'
 import { matches } from '../../utils/utils.js'
 import fs from 'fs/promises'
 

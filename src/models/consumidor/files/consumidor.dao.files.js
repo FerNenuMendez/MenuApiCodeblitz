@@ -1,6 +1,6 @@
 //SINGLETON
 
-import { Consumidor } from './cosumidor.model.file.js'; // Asegúrate de que el nombre del archivo sea correcto
+import { Consumidor } from './consumidor.model.file.js'; // Asegúrate de que el nombre del archivo sea correcto
 import { matches } from '../../utils/utils.js';
 import fs from 'fs/promises';
 
