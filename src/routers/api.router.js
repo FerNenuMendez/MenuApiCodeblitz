@@ -2,7 +2,7 @@ import { Router, json, urlencoded } from 'express'
 import { respuestasMejoradas } from '../middlewares/respuestasMejoradas.js'
 import { manejoDeErrores } from '../middlewares/manejoDeErrores.js'
 import { clientesRouter } from './router/clientes.router.js'
-import { consumidorRouter } from './router/consumidor.router.js'
+
 
 export const apiRouter = Router()
 

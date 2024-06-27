@@ -8,6 +8,7 @@ export const clientesSchema = new Schema({
     dni: { type: Number, unique: true, required: true },
     telefono: { type: Number, required: true },
     mail: { type: String, unique: true, required: true },
+    password: { type: String, required: true },
     domicilio: { type: String, required: true },
     nacimiento: { type: Date, },
     eCivil: { type: String },

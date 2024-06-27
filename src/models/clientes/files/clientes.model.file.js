@@ -2,13 +2,14 @@
 import { randomUUID } from 'node:crypto';
 
 export class Cliente {
-    constructor({ _id = randomUUID(), nombre, apellido, dni, telefono, mail, domicilio, nacimiento, eCivil, userID, inventario }) {
+    constructor({ _id = randomUUID(), nombre, apellido, dni, telefono, mail, password, domicilio, nacimiento, eCivil, userID, inventario }) {
         this._id = _id;
         this._nombre = nombre;
         this._apellido = apellido;
         this._dni = dni;
         this._telefono = telefono;
         this._mail = mail;
+        this._password = password;
         this._domicilio = domicilio;
         this._nacimiento = nacimiento;
         this._eCivil = eCivil;
@@ -22,6 +23,7 @@ export class Cliente {
     get dni() { return this._dni; }
     get telefono() { return this._telefono; }
     get mail() { return this._mail; }
+    get password() { return this._password }
     get domicilio() { return this._domicilio; }
     get nacimiento() { return this._nacimiento; }
     get eCivil() { return this._eCivil; }
@@ -54,6 +56,11 @@ export class Cliente {
         if (!value) throw new Error('El mail es obligatorio');
         if (!/\S+@\S+\.\S+/.test(value)) throw new Error('El mail debe ser una dirección válida');
         this._mail = value;
+    }
+
+    set password(value) {
+        if (!value) throw new Error('El password es obligatorio');
+        this._password = value;
     }
 
     set domicilio(value) {
@@ -90,6 +97,7 @@ export class Cliente {
             dni: this._dni,
             telefono: this._telefono,
             mail: this._mail,
+            password: this._password,
             domicilio: this._domicilio,
             nacimiento: this._nacimiento,
             eCivil: this._eCivil,
