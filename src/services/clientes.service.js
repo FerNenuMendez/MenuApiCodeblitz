@@ -11,16 +11,16 @@ class ClientesService {
     async registrar(data) {
         return await clientesDao.create(data)
     }
-    async agregarAlInventario(clienteId, data) {
-        const cliente = await clientesDao.readOne({ _id: clienteId });
-        if (!cliente) {
-            logger.error('Cliente no encontrado')
-            throw new Error('Cliente no encontrado');
-        }
-        cliente.inventario.push(data);
-        const clienteActualizado = await clientesDao.updateOne({ _id: clienteId }, { inventario: cliente.inventario });
-        return clienteActualizado;
-    }
+    // async agregarAlInventario(clienteId, data) {
+    //     const cliente = await clientesDao.readOne({ _id: clienteId });
+    //     if (!cliente) {
+    //         logger.error('Cliente no encontrado')
+    //         throw new Error('Cliente no encontrado');
+    //     }
+    //     cliente.inventario.push(data);
+    //     const clienteActualizado = await clientesDao.updateOne({ _id: clienteId }, { inventario: cliente.inventario });
+    //     return clienteActualizado;
+    // }
 
     async buscarTodos() {
         return await clientesDao.readAll();
@@ -42,26 +42,26 @@ class ClientesService {
 
     async crearUsuario(datosUsuario, clienteId) {
         const nuevoUsuario = await userDao.create(datosUsuario);
-        const clienteActualizado = await clientesDao.updateOne({ _id: clienteId }, { userID: nuevoUsuario._id });
+        const clienteActualizado = await clientesDao.updateOne({ _id: clienteId }, { _userID: nuevoUsuario._id });
         return clienteActualizado;
     }
 
-    async crearTienda(clienteId, datosTienda) {
-        const cliente = await clientesDao.readOne({ _id: clienteId });
-        if (!cliente) {
-            logger.error('Cliente no encontrado')
-            throw new Error('Cliente no encontrado');
-        }
-        const nuevaTienda = await tiendasDao.create(datosTienda);
-        const usuario = await userDao.readOne({ _id: cliente.userID });
-        if (!usuario) {
-            logger.error('Usuario no encontrado')
-            throw new Error('Usuario no encontrado');
-        }
-        usuario.tiendas.push({ tiendaID: nuevaTienda._id });
-        await userDao.updateOne({ _id: usuario._id }, { tiendas: usuario.tiendas });
-        return nuevaTienda;
-    }
+    // async crearTienda(clienteId, datosTienda) {
+    //     const cliente = await clientesDao.readOne({ _id: clienteId });
+    //     if (!cliente) {
+    //         logger.error('Cliente no encontrado')
+    //         throw new Error('Cliente no encontrado');
+    //     }
+    //     const nuevaTienda = await tiendasDao.create(datosTienda);
+    //     const usuario = await userDao.readOne({ _id: cliente.userID });
+    //     if (!usuario) {
+    //         logger.error('Usuario no encontrado')
+    //         throw new Error('Usuario no encontrado');
+    //     }
+    //     usuario.tiendas.push({ tiendaID: nuevaTienda._id });
+    //     await userDao.updateOne({ _id: usuario._id }, { tiendas: usuario.tiendas });
+    //     return nuevaTienda;
+    // }
 
     async darDeBaja(clienteId) {
         const cliente = await clientesDao.readOne({ _id: clienteId });
@@ -69,11 +69,13 @@ class ClientesService {
             logger.error('Cliente no encontrado')
             throw new Error('Cliente no encontrado');
         }
-        if (cliente.userID) {
-            await userDao.deleteOne({ _id: cliente.userID });
+        if (cliente._userID) {
+            await userDao.deleteOne({ _id: cliente._userID });
         }
         const clienteEliminado = await clientesDao.deleteOne({ _id: clienteId });
         return clienteEliminado;
     }
 }
+
+
 export const clientesService = new ClientesService()

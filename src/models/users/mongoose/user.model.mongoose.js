@@ -2,7 +2,7 @@ import { Schema } from 'mongoose'
 import { randomUUID } from 'crypto'
 
 export const userSchema = new Schema({
-    userID: { type: String, default: randomUUID, unique: true, required: true },
+    _userID: { type: String, default: randomUUID, unique: true, required: true },
     mail: { type: String, unique: true, required: true },
     password: { type: String, required: true },
     aux: { type: String },
