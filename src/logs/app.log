@@ -378,3 +378,24 @@
 2024-06-24 13:32:07 [32minfo[39m: Base de datos conectada a MongoDB
 2024-06-26 15:39:58 [32minfo[39m: Cargando configuracion:
 2024-06-26 15:40:24 [32minfo[39m: Cargando configuracion:
+2024-07-01 15:13:47 [32minfo[39m: Cargando configuracion:
+2024-07-01 15:14:09 [32minfo[39m: Cargando configuracion:
+2024-07-01 15:14:09 [32minfo[39m: persistiendo Clientes en: mongoDB
+2024-07-01 15:14:10 [32minfo[39m: persistiendo User en: mongoDB
+2024-07-01 15:14:10 [32minfo[39m: persistiendo Tiendas en: mongoDB
+2024-07-01 15:25:41 [32minfo[39m: Cargando configuracion:
+2024-07-01 15:32:21 [32minfo[39m: Cargando configuracion:
+2024-07-01 15:32:21 [32minfo[39m: persistiendo Clientes en: mongoDB
+2024-07-01 15:32:21 [32minfo[39m: persistiendo User en: mongoDB
+2024-07-01 15:32:21 [32minfo[39m: persistiendo Tiendas en: mongoDB
+2024-07-01 15:32:25 [32minfo[39m: Base de datos conectada a MongoDB
+2024-07-01 15:32:50 [32minfo[39m: Cargando configuracion:
+2024-07-01 15:32:51 [32minfo[39m: persistiendo Clientes en: mongoDB
+2024-07-01 15:32:51 [32minfo[39m: persistiendo User en: mongoDB
+2024-07-01 15:32:51 [32minfo[39m: persistiendo Tiendas en: mongoDB
+2024-07-01 15:32:51 [32minfo[39m: Base de datos conectada a MongoDB
+2024-07-01 15:33:01 [32minfo[39m: Cargando configuracion:
+2024-07-01 15:33:01 [32minfo[39m: persistiendo Clientes en: mongoDB
+2024-07-01 15:33:01 [32minfo[39m: persistiendo User en: mongoDB
+2024-07-01 15:33:01 [32minfo[39m: persistiendo Tiendas en: mongoDB
+2024-07-01 15:33:02 [32minfo[39m: Base de datos conectada a MongoDB

@@ -12,6 +12,6 @@ apiRouter.use(json())
 apiRouter.use(urlencoded({ extended: true }))
 
 apiRouter.use('/clientes', clientesRouter)
-apiRouter.use('/consumidor', consumidorRouter)
+
 
 

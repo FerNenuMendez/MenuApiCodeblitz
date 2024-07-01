@@ -1,6 +1,6 @@
 import { clientesService } from "../services/clientes.service.js";
 import logger from "../middlewares/logger.js"
-import { capitalize } from "../models/utils/utils.js";
+
 
 
 export async function getController(req, res, next) {

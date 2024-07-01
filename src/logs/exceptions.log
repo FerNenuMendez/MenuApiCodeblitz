@@ -4,3 +4,9 @@
     at file:///C:/Users/FerM/Desktop/New%20Api/src/routers/api.router.js:15:30
 2024-06-26 15:40:24 [31merror[39m: ReferenceError: consumidorRouter is not defined
     at file:///C:/Users/FerM/Desktop/New%20Api/src/routers/api.router.js:15:30
+2024-07-01 15:13:48 [31merror[39m: ReferenceError: consumidorRouter is not defined
+    at file:///C:/Users/ferna/OneDrive/Escritorio/MenuApiCodeblitz/src/routers/api.router.js:15:30
+2024-07-01 15:14:10 [31merror[39m: ReferenceError: consumidorRouter is not defined
+    at file:///C:/Users/ferna/OneDrive/Escritorio/MenuApiCodeblitz/src/routers/api.router.js:15:30
+2024-07-01 15:25:42 [31merror[39m: ReferenceError: consumidorRouter is not defined
+    at file:///C:/Users/ferna/OneDrive/Escritorio/MenuApiCodeblitz/src/routers/api.router.js:15:30
