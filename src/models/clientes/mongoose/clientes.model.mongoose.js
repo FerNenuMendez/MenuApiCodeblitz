@@ -1,8 +1,8 @@
 import { Schema } from 'mongoose'
-import { randomUUID } from 'crypto'
+// import { randomUUID } from 'crypto'
 
 export const clientesSchema = new Schema({
-    id: { type: String, default: randomUUID, unique: true, required: true },
+    // id: { type: String, default: randomUUID, unique: true, required: true },
     nombre: { type: String, required: true },
     apellido: { type: String, required: true },
     dni: { type: Number, unique: true, required: true },

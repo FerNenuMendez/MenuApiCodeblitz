@@ -7,7 +7,7 @@ export async function getController(req, res, next) {
     try {
         const clientes = await clientesService.buscarTodos()
         logger.info(JSON.stringify(clientes))
-        res.created(clientes)
+        res.result(clientes)
     } catch (error) {
         logger.error(error)
         next(error)
@@ -29,7 +29,7 @@ export async function postController(req, res, next) {
         const data = req.body;
         const cliente = await clientesService.registrar(data);
         logger.info(JSON.stringify(cliente))
-        res.result(cliente)
+        res.created(cliente)
     } catch (error) {
         logger.error(error)
         next(error)
@@ -39,7 +39,7 @@ export async function deleteController(req, res, next) {
     const { id } = req.params;
     try {
         const cliente = await clientesService.darDeBaja(id)
-        res.result(cliente)
+        res.deleted(cliente)
     } catch {
         logger.error(error)
         next(error)

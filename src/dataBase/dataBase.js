@@ -5,7 +5,7 @@ import logger from "../middlewares/logger.js"
 
 dotenv.config();
 
-const MONGODB_CNX_STR = `${process.env.Mongo__CNX__STR}`;
+const MONGODB_CNX_STR = `${process.env.MongoLocal__CNX__STR}`;
 
 export async function connect() {
     try {

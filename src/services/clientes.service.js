@@ -1,11 +1,11 @@
 import { getDaoClientes } from '../models/clientes/clientes.dao.js'
 import { getDaoUser } from '../models/users/user.dao.js'
-import { getDaoTienda } from '../models/tiendas/tienda.dao.js'
+
 import logger from '../middlewares/logger.js'
 
 const clientesDao = await getDaoClientes()
 const userDao = getDaoUser()
-const tiendasDao = getDaoTienda()
+
 
 class ClientesService {
     async registrar(data) {

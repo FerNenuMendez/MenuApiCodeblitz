@@ -399,3 +399,99 @@
 2024-07-01 15:33:01 [32minfo[39m: persistiendo User en: mongoDB
 2024-07-01 15:33:01 [32minfo[39m: persistiendo Tiendas en: mongoDB
 2024-07-01 15:33:02 [32minfo[39m: Base de datos conectada a MongoDB
+2024-07-03 18:03:24 [32minfo[39m: Cargando configuracion:
+2024-07-03 18:03:26 [32minfo[39m: persistiendo Clientes en: mongoDB
+2024-07-03 18:03:26 [32minfo[39m: persistiendo User en: mongoDB
+2024-07-03 18:03:27 [32minfo[39m: Base de datos conectada a MongoDB
+2024-07-03 18:03:59 [32minfo[39m: Cargando configuracion:
+2024-07-03 18:04:00 [32minfo[39m: persistiendo Clientes en: mongoDB
+2024-07-03 18:04:00 [32minfo[39m: persistiendo User en: mongoDB
+2024-07-03 18:04:00 [32minfo[39m: Base de datos conectada a MongoDB
+2024-07-03 18:06:30 [31merror[39m: ValidationError: clientes validation failed: nacimiento: Cast to date failed for value "23/07/88" (type string) at path "nacimiento", password: Path `password` is required.
+    at Document.invalidate (C:\Users\FerM\Desktop\New Api\node_modules\mongoose\lib\document.js:3289:32)
+    at model.$set (C:\Users\FerM\Desktop\New Api\node_modules\mongoose\lib\document.js:1463:12)
+    at model.$set (C:\Users\FerM\Desktop\New Api\node_modules\mongoose\lib\document.js:1117:16)
+    at model.Document (C:\Users\FerM\Desktop\New Api\node_modules\mongoose\lib\document.js:166:12)
+    at model.Model (C:\Users\FerM\Desktop\New Api\node_modules\mongoose\lib\model.js:132:12)
+    at new model (C:\Users\FerM\Desktop\New Api\node_modules\mongoose\lib\model.js:4870:15)
+    at C:\Users\FerM\Desktop\New Api\node_modules\mongoose\lib\model.js:2989:20
+    at Array.map (<anonymous>)
+    at Function.create (C:\Users\FerM\Desktop\New Api\node_modules\mongoose\lib\model.js:2977:34)
+    at ClientesDaoMongoose.create (file:///C:/Users/FerM/Desktop/New%20Api/src/models/clientes/mongoose/clientes.dao.mongoose.js:16:50)
+2024-07-03 18:08:00 [31merror[39m: ValidationError: clientes validation failed: nacimiento: Cast to date failed for value "23/07/88" (type string) at path "nacimiento"
+    at Document.invalidate (C:\Users\FerM\Desktop\New Api\node_modules\mongoose\lib\document.js:3289:32)
+    at model.$set (C:\Users\FerM\Desktop\New Api\node_modules\mongoose\lib\document.js:1463:12)
+    at model.$set (C:\Users\FerM\Desktop\New Api\node_modules\mongoose\lib\document.js:1117:16)
+    at model.Document (C:\Users\FerM\Desktop\New Api\node_modules\mongoose\lib\document.js:166:12)
+    at model.Model (C:\Users\FerM\Desktop\New Api\node_modules\mongoose\lib\model.js:132:12)
+    at new model (C:\Users\FerM\Desktop\New Api\node_modules\mongoose\lib\model.js:4870:15)
+    at C:\Users\FerM\Desktop\New Api\node_modules\mongoose\lib\model.js:2989:20
+    at Array.map (<anonymous>)
+    at Function.create (C:\Users\FerM\Desktop\New Api\node_modules\mongoose\lib\model.js:2977:34)
+    at ClientesDaoMongoose.create (file:///C:/Users/FerM/Desktop/New%20Api/src/models/clientes/mongoose/clientes.dao.mongoose.js:16:50)
+2024-07-03 18:08:28 [32minfo[39m: Cargando configuracion:
+2024-07-03 18:08:28 [32minfo[39m: persistiendo Clientes en: mongoDB
+2024-07-03 18:08:28 [32minfo[39m: persistiendo User en: mongoDB
+2024-07-03 18:08:28 [32minfo[39m: Base de datos conectada a MongoDB
+2024-07-03 18:08:42 [32minfo[39m: Cargando configuracion:
+2024-07-03 18:08:42 [32minfo[39m: persistiendo Clientes en: mongoDB
+2024-07-03 18:08:42 [32minfo[39m: persistiendo User en: mongoDB
+2024-07-03 18:08:42 [32minfo[39m: Base de datos conectada a MongoDB
+2024-07-03 18:08:51 [31merror[39m: ValidationError: clientes validation failed: nacimiento: Cast to date failed for value "23/07/88" (type string) at path "nacimiento"
+    at Document.invalidate (C:\Users\FerM\Desktop\New Api\node_modules\mongoose\lib\document.js:3289:32)
+    at model.$set (C:\Users\FerM\Desktop\New Api\node_modules\mongoose\lib\document.js:1463:12)
+    at model.$set (C:\Users\FerM\Desktop\New Api\node_modules\mongoose\lib\document.js:1117:16)
+    at model.Document (C:\Users\FerM\Desktop\New Api\node_modules\mongoose\lib\document.js:166:12)
+    at model.Model (C:\Users\FerM\Desktop\New Api\node_modules\mongoose\lib\model.js:132:12)
+    at new model (C:\Users\FerM\Desktop\New Api\node_modules\mongoose\lib\model.js:4870:15)
+    at C:\Users\FerM\Desktop\New Api\node_modules\mongoose\lib\model.js:2989:20
+    at Array.map (<anonymous>)
+    at Function.create (C:\Users\FerM\Desktop\New Api\node_modules\mongoose\lib\model.js:2977:34)
+    at ClientesDaoMongoose.create (file:///C:/Users/FerM/Desktop/New%20Api/src/models/clientes/mongoose/clientes.dao.mongoose.js:16:50)
+2024-07-03 18:10:31 [32minfo[39m: Cargando configuracion:
+2024-07-03 18:10:31 [32minfo[39m: persistiendo Clientes en: mongoDB
+2024-07-03 18:10:31 [32minfo[39m: persistiendo User en: mongoDB
+2024-07-03 18:10:31 [32minfo[39m: Base de datos conectada a MongoDB
+2024-07-03 18:10:33 [32minfo[39m: {"nombre":"Fer","apellido":"Jhovanob","dni":12345678,"telefono":1144114411,"mail":"jhovanobTurroMantico@gmail.com","password":"Feer1688","domicilio":"en mi casa","nacimiento":"1988-07-23T00:00:00.000Z","eCivil":"binario","inventario":[],"_id":"6685be49127bda23737f2aa5","id":"0ca25461-1622-4818-8c57-c7cf0fd6a331"}
+2024-07-03 18:12:00 [32minfo[39m: [{"_id":"6685be49127bda23737f2aa5","nombre":"Fer","apellido":"Jhovanob","dni":12345678,"telefono":1144114411,"mail":"jhovanobTurroMantico@gmail.com","password":"Feer1688","domicilio":"en mi casa","nacimiento":"1988-07-23T00:00:00.000Z","eCivil":"binario","inventario":[],"id":"0ca25461-1622-4818-8c57-c7cf0fd6a331"}]
+2024-07-03 18:12:33 [31merror[39m: CastError: Cast to ObjectId failed for value "0ca25461-1622-4818-8c57-c7cf0fd6a331" (type string) at path "_id" for model "clientes"
+    at SchemaObjectId.cast (C:\Users\FerM\Desktop\New Api\node_modules\mongoose\lib\schema\objectId.js:250:11)
+    at SchemaType.applySetters (C:\Users\FerM\Desktop\New Api\node_modules\mongoose\lib\schemaType.js:1236:12)
+    at SchemaType.castForQuery (C:\Users\FerM\Desktop\New Api\node_modules\mongoose\lib\schemaType.js:1653:17)
+    at cast (C:\Users\FerM\Desktop\New Api\node_modules\mongoose\lib\cast.js:375:32)
+    at Query.cast (C:\Users\FerM\Desktop\New Api\node_modules\mongoose\lib\query.js:4798:12)
+    at Query._castConditions (C:\Users\FerM\Desktop\New Api\node_modules\mongoose\lib\query.js:2206:10)
+    at model.Query._findOne (C:\Users\FerM\Desktop\New Api\node_modules\mongoose\lib\query.js:2526:8)
+    at model.Query.exec (C:\Users\FerM\Desktop\New Api\node_modules\mongoose\lib\query.js:4342:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ClientesDaoMongoose.readById (file:///C:/Users/FerM/Desktop/New%20Api/src/models/clientes/mongoose/clientes.dao.mongoose.js:55:25)
+2024-07-03 18:14:21 [32minfo[39m: Cargando configuracion:
+2024-07-03 18:14:22 [32minfo[39m: persistiendo Clientes en: mongoDB
+2024-07-03 18:14:22 [32minfo[39m: persistiendo User en: mongoDB
+2024-07-03 18:14:22 [32minfo[39m: Base de datos conectada a MongoDB
+2024-07-03 18:14:28 [32minfo[39m: Cargando configuracion:
+2024-07-03 18:14:29 [32minfo[39m: persistiendo Clientes en: mongoDB
+2024-07-03 18:14:29 [32minfo[39m: persistiendo User en: mongoDB
+2024-07-03 18:14:29 [32minfo[39m: Base de datos conectada a MongoDB
+2024-07-03 18:14:58 [32minfo[39m: {"nombre":"Fer","apellido":"Jhovanob","dni":12345678,"telefono":1144114411,"mail":"jhovanobTurroMantico@gmail.com","password":"Feer1688","domicilio":"en mi casa","nacimiento":"1988-07-23T00:00:00.000Z","eCivil":"binario","inventario":[],"_id":"6685bf52a6d8b52fe55c0ac8"}
+2024-07-03 18:15:16 [32minfo[39m: {"_id":"6685bf52a6d8b52fe55c0ac8","nombre":"Fer","apellido":"Jhovanob","dni":12345678,"telefono":1144114411,"mail":"jhovanobTurroMantico@gmail.com","password":"Feer1688","domicilio":"en mi casa","nacimiento":"1988-07-23T00:00:00.000Z","eCivil":"binario","inventario":[]}
+2024-07-03 18:15:56 [32minfo[39m: Cargando configuracion:
+2024-07-03 18:15:57 [32minfo[39m: persistiendo Clientes en: mongoDB
+2024-07-03 18:15:57 [32minfo[39m: persistiendo User en: mongoDB
+2024-07-03 18:15:57 [32minfo[39m: Base de datos conectada a MongoDB
+2024-07-03 18:17:33 [32minfo[39m: Cargando configuracion:
+2024-07-03 18:17:35 [32minfo[39m: persistiendo Clientes en: mongoDB
+2024-07-03 18:17:35 [32minfo[39m: persistiendo User en: mongoDB
+2024-07-03 18:17:35 [32minfo[39m: Base de datos conectada a MongoDB
+2024-07-03 18:17:43 [32minfo[39m: Cargando configuracion:
+2024-07-03 18:17:44 [32minfo[39m: persistiendo Clientes en: mongoDB
+2024-07-03 18:17:44 [32minfo[39m: persistiendo User en: mongoDB
+2024-07-03 18:17:44 [32minfo[39m: Base de datos conectada a MongoDB
+2024-07-03 18:18:12 [32minfo[39m: Cargando configuracion:
+2024-07-03 18:18:13 [32minfo[39m: persistiendo Clientes en: mongoDB
+2024-07-03 18:18:13 [32minfo[39m: persistiendo User en: mongoDB
+2024-07-03 18:18:13 [32minfo[39m: Base de datos conectada a MongoDB
+2024-07-03 18:18:25 [32minfo[39m: Cargando configuracion:
+2024-07-03 18:18:26 [32minfo[39m: persistiendo Clientes en: mongoDB
+2024-07-03 18:18:26 [32minfo[39m: persistiendo User en: mongoDB
+2024-07-03 18:18:26 [32minfo[39m: Base de datos conectada a MongoDB
