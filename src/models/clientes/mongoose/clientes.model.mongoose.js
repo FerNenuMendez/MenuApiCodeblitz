@@ -1,8 +1,8 @@
 import { Schema } from 'mongoose'
-// import { randomUUID } from 'crypto'
+import { randomUUID } from 'crypto'
 
 export const clientesSchema = new Schema({
-    // id: { type: String, default: randomUUID, unique: true, required: true },
+    id: { type: String, default: randomUUID, unique: true },
     nombre: { type: String, required: true },
     apellido: { type: String, required: true },
     dni: { type: Number, unique: true, required: true },
@@ -10,9 +10,13 @@ export const clientesSchema = new Schema({
     mail: { type: String, unique: true, required: true },
     password: { type: String, required: true },
     domicilio: { type: String, required: true },
-    nacimiento: { type: Date, },
-    eCivil: { type: String },
-    userID: { type: String, unique: true, sparse: true },
+    cuit: { type: String, required: true },
+    estado: { type: String },
+    ingreso: { type: Date },
+    lastLogin: { type: Date },
+    nivel: { type: String },
+    aux: { type: String },
+    tiendas: [{}],
     inventario: [{}]
 }, {
     strict: 'throw',

@@ -1,497 +1,105 @@
-2024-06-19 14:42:41 [32minfo[39m: Cargando configuracion:
-2024-06-19 14:42:42 [32minfo[39m: persistiendo Clientes en: mongoDB
-2024-06-19 14:42:42 [32minfo[39m: persistiendo User en: mongoDB
-2024-06-19 14:42:42 [32minfo[39m: persistiendo Tiendas en: mongoDB
-2024-06-19 14:42:42 [32minfo[39m: persistiendo Consumidor en: mongoDB
-2024-06-19 14:42:43 [32minfo[39m: Base de datos conectada a MongoDB
-2024-06-19 14:43:05 [32minfo[39m: Cargando configuracion:
-2024-06-19 14:43:06 [32minfo[39m: persistiendo Clientes en mongoDB
-2024-06-19 14:43:06 [32minfo[39m: persistiendo User en: mongoDB
-2024-06-19 14:43:06 [32minfo[39m: persistiendo Tiendas en: mongoDB
-2024-06-19 14:43:06 [32minfo[39m: persistiendo Consumidor en: mongoDB
-2024-06-19 14:43:07 [32minfo[39m: Base de datos conectada a MongoDB
-2024-06-19 14:43:15 [32minfo[39m: Cargando configuracion:
-2024-06-19 14:43:16 [32minfo[39m: persistiendo Clientes en: mongoDB
-2024-06-19 14:43:16 [32minfo[39m: persistiendo User en: mongoDB
-2024-06-19 14:43:16 [32minfo[39m: persistiendo Tiendas en: mongoDB
-2024-06-19 14:43:16 [32minfo[39m: persistiendo Consumidor en: mongoDB
-2024-06-19 14:43:16 [32minfo[39m: Base de datos conectada a MongoDB
-2024-06-19 15:57:17 [32minfo[39m: Cargando configuracion:
-2024-06-19 15:57:18 [32minfo[39m: persistiendo Clientes en: mongoDB
-2024-06-19 15:57:18 [32minfo[39m: persistiendo User en: mongoDB
-2024-06-19 15:57:18 [32minfo[39m: persistiendo Tiendas en: mongoDB
-2024-06-19 15:57:18 [32minfo[39m: persistiendo Consumidor en: mongoDB
-2024-06-19 15:57:48 [32minfo[39m: Base de datos conectada a MongoDB
-2024-06-19 18:06:14 [32minfo[39m: Cargando configuracion:
-2024-06-19 18:06:14 [32minfo[39m: persistiendo Clientes en: mongoDB
-2024-06-19 18:06:14 [32minfo[39m: persistiendo User en: mongoDB
-2024-06-19 18:06:14 [32minfo[39m: persistiendo Tiendas en: mongoDB
-2024-06-19 18:06:14 [32minfo[39m: persistiendo Consumidor en: mongoDB
-2024-06-19 18:06:16 [32minfo[39m: Base de datos conectada a MongoDB
-2024-06-19 18:19:46 [32minfo[39m: Cargando configuracion:
-2024-06-19 18:19:47 [32minfo[39m: persistiendo Clientes en: mongoDB
-2024-06-19 18:19:47 [32minfo[39m: persistiendo User en: mongoDB
-2024-06-19 18:19:47 [32minfo[39m: persistiendo Tiendas en: mongoDB
-2024-06-19 18:19:47 [32minfo[39m: persistiendo Consumidor en: mongoDB
-2024-06-19 18:19:48 [32minfo[39m: Base de datos conectada a MongoDB
-2024-06-19 18:19:53 [31merror[39m: MongoServerError: E11000 duplicate key error collection: ApiMenuInteractivo.clientes index: dni_1 dup key: { dni: 12245622 }
+2024-07-03 21:22:11 [32minfo[39m: Cargando configuracion:
+2024-07-03 21:22:12 [32minfo[39m: persistiendo Clientes en: mongoDB
+2024-07-03 21:22:12 [32minfo[39m: persistiendo User en: mongoDB
+2024-07-03 21:22:12 [32minfo[39m: Base de datos conectada a MongoDB
+2024-07-03 21:22:23 [31merror[39m: MongoServerError: E11000 duplicate key error collection: ApiMenuInteractivo.clientes index: clienteID_1 dup key: { clienteID: null }
     at InsertOneOperation.execute (C:\Users\FerM\Desktop\New Api\node_modules\mongodb\lib\operations\insert.js:51:19)
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
     at async executeOperation (C:\Users\FerM\Desktop\New Api\node_modules\mongodb\lib\operations\execute_operation.js:136:16)
     at async Collection.insertOne (C:\Users\FerM\Desktop\New Api\node_modules\mongodb\lib\collection.js:155:16)
-2024-06-19 18:20:08 [31merror[39m: MongoServerError: E11000 duplicate key error collection: ApiMenuInteractivo.clientes index: userID_1 dup key: { userID: null }
+2024-07-03 21:22:42 [32minfo[39m: "Clientes:"
+2024-07-03 21:22:42 [32minfo[39m: [{"_id":"6685e732ace38a8a687c20e6","nombre":"Fer1as1","apellido":"Jhoasvanob11","dni":12135612,"telefono":11441114412,"mail":"jho2van1obTurroMantico@gmail.com","password":"Feer1688","domicilio":"en mi casa1","nacimiento":"1988-07-24T00:00:00.000Z","eCivil":"binario","inventario":[],"id":"edf50057-a770-483d-85d1-d8f9dec11bec","userID":"abeda07b-4ff1-4fb5-86c3-4d772b6e2607"}]
+2024-07-03 21:23:16 [32minfo[39m: Cargando configuracion:
+2024-07-03 21:23:17 [32minfo[39m: persistiendo Clientes en: mongoDB
+2024-07-03 21:23:17 [32minfo[39m: persistiendo User en: mongoDB
+2024-07-03 21:23:17 [32minfo[39m: Base de datos conectada a MongoDB
+2024-07-03 21:23:29 [32minfo[39m: Cargando configuracion:
+2024-07-03 21:23:29 [32minfo[39m: persistiendo Clientes en: mongoDB
+2024-07-03 21:23:29 [32minfo[39m: persistiendo User en: mongoDB
+2024-07-03 21:23:29 [32minfo[39m: Base de datos conectada a MongoDB
+2024-07-03 21:23:38 [32minfo[39m: Cargando configuracion:
+2024-07-03 21:23:39 [32minfo[39m: persistiendo Clientes en: mongoDB
+2024-07-03 21:23:39 [32minfo[39m: persistiendo User en: mongoDB
+2024-07-03 21:23:39 [32minfo[39m: Base de datos conectada a MongoDB
+2024-07-03 21:23:53 [31merror[39m: MongoServerError: E11000 duplicate key error collection: ApiMenuInteractivo.clientes index: clienteID_1 dup key: { clienteID: null }
     at InsertOneOperation.execute (C:\Users\FerM\Desktop\New Api\node_modules\mongodb\lib\operations\insert.js:51:19)
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
     at async executeOperation (C:\Users\FerM\Desktop\New Api\node_modules\mongodb\lib\operations\execute_operation.js:136:16)
     at async Collection.insertOne (C:\Users\FerM\Desktop\New Api\node_modules\mongodb\lib\collection.js:155:16)
-2024-06-19 18:20:32 [31merror[39m: ValidationError: clientes validation failed: userID: Cast to ObjectId failed for value "Nenucodonosor" (type string) at path "userID" because of "BSONError"
-    at Document.invalidate (C:\Users\FerM\Desktop\New Api\node_modules\mongoose\lib\document.js:3289:32)
-    at model.$set (C:\Users\FerM\Desktop\New Api\node_modules\mongoose\lib\document.js:1463:12)
-    at model.$set (C:\Users\FerM\Desktop\New Api\node_modules\mongoose\lib\document.js:1117:16)
-    at model.Document (C:\Users\FerM\Desktop\New Api\node_modules\mongoose\lib\document.js:166:12)
-    at model.Model (C:\Users\FerM\Desktop\New Api\node_modules\mongoose\lib\model.js:132:12)
-    at new model (C:\Users\FerM\Desktop\New Api\node_modules\mongoose\lib\model.js:4870:15)
-    at C:\Users\FerM\Desktop\New Api\node_modules\mongoose\lib\model.js:2989:20
-    at Array.map (<anonymous>)
-    at Function.create (C:\Users\FerM\Desktop\New Api\node_modules\mongoose\lib\model.js:2977:34)
-    at ClientesDaoMongoose.create (file:///C:/Users/FerM/Desktop/New%20Api/src/models/clientes/mongoose/clientes.dao.mongoose.js:16:50)
-2024-06-19 18:20:45 [31merror[39m: ValidationError: clientes validation failed: userID: Cast to ObjectId failed for value "2" (type string) at path "userID" because of "BSONError"
-    at Document.invalidate (C:\Users\FerM\Desktop\New Api\node_modules\mongoose\lib\document.js:3289:32)
-    at model.$set (C:\Users\FerM\Desktop\New Api\node_modules\mongoose\lib\document.js:1463:12)
-    at model.$set (C:\Users\FerM\Desktop\New Api\node_modules\mongoose\lib\document.js:1117:16)
-    at model.Document (C:\Users\FerM\Desktop\New Api\node_modules\mongoose\lib\document.js:166:12)
-    at model.Model (C:\Users\FerM\Desktop\New Api\node_modules\mongoose\lib\model.js:132:12)
-    at new model (C:\Users\FerM\Desktop\New Api\node_modules\mongoose\lib\model.js:4870:15)
-    at C:\Users\FerM\Desktop\New Api\node_modules\mongoose\lib\model.js:2989:20
-    at Array.map (<anonymous>)
-    at Function.create (C:\Users\FerM\Desktop\New Api\node_modules\mongoose\lib\model.js:2977:34)
-    at ClientesDaoMongoose.create (file:///C:/Users/FerM/Desktop/New%20Api/src/models/clientes/mongoose/clientes.dao.mongoose.js:16:50)
-2024-06-19 18:20:54 [31merror[39m: MongoServerError: E11000 duplicate key error collection: ApiMenuInteractivo.clientes index: userID_1 dup key: { userID: null }
+2024-07-03 21:24:46 [32minfo[39m: Cargando configuracion:
+2024-07-03 21:24:47 [32minfo[39m: persistiendo Clientes en: mongoDB
+2024-07-03 21:24:47 [32minfo[39m: persistiendo User en: mongoDB
+2024-07-03 21:24:47 [32minfo[39m: Base de datos conectada a MongoDB
+2024-07-03 21:25:12 [32minfo[39m: Cargando configuracion:
+2024-07-03 21:25:13 [32minfo[39m: persistiendo Clientes en: mongoDB
+2024-07-03 21:25:13 [32minfo[39m: persistiendo User en: mongoDB
+2024-07-03 21:25:13 [32minfo[39m: Base de datos conectada a MongoDB
+2024-07-03 21:25:48 [32minfo[39m: Cargando configuracion:
+2024-07-03 21:25:48 [32minfo[39m: persistiendo Clientes en: mongoDB
+2024-07-03 21:25:48 [32minfo[39m: persistiendo User en: mongoDB
+2024-07-03 21:25:49 [32minfo[39m: Base de datos conectada a MongoDB
+2024-07-03 21:25:59 [32minfo[39m: "Clientes:"
+2024-07-03 21:25:59 [32minfo[39m: []
+2024-07-03 21:28:26 [32minfo[39m: "Cliente Creado:"
+2024-07-03 21:28:26 [32minfo[39m: {"nombre":"Fer","apellido":"Mendez","dni":12123123,"telefono":1123234545,"mail":"fer@gmail.com","password":"13123","domicilio":"La la la","eCivil":"Ni idea","inventario":[],"_id":"6685ecaa4e65f5babf6d0c8a","ID":"dd4989aa-f80e-453f-91ce-7db57227a3c1"}
+2024-07-03 21:28:56 [32minfo[39m: Cargando configuracion:
+2024-07-03 21:28:57 [32minfo[39m: persistiendo Clientes en: mongoDB
+2024-07-03 21:28:57 [32minfo[39m: persistiendo User en: mongoDB
+2024-07-03 21:28:57 [32minfo[39m: Base de datos conectada a MongoDB
+2024-07-03 21:29:02 [31merror[39m: MongoServerError: E11000 duplicate key error collection: ApiMenuInteractivo.clientes index: id_1 dup key: { id: null }
     at InsertOneOperation.execute (C:\Users\FerM\Desktop\New Api\node_modules\mongodb\lib\operations\insert.js:51:19)
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
     at async executeOperation (C:\Users\FerM\Desktop\New Api\node_modules\mongodb\lib\operations\execute_operation.js:136:16)
     at async Collection.insertOne (C:\Users\FerM\Desktop\New Api\node_modules\mongodb\lib\collection.js:155:16)
-2024-06-19 18:21:40 [32minfo[39m: Cargando configuracion:
-2024-06-19 18:21:41 [32minfo[39m: persistiendo Clientes en: mongoDB
-2024-06-19 18:21:41 [32minfo[39m: persistiendo User en: mongoDB
-2024-06-19 18:21:41 [32minfo[39m: persistiendo Tiendas en: mongoDB
-2024-06-19 18:21:41 [32minfo[39m: persistiendo Consumidor en: mongoDB
-2024-06-19 18:21:43 [32minfo[39m: Base de datos conectada a MongoDB
-2024-06-19 18:22:22 [31merror[39m: MongoServerError: E11000 duplicate key error collection: ApiMenuInteractivo.clientes index: userID_1 dup key: { userID: null }
+2024-07-08 21:20:05 [32minfo[39m: Cargando configuracion:
+2024-07-08 21:20:06 [32minfo[39m: persistiendo Clientes en: mongoDB
+2024-07-08 21:20:06 [32minfo[39m: Base de datos conectada a MongoDB
+2024-07-08 21:30:07 [32minfo[39m: Cargando configuracion:
+2024-07-08 21:30:08 [32minfo[39m: persistiendo Clientes en: mongoDB
+2024-07-08 21:30:08 [32minfo[39m: Base de datos conectada a MongoDB
+2024-07-08 21:32:34 [32minfo[39m: Cargando configuracion:
+2024-07-08 21:32:35 [32minfo[39m: persistiendo Clientes en: mongoDB
+2024-07-08 21:32:35 [32minfo[39m: Base de datos conectada a MongoDB
+2024-07-08 21:33:09 [32minfo[39m: Cargando configuracion:
+2024-07-08 21:33:10 [32minfo[39m: persistiendo Clientes en: mongoDB
+2024-07-08 21:33:10 [32minfo[39m: Base de datos conectada a MongoDB
+2024-07-08 21:34:46 [32minfo[39m: Cargando configuracion:
+2024-07-08 21:34:47 [32minfo[39m: persistiendo Clientes en: mongoDB
+2024-07-08 21:34:47 [32minfo[39m: Base de datos conectada a MongoDB
+2024-07-08 21:35:26 [32minfo[39m: Cargando configuracion:
+2024-07-08 21:35:27 [32minfo[39m: persistiendo Clientes en: mongoDB
+2024-07-08 21:35:27 [32minfo[39m: Base de datos conectada a MongoDB
+2024-07-08 21:35:31 [32minfo[39m: Cargando configuracion:
+2024-07-08 21:35:31 [32minfo[39m: persistiendo Clientes en: mongoDB
+2024-07-08 21:35:31 [32minfo[39m: Base de datos conectada a MongoDB
+2024-07-08 21:35:55 [32minfo[39m: Cargando configuracion:
+2024-07-08 21:35:56 [32minfo[39m: persistiendo Clientes en: mongoDB
+2024-07-08 21:35:56 [32minfo[39m: Base de datos conectada a MongoDB
+2024-07-08 21:39:01 [32minfo[39m: "Cliente Creado:"
+2024-07-08 21:39:01 [32minfo[39m: {"nombre":"Fer","apellido":"Mendez","dni":33398668,"telefono":44504058,"mail":"fer@gmail.com","password":"$2b$10$.6kNEHCXk.63CfE0apPfwuNsq2aohaIkI3PBqo1JL1ndPWUFqPhZu","domicilio":"laslasalsalsas 111","cuit":"30-33398668-0","ingreso":"2024-07-09T00:39:01.455Z","tiendas":[],"inventario":[],"_id":"668c86a551d5521282adfb34","id":"c6dca39f-6037-44ee-b8ad-8e1ab7cfcd60"}
+2024-07-08 21:39:56 [32minfo[39m: Cargando configuracion:
+2024-07-08 21:39:57 [32minfo[39m: persistiendo Clientes en: mongoDB
+2024-07-08 21:39:58 [32minfo[39m: Base de datos conectada a MongoDB
+2024-07-08 21:40:23 [31merror[39m: MongoServerError: E11000 duplicate key error collection: ApiMenuInteractivo.clientes index: userID_1 dup key: { userID: null }
     at InsertOneOperation.execute (C:\Users\FerM\Desktop\New Api\node_modules\mongodb\lib\operations\insert.js:51:19)
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
     at async executeOperation (C:\Users\FerM\Desktop\New Api\node_modules\mongodb\lib\operations\execute_operation.js:136:16)
     at async Collection.insertOne (C:\Users\FerM\Desktop\New Api\node_modules\mongodb\lib\collection.js:155:16)
-2024-06-19 18:23:09 [31merror[39m: MongoServerError: E11000 duplicate key error collection: ApiMenuInteractivo.clientes index: userID_1 dup key: { userID: null }
+2024-07-08 21:41:23 [32minfo[39m: Cargando configuracion:
+2024-07-08 21:41:24 [32minfo[39m: persistiendo Clientes en: mongoDB
+2024-07-08 21:41:24 [32minfo[39m: Base de datos conectada a MongoDB
+2024-07-08 21:41:28 [31merror[39m: MongoServerError: E11000 duplicate key error collection: ApiMenuInteractivo.clientes index: userID_1 dup key: { userID: null }
     at InsertOneOperation.execute (C:\Users\FerM\Desktop\New Api\node_modules\mongodb\lib\operations\insert.js:51:19)
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
     at async executeOperation (C:\Users\FerM\Desktop\New Api\node_modules\mongodb\lib\operations\execute_operation.js:136:16)
     at async Collection.insertOne (C:\Users\FerM\Desktop\New Api\node_modules\mongodb\lib\collection.js:155:16)
-2024-06-19 18:23:15 [32minfo[39m: [object Object]
-2024-06-19 18:29:55 [32minfo[39m: Cargando configuracion:
-2024-06-19 18:29:56 [32minfo[39m: persistiendo Clientes en: mongoDB
-2024-06-19 18:29:56 [32minfo[39m: persistiendo User en: mongoDB
-2024-06-19 18:29:56 [32minfo[39m: persistiendo Tiendas en: mongoDB
-2024-06-19 18:29:56 [32minfo[39m: persistiendo Consumidor en: mongoDB
-2024-06-19 18:29:57 [32minfo[39m: Base de datos conectada a MongoDB
-2024-06-19 18:30:18 [32minfo[39m: Cargando configuracion:
-2024-06-19 18:30:18 [32minfo[39m: persistiendo Clientes en: mongoDB
-2024-06-19 18:30:18 [32minfo[39m: persistiendo User en: mongoDB
-2024-06-19 18:30:18 [32minfo[39m: persistiendo Tiendas en: mongoDB
-2024-06-19 18:30:18 [32minfo[39m: persistiendo Consumidor en: mongoDB
-2024-06-19 18:30:19 [32minfo[39m: Base de datos conectada a MongoDB
-2024-06-24 12:37:52 [32minfo[39m: Cargando configuracion:
-2024-06-24 12:37:53 [32minfo[39m: persistiendo Clientes en: mongoDB
-2024-06-24 12:37:53 [32minfo[39m: persistiendo User en: mongoDB
-2024-06-24 12:37:53 [32minfo[39m: persistiendo Tiendas en: mongoDB
-2024-06-24 12:37:53 [32minfo[39m: persistiendo Consumidor en: mongoDB
-2024-06-24 12:37:54 [32minfo[39m: Base de datos conectada a MongoDB
-2024-06-24 12:38:57 [32minfo[39m: Cargando configuracion:
-2024-06-24 12:38:58 [32minfo[39m: persistiendo Clientes en: mongoDB
-2024-06-24 12:38:58 [32minfo[39m: persistiendo User en: mongoDB
-2024-06-24 12:38:58 [32minfo[39m: persistiendo Tiendas en: mongoDB
-2024-06-24 12:38:58 [32minfo[39m: persistiendo Consumidor en: mongoDB
-2024-06-24 12:38:59 [32minfo[39m: Base de datos conectada a MongoDB
-2024-06-24 12:39:15 [32minfo[39m: Cargando configuracion:
-2024-06-24 12:39:16 [32minfo[39m: persistiendo Clientes en: mongoDB
-2024-06-24 12:39:16 [32minfo[39m: persistiendo User en: mongoDB
-2024-06-24 12:39:16 [32minfo[39m: persistiendo Tiendas en: mongoDB
-2024-06-24 12:39:16 [32minfo[39m: persistiendo Consumidor en: mongoDB
-2024-06-24 12:39:17 [32minfo[39m: Base de datos conectada a MongoDB
-2024-06-24 12:39:44 [32minfo[39m: Cargando configuracion:
-2024-06-24 12:39:45 [32minfo[39m: persistiendo Clientes en: mongoDB
-2024-06-24 12:39:45 [32minfo[39m: persistiendo User en: mongoDB
-2024-06-24 12:39:45 [32minfo[39m: persistiendo Tiendas en: mongoDB
-2024-06-24 12:39:45 [32minfo[39m: persistiendo Consumidor en: mongoDB
-2024-06-24 12:39:46 [32minfo[39m: Base de datos conectada a MongoDB
-2024-06-24 12:40:13 [32minfo[39m: Cargando configuracion:
-2024-06-24 12:40:14 [32minfo[39m: persistiendo Clientes en: mongoDB
-2024-06-24 12:40:14 [32minfo[39m: persistiendo User en: mongoDB
-2024-06-24 12:40:14 [32minfo[39m: persistiendo Tiendas en: mongoDB
-2024-06-24 12:40:14 [32minfo[39m: persistiendo Consumidor en: mongoDB
-2024-06-24 12:40:15 [32minfo[39m: Base de datos conectada a MongoDB
-2024-06-24 12:56:07 [32minfo[39m: Cargando configuracion:
-2024-06-24 12:56:08 [32minfo[39m: persistiendo Clientes en: mongoDB
-2024-06-24 12:56:08 [32minfo[39m: persistiendo User en: mongoDB
-2024-06-24 12:56:08 [32minfo[39m: persistiendo Tiendas en: mongoDB
-2024-06-24 12:56:08 [32minfo[39m: persistiendo Consumidor en: mongoDB
-2024-06-24 12:56:09 [32minfo[39m: Base de datos conectada a MongoDB
-2024-06-24 13:00:15 [32minfo[39m: Cargando configuracion:
-2024-06-24 13:00:16 [32minfo[39m: persistiendo Clientes en: mongoDB
-2024-06-24 13:00:16 [32minfo[39m: persistiendo User en: mongoDB
-2024-06-24 13:00:16 [32minfo[39m: persistiendo Tiendas en: mongoDB
-2024-06-24 13:00:16 [32minfo[39m: persistiendo Consumidor en: mongoDB
-2024-06-24 13:00:17 [32minfo[39m: Base de datos conectada a MongoDB
-2024-06-24 13:01:31 [32minfo[39m: Cargando configuracion:
-2024-06-24 13:01:31 [32minfo[39m: persistiendo Clientes en: mongoDB
-2024-06-24 13:01:32 [32minfo[39m: persistiendo User en: mongoDB
-2024-06-24 13:01:32 [32minfo[39m: persistiendo Tiendas en: mongoDB
-2024-06-24 13:01:32 [32minfo[39m: persistiendo Consumidor en: mongoDB
-2024-06-24 13:01:33 [32minfo[39m: Base de datos conectada a MongoDB
-2024-06-24 13:01:57 [32minfo[39m: Cargando configuracion:
-2024-06-24 13:01:58 [32minfo[39m: persistiendo Clientes en: mongoDB
-2024-06-24 13:01:58 [32minfo[39m: persistiendo User en: mongoDB
-2024-06-24 13:01:58 [32minfo[39m: persistiendo Tiendas en: mongoDB
-2024-06-24 13:01:58 [32minfo[39m: persistiendo Consumidor en: mongoDB
-2024-06-24 13:01:59 [32minfo[39m: Base de datos conectada a MongoDB
-2024-06-24 13:02:22 [32minfo[39m: Cargando configuracion:
-2024-06-24 13:02:22 [32minfo[39m: persistiendo Clientes en: mongoDB
-2024-06-24 13:02:22 [32minfo[39m: persistiendo User en: mongoDB
-2024-06-24 13:02:22 [32minfo[39m: persistiendo Tiendas en: mongoDB
-2024-06-24 13:02:22 [32minfo[39m: persistiendo Consumidor en: mongoDB
-2024-06-24 13:02:23 [32minfo[39m: Base de datos conectada a MongoDB
-2024-06-24 13:03:15 [32minfo[39m: Cargando configuracion:
-2024-06-24 13:03:16 [32minfo[39m: persistiendo Clientes en: mongoDB
-2024-06-24 13:03:16 [32minfo[39m: persistiendo User en: mongoDB
-2024-06-24 13:03:16 [32minfo[39m: persistiendo Tiendas en: mongoDB
-2024-06-24 13:03:16 [32minfo[39m: persistiendo Consumidor en: mongoDB
-2024-06-24 13:03:17 [32minfo[39m: Base de datos conectada a MongoDB
-2024-06-24 13:03:42 [32minfo[39m: Cargando configuracion:
-2024-06-24 13:03:43 [32minfo[39m: persistiendo Clientes en: mongoDB
-2024-06-24 13:03:43 [32minfo[39m: persistiendo User en: mongoDB
-2024-06-24 13:03:43 [32minfo[39m: persistiendo Tiendas en: mongoDB
-2024-06-24 13:03:43 [32minfo[39m: persistiendo Consumidor en: mongoDB
-2024-06-24 13:03:43 [32minfo[39m: Base de datos conectada a MongoDB
-2024-06-24 13:05:53 [32minfo[39m: Cargando configuracion:
-2024-06-24 13:05:54 [32minfo[39m: persistiendo Clientes en: mongoDB
-2024-06-24 13:05:54 [32minfo[39m: persistiendo User en: mongoDB
-2024-06-24 13:05:54 [32minfo[39m: persistiendo Tiendas en: mongoDB
-2024-06-24 13:05:54 [32minfo[39m: persistiendo Consumidor en: mongoDB
-2024-06-24 13:05:55 [32minfo[39m: Base de datos conectada a MongoDB
-2024-06-24 13:06:25 [32minfo[39m: Cargando configuracion:
-2024-06-24 13:06:26 [32minfo[39m: persistiendo Clientes en: mongoDB
-2024-06-24 13:06:26 [32minfo[39m: persistiendo User en: mongoDB
-2024-06-24 13:06:26 [32minfo[39m: persistiendo Tiendas en: mongoDB
-2024-06-24 13:06:26 [32minfo[39m: persistiendo Consumidor en: mongoDB
-2024-06-24 13:06:27 [32minfo[39m: Base de datos conectada a MongoDB
-2024-06-24 13:07:24 [32minfo[39m: Cargando configuracion:
-2024-06-24 13:07:25 [32minfo[39m: persistiendo Clientes en: mongoDB
-2024-06-24 13:07:25 [32minfo[39m: persistiendo User en: mongoDB
-2024-06-24 13:07:25 [32minfo[39m: persistiendo Tiendas en: mongoDB
-2024-06-24 13:07:25 [32minfo[39m: persistiendo Consumidor en: mongoDB
-2024-06-24 13:07:26 [32minfo[39m: Base de datos conectada a MongoDB
-2024-06-24 13:07:35 [32minfo[39m: Cargando configuracion:
-2024-06-24 13:07:37 [32minfo[39m: persistiendo Clientes en: mongoDB
-2024-06-24 13:07:37 [32minfo[39m: persistiendo User en: mongoDB
-2024-06-24 13:07:37 [32minfo[39m: persistiendo Tiendas en: mongoDB
-2024-06-24 13:07:37 [32minfo[39m: persistiendo Consumidor en: mongoDB
-2024-06-24 13:07:37 [32minfo[39m: Base de datos conectada a MongoDB
-2024-06-24 13:09:22 [32minfo[39m: Cargando configuracion:
-2024-06-24 13:09:22 [32minfo[39m: persistiendo Clientes en: mongoDB
-2024-06-24 13:09:22 [32minfo[39m: persistiendo User en: mongoDB
-2024-06-24 13:09:22 [32minfo[39m: persistiendo Tiendas en: mongoDB
-2024-06-24 13:09:22 [32minfo[39m: persistiendo Consumidor en: mongoDB
-2024-06-24 13:09:23 [32minfo[39m: Base de datos conectada a MongoDB
-2024-06-24 13:09:49 [32minfo[39m: Cargando configuracion:
-2024-06-24 13:09:50 [32minfo[39m: persistiendo Clientes en: mongoDB
-2024-06-24 13:09:50 [32minfo[39m: persistiendo User en: mongoDB
-2024-06-24 13:09:50 [32minfo[39m: persistiendo Tiendas en: mongoDB
-2024-06-24 13:09:50 [32minfo[39m: persistiendo Consumidor en: mongoDB
-2024-06-24 13:09:51 [32minfo[39m: Base de datos conectada a MongoDB
-2024-06-24 13:10:41 [32minfo[39m: Cargando configuracion:
-2024-06-24 13:10:42 [32minfo[39m: persistiendo Clientes en: mongoDB
-2024-06-24 13:10:42 [32minfo[39m: persistiendo User en: mongoDB
-2024-06-24 13:10:42 [32minfo[39m: persistiendo Tiendas en: mongoDB
-2024-06-24 13:10:42 [32minfo[39m: persistiendo Consumidor en: mongoDB
-2024-06-24 13:10:43 [32minfo[39m: Base de datos conectada a MongoDB
-2024-06-24 13:10:52 [32minfo[39m: Cargando configuracion:
-2024-06-24 13:10:52 [32minfo[39m: persistiendo Clientes en: mongoDB
-2024-06-24 13:10:52 [32minfo[39m: persistiendo User en: mongoDB
-2024-06-24 13:10:52 [32minfo[39m: persistiendo Tiendas en: mongoDB
-2024-06-24 13:10:52 [32minfo[39m: persistiendo Consumidor en: mongoDB
-2024-06-24 13:10:53 [32minfo[39m: Base de datos conectada a MongoDB
-2024-06-24 13:11:15 [32minfo[39m: Cargando configuracion:
-2024-06-24 13:11:15 [32minfo[39m: persistiendo Clientes en: mongoDB
-2024-06-24 13:11:15 [32minfo[39m: persistiendo User en: mongoDB
-2024-06-24 13:11:15 [32minfo[39m: persistiendo Tiendas en: mongoDB
-2024-06-24 13:11:15 [32minfo[39m: persistiendo Consumidor en: mongoDB
-2024-06-24 13:11:16 [32minfo[39m: Base de datos conectada a MongoDB
-2024-06-24 13:11:40 [32minfo[39m: Cargando configuracion:
-2024-06-24 13:11:41 [32minfo[39m: persistiendo Clientes en: mongoDB
-2024-06-24 13:11:41 [32minfo[39m: persistiendo User en: mongoDB
-2024-06-24 13:11:41 [32minfo[39m: persistiendo Tiendas en: mongoDB
-2024-06-24 13:11:41 [32minfo[39m: persistiendo Consumidor en: mongoDB
-2024-06-24 13:11:41 [32minfo[39m: Base de datos conectada a MongoDB
-2024-06-24 13:12:30 [32minfo[39m: Cargando configuracion:
-2024-06-24 13:12:31 [32minfo[39m: persistiendo Clientes en: mongoDB
-2024-06-24 13:12:31 [32minfo[39m: persistiendo User en: mongoDB
-2024-06-24 13:12:31 [32minfo[39m: persistiendo Tiendas en: mongoDB
-2024-06-24 13:12:31 [32minfo[39m: persistiendo Consumidor en: mongoDB
-2024-06-24 13:12:32 [32minfo[39m: Base de datos conectada a MongoDB
-2024-06-24 13:12:36 [32minfo[39m: Cargando configuracion:
-2024-06-24 13:12:36 [32minfo[39m: persistiendo Clientes en: mongoDB
-2024-06-24 13:12:36 [32minfo[39m: persistiendo User en: mongoDB
-2024-06-24 13:12:36 [32minfo[39m: persistiendo Tiendas en: mongoDB
-2024-06-24 13:12:36 [32minfo[39m: persistiendo Consumidor en: mongoDB
-2024-06-24 13:12:37 [32minfo[39m: Base de datos conectada a MongoDB
-2024-06-24 13:13:12 [32minfo[39m: Cargando configuracion:
-2024-06-24 13:13:13 [32minfo[39m: persistiendo Clientes en: mongoDB
-2024-06-24 13:13:13 [32minfo[39m: persistiendo User en: mongoDB
-2024-06-24 13:13:13 [32minfo[39m: persistiendo Tiendas en: mongoDB
-2024-06-24 13:13:13 [32minfo[39m: persistiendo Consumidor en: mongoDB
-2024-06-24 13:13:14 [32minfo[39m: Base de datos conectada a MongoDB
-2024-06-24 13:13:35 [32minfo[39m: Cargando configuracion:
-2024-06-24 13:13:37 [32minfo[39m: persistiendo Clientes en: mongoDB
-2024-06-24 13:13:37 [32minfo[39m: persistiendo User en: mongoDB
-2024-06-24 13:13:37 [32minfo[39m: persistiendo Tiendas en: mongoDB
-2024-06-24 13:13:37 [32minfo[39m: persistiendo Consumidor en: mongoDB
-2024-06-24 13:13:38 [32minfo[39m: Base de datos conectada a MongoDB
-2024-06-24 13:14:23 [32minfo[39m: Cargando configuracion:
-2024-06-24 13:14:24 [32minfo[39m: persistiendo Clientes en: mongoDB
-2024-06-24 13:14:24 [32minfo[39m: persistiendo User en: mongoDB
-2024-06-24 13:14:24 [32minfo[39m: persistiendo Tiendas en: mongoDB
-2024-06-24 13:14:24 [32minfo[39m: persistiendo Consumidor en: mongoDB
-2024-06-24 13:14:25 [32minfo[39m: Base de datos conectada a MongoDB
-2024-06-24 13:16:33 [32minfo[39m: Cargando configuracion:
-2024-06-24 13:16:34 [32minfo[39m: persistiendo Clientes en: mongoDB
-2024-06-24 13:16:34 [32minfo[39m: persistiendo User en: mongoDB
-2024-06-24 13:16:34 [32minfo[39m: persistiendo Tiendas en: mongoDB
-2024-06-24 13:16:34 [32minfo[39m: persistiendo Consumidor en: mongoDB
-2024-06-24 13:16:35 [32minfo[39m: Base de datos conectada a MongoDB
-2024-06-24 13:19:18 [32minfo[39m: Cargando configuracion:
-2024-06-24 13:19:19 [32minfo[39m: persistiendo Clientes en: mongoDB
-2024-06-24 13:19:19 [32minfo[39m: persistiendo User en: mongoDB
-2024-06-24 13:19:19 [32minfo[39m: persistiendo Tiendas en: mongoDB
-2024-06-24 13:19:19 [32minfo[39m: persistiendo Consumidor en: mongoDB
-2024-06-24 13:19:20 [32minfo[39m: Base de datos conectada a MongoDB
-2024-06-24 13:19:29 [32minfo[39m: Cargando configuracion:
-2024-06-24 13:19:30 [32minfo[39m: persistiendo Clientes en: mongoDB
-2024-06-24 13:19:30 [32minfo[39m: persistiendo User en: mongoDB
-2024-06-24 13:19:30 [32minfo[39m: persistiendo Tiendas en: mongoDB
-2024-06-24 13:19:30 [32minfo[39m: persistiendo Consumidor en: mongoDB
-2024-06-24 13:19:31 [32minfo[39m: Base de datos conectada a MongoDB
-2024-06-24 13:22:49 [32minfo[39m: Cargando configuracion:
-2024-06-24 13:22:50 [32minfo[39m: persistiendo Clientes en: mongoDB
-2024-06-24 13:22:50 [32minfo[39m: persistiendo User en: mongoDB
-2024-06-24 13:22:50 [32minfo[39m: persistiendo Tiendas en: mongoDB
-2024-06-24 13:22:50 [32minfo[39m: persistiendo Consumidor en: mongoDB
-2024-06-24 13:22:51 [32minfo[39m: Base de datos conectada a MongoDB
-2024-06-24 13:24:01 [32minfo[39m: Cargando configuracion:
-2024-06-24 13:24:02 [32minfo[39m: persistiendo Clientes en: mongoDB
-2024-06-24 13:24:02 [32minfo[39m: persistiendo User en: mongoDB
-2024-06-24 13:24:02 [32minfo[39m: persistiendo Tiendas en: mongoDB
-2024-06-24 13:24:02 [32minfo[39m: persistiendo Consumidor en: mongoDB
-2024-06-24 13:24:03 [32minfo[39m: Base de datos conectada a MongoDB
-2024-06-24 13:25:35 [32minfo[39m: Cargando configuracion:
-2024-06-24 13:25:36 [32minfo[39m: persistiendo Clientes en: mongoDB
-2024-06-24 13:25:36 [32minfo[39m: persistiendo User en: mongoDB
-2024-06-24 13:25:36 [32minfo[39m: persistiendo Tiendas en: mongoDB
-2024-06-24 13:25:36 [32minfo[39m: persistiendo Consumidor en: mongoDB
-2024-06-24 13:25:37 [32minfo[39m: Base de datos conectada a MongoDB
-2024-06-24 13:25:59 [32minfo[39m: Cargando configuracion:
-2024-06-24 13:26:00 [32minfo[39m: persistiendo Clientes en: mongoDB
-2024-06-24 13:26:00 [32minfo[39m: persistiendo User en: mongoDB
-2024-06-24 13:26:00 [32minfo[39m: persistiendo Tiendas en: mongoDB
-2024-06-24 13:26:00 [32minfo[39m: persistiendo Consumidor en: mongoDB
-2024-06-24 13:26:00 [32minfo[39m: Base de datos conectada a MongoDB
-2024-06-24 13:26:15 [32minfo[39m: Cargando configuracion:
-2024-06-24 13:26:15 [32minfo[39m: persistiendo Clientes en: mongoDB
-2024-06-24 13:26:15 [32minfo[39m: persistiendo User en: mongoDB
-2024-06-24 13:26:15 [32minfo[39m: persistiendo Tiendas en: mongoDB
-2024-06-24 13:26:15 [32minfo[39m: persistiendo Consumidor en: mongoDB
-2024-06-24 13:26:16 [32minfo[39m: Base de datos conectada a MongoDB
-2024-06-24 13:27:39 [32minfo[39m: Cargando configuracion:
-2024-06-24 13:27:40 [32minfo[39m: persistiendo Clientes en: mongoDB
-2024-06-24 13:27:40 [32minfo[39m: persistiendo User en: mongoDB
-2024-06-24 13:27:40 [32minfo[39m: persistiendo Tiendas en: mongoDB
-2024-06-24 13:27:40 [32minfo[39m: persistiendo Consumidor en: mongoDB
-2024-06-24 13:27:41 [32minfo[39m: Base de datos conectada a MongoDB
-2024-06-24 13:28:00 [32minfo[39m: Cargando configuracion:
-2024-06-24 13:28:01 [32minfo[39m: persistiendo Clientes en: mongoDB
-2024-06-24 13:28:01 [32minfo[39m: persistiendo User en: mongoDB
-2024-06-24 13:28:01 [32minfo[39m: persistiendo Tiendas en: mongoDB
-2024-06-24 13:28:01 [32minfo[39m: persistiendo Consumidor en: mongoDB
-2024-06-24 13:28:02 [32minfo[39m: Base de datos conectada a MongoDB
-2024-06-24 13:28:27 [32minfo[39m: Cargando configuracion:
-2024-06-24 13:28:28 [32minfo[39m: persistiendo Clientes en: mongoDB
-2024-06-24 13:28:28 [32minfo[39m: persistiendo User en: mongoDB
-2024-06-24 13:28:28 [32minfo[39m: persistiendo Tiendas en: mongoDB
-2024-06-24 13:28:28 [32minfo[39m: persistiendo Consumidor en: mongoDB
-2024-06-24 13:28:29 [32minfo[39m: Base de datos conectada a MongoDB
-2024-06-24 13:28:33 [32minfo[39m: Cargando configuracion:
-2024-06-24 13:28:33 [32minfo[39m: persistiendo Clientes en: mongoDB
-2024-06-24 13:28:33 [32minfo[39m: persistiendo User en: mongoDB
-2024-06-24 13:28:33 [32minfo[39m: persistiendo Tiendas en: mongoDB
-2024-06-24 13:28:33 [32minfo[39m: persistiendo Consumidor en: mongoDB
-2024-06-24 13:28:34 [32minfo[39m: Base de datos conectada a MongoDB
-2024-06-24 13:29:18 [32minfo[39m: Cargando configuracion:
-2024-06-24 13:29:19 [32minfo[39m: persistiendo Clientes en: mongoDB
-2024-06-24 13:29:19 [32minfo[39m: persistiendo User en: mongoDB
-2024-06-24 13:29:19 [32minfo[39m: persistiendo Tiendas en: mongoDB
-2024-06-24 13:29:19 [32minfo[39m: persistiendo Consumidor en: mongoDB
-2024-06-24 13:29:20 [32minfo[39m: Base de datos conectada a MongoDB
-2024-06-24 13:30:10 [32minfo[39m: Cargando configuracion:
-2024-06-24 13:30:11 [32minfo[39m: persistiendo Clientes en: mongoDB
-2024-06-24 13:30:11 [32minfo[39m: persistiendo User en: mongoDB
-2024-06-24 13:30:11 [32minfo[39m: persistiendo Tiendas en: mongoDB
-2024-06-24 13:30:11 [32minfo[39m: persistiendo Consumidor en: mongoDB
-2024-06-24 13:30:12 [32minfo[39m: Base de datos conectada a MongoDB
-2024-06-24 13:30:40 [32minfo[39m: Cargando configuracion:
-2024-06-24 13:30:41 [32minfo[39m: persistiendo Clientes en: mongoDB
-2024-06-24 13:30:41 [32minfo[39m: persistiendo User en: mongoDB
-2024-06-24 13:30:41 [32minfo[39m: persistiendo Tiendas en: mongoDB
-2024-06-24 13:30:41 [32minfo[39m: persistiendo Consumidor en: mongoDB
-2024-06-24 13:30:42 [32minfo[39m: Base de datos conectada a MongoDB
-2024-06-24 13:31:14 [32minfo[39m: Cargando configuracion:
-2024-06-24 13:31:15 [32minfo[39m: persistiendo Clientes en: mongoDB
-2024-06-24 13:31:15 [32minfo[39m: persistiendo User en: mongoDB
-2024-06-24 13:31:15 [32minfo[39m: persistiendo Tiendas en: mongoDB
-2024-06-24 13:31:15 [32minfo[39m: persistiendo Consumidor en: mongoDB
-2024-06-24 13:31:16 [32minfo[39m: Base de datos conectada a MongoDB
-2024-06-24 13:31:31 [32minfo[39m: Cargando configuracion:
-2024-06-24 13:31:31 [32minfo[39m: persistiendo Clientes en: mongoDB
-2024-06-24 13:31:31 [32minfo[39m: persistiendo User en: mongoDB
-2024-06-24 13:31:31 [32minfo[39m: persistiendo Tiendas en: mongoDB
-2024-06-24 13:31:31 [32minfo[39m: persistiendo Consumidor en: mongoDB
-2024-06-24 13:31:32 [32minfo[39m: Base de datos conectada a MongoDB
-2024-06-24 13:31:50 [32minfo[39m: Cargando configuracion:
-2024-06-24 13:31:51 [32minfo[39m: persistiendo Clientes en: mongoDB
-2024-06-24 13:31:51 [32minfo[39m: persistiendo User en: mongoDB
-2024-06-24 13:31:51 [32minfo[39m: persistiendo Tiendas en: mongoDB
-2024-06-24 13:31:51 [32minfo[39m: persistiendo Consumidor en: mongoDB
-2024-06-24 13:31:52 [32minfo[39m: Base de datos conectada a MongoDB
-2024-06-24 13:32:05 [32minfo[39m: Cargando configuracion:
-2024-06-24 13:32:06 [32minfo[39m: persistiendo Clientes en: mongoDB
-2024-06-24 13:32:06 [32minfo[39m: persistiendo User en: mongoDB
-2024-06-24 13:32:06 [32minfo[39m: persistiendo Tiendas en: mongoDB
-2024-06-24 13:32:06 [32minfo[39m: persistiendo Consumidor en: mongoDB
-2024-06-24 13:32:07 [32minfo[39m: Base de datos conectada a MongoDB
-2024-06-26 15:39:58 [32minfo[39m: Cargando configuracion:
-2024-06-26 15:40:24 [32minfo[39m: Cargando configuracion:
-2024-07-01 15:13:47 [32minfo[39m: Cargando configuracion:
-2024-07-01 15:14:09 [32minfo[39m: Cargando configuracion:
-2024-07-01 15:14:09 [32minfo[39m: persistiendo Clientes en: mongoDB
-2024-07-01 15:14:10 [32minfo[39m: persistiendo User en: mongoDB
-2024-07-01 15:14:10 [32minfo[39m: persistiendo Tiendas en: mongoDB
-2024-07-01 15:25:41 [32minfo[39m: Cargando configuracion:
-2024-07-01 15:32:21 [32minfo[39m: Cargando configuracion:
-2024-07-01 15:32:21 [32minfo[39m: persistiendo Clientes en: mongoDB
-2024-07-01 15:32:21 [32minfo[39m: persistiendo User en: mongoDB
-2024-07-01 15:32:21 [32minfo[39m: persistiendo Tiendas en: mongoDB
-2024-07-01 15:32:25 [32minfo[39m: Base de datos conectada a MongoDB
-2024-07-01 15:32:50 [32minfo[39m: Cargando configuracion:
-2024-07-01 15:32:51 [32minfo[39m: persistiendo Clientes en: mongoDB
-2024-07-01 15:32:51 [32minfo[39m: persistiendo User en: mongoDB
-2024-07-01 15:32:51 [32minfo[39m: persistiendo Tiendas en: mongoDB
-2024-07-01 15:32:51 [32minfo[39m: Base de datos conectada a MongoDB
-2024-07-01 15:33:01 [32minfo[39m: Cargando configuracion:
-2024-07-01 15:33:01 [32minfo[39m: persistiendo Clientes en: mongoDB
-2024-07-01 15:33:01 [32minfo[39m: persistiendo User en: mongoDB
-2024-07-01 15:33:01 [32minfo[39m: persistiendo Tiendas en: mongoDB
-2024-07-01 15:33:02 [32minfo[39m: Base de datos conectada a MongoDB
-2024-07-03 18:03:24 [32minfo[39m: Cargando configuracion:
-2024-07-03 18:03:26 [32minfo[39m: persistiendo Clientes en: mongoDB
-2024-07-03 18:03:26 [32minfo[39m: persistiendo User en: mongoDB
-2024-07-03 18:03:27 [32minfo[39m: Base de datos conectada a MongoDB
-2024-07-03 18:03:59 [32minfo[39m: Cargando configuracion:
-2024-07-03 18:04:00 [32minfo[39m: persistiendo Clientes en: mongoDB
-2024-07-03 18:04:00 [32minfo[39m: persistiendo User en: mongoDB
-2024-07-03 18:04:00 [32minfo[39m: Base de datos conectada a MongoDB
-2024-07-03 18:06:30 [31merror[39m: ValidationError: clientes validation failed: nacimiento: Cast to date failed for value "23/07/88" (type string) at path "nacimiento", password: Path `password` is required.
-    at Document.invalidate (C:\Users\FerM\Desktop\New Api\node_modules\mongoose\lib\document.js:3289:32)
-    at model.$set (C:\Users\FerM\Desktop\New Api\node_modules\mongoose\lib\document.js:1463:12)
-    at model.$set (C:\Users\FerM\Desktop\New Api\node_modules\mongoose\lib\document.js:1117:16)
-    at model.Document (C:\Users\FerM\Desktop\New Api\node_modules\mongoose\lib\document.js:166:12)
-    at model.Model (C:\Users\FerM\Desktop\New Api\node_modules\mongoose\lib\model.js:132:12)
-    at new model (C:\Users\FerM\Desktop\New Api\node_modules\mongoose\lib\model.js:4870:15)
-    at C:\Users\FerM\Desktop\New Api\node_modules\mongoose\lib\model.js:2989:20
-    at Array.map (<anonymous>)
-    at Function.create (C:\Users\FerM\Desktop\New Api\node_modules\mongoose\lib\model.js:2977:34)
-    at ClientesDaoMongoose.create (file:///C:/Users/FerM/Desktop/New%20Api/src/models/clientes/mongoose/clientes.dao.mongoose.js:16:50)
-2024-07-03 18:08:00 [31merror[39m: ValidationError: clientes validation failed: nacimiento: Cast to date failed for value "23/07/88" (type string) at path "nacimiento"
-    at Document.invalidate (C:\Users\FerM\Desktop\New Api\node_modules\mongoose\lib\document.js:3289:32)
-    at model.$set (C:\Users\FerM\Desktop\New Api\node_modules\mongoose\lib\document.js:1463:12)
-    at model.$set (C:\Users\FerM\Desktop\New Api\node_modules\mongoose\lib\document.js:1117:16)
-    at model.Document (C:\Users\FerM\Desktop\New Api\node_modules\mongoose\lib\document.js:166:12)
-    at model.Model (C:\Users\FerM\Desktop\New Api\node_modules\mongoose\lib\model.js:132:12)
-    at new model (C:\Users\FerM\Desktop\New Api\node_modules\mongoose\lib\model.js:4870:15)
-    at C:\Users\FerM\Desktop\New Api\node_modules\mongoose\lib\model.js:2989:20
-    at Array.map (<anonymous>)
-    at Function.create (C:\Users\FerM\Desktop\New Api\node_modules\mongoose\lib\model.js:2977:34)
-    at ClientesDaoMongoose.create (file:///C:/Users/FerM/Desktop/New%20Api/src/models/clientes/mongoose/clientes.dao.mongoose.js:16:50)
-2024-07-03 18:08:28 [32minfo[39m: Cargando configuracion:
-2024-07-03 18:08:28 [32minfo[39m: persistiendo Clientes en: mongoDB
-2024-07-03 18:08:28 [32minfo[39m: persistiendo User en: mongoDB
-2024-07-03 18:08:28 [32minfo[39m: Base de datos conectada a MongoDB
-2024-07-03 18:08:42 [32minfo[39m: Cargando configuracion:
-2024-07-03 18:08:42 [32minfo[39m: persistiendo Clientes en: mongoDB
-2024-07-03 18:08:42 [32minfo[39m: persistiendo User en: mongoDB
-2024-07-03 18:08:42 [32minfo[39m: Base de datos conectada a MongoDB
-2024-07-03 18:08:51 [31merror[39m: ValidationError: clientes validation failed: nacimiento: Cast to date failed for value "23/07/88" (type string) at path "nacimiento"
-    at Document.invalidate (C:\Users\FerM\Desktop\New Api\node_modules\mongoose\lib\document.js:3289:32)
-    at model.$set (C:\Users\FerM\Desktop\New Api\node_modules\mongoose\lib\document.js:1463:12)
-    at model.$set (C:\Users\FerM\Desktop\New Api\node_modules\mongoose\lib\document.js:1117:16)
-    at model.Document (C:\Users\FerM\Desktop\New Api\node_modules\mongoose\lib\document.js:166:12)
-    at model.Model (C:\Users\FerM\Desktop\New Api\node_modules\mongoose\lib\model.js:132:12)
-    at new model (C:\Users\FerM\Desktop\New Api\node_modules\mongoose\lib\model.js:4870:15)
-    at C:\Users\FerM\Desktop\New Api\node_modules\mongoose\lib\model.js:2989:20
-    at Array.map (<anonymous>)
-    at Function.create (C:\Users\FerM\Desktop\New Api\node_modules\mongoose\lib\model.js:2977:34)
-    at ClientesDaoMongoose.create (file:///C:/Users/FerM/Desktop/New%20Api/src/models/clientes/mongoose/clientes.dao.mongoose.js:16:50)
-2024-07-03 18:10:31 [32minfo[39m: Cargando configuracion:
-2024-07-03 18:10:31 [32minfo[39m: persistiendo Clientes en: mongoDB
-2024-07-03 18:10:31 [32minfo[39m: persistiendo User en: mongoDB
-2024-07-03 18:10:31 [32minfo[39m: Base de datos conectada a MongoDB
-2024-07-03 18:10:33 [32minfo[39m: {"nombre":"Fer","apellido":"Jhovanob","dni":12345678,"telefono":1144114411,"mail":"jhovanobTurroMantico@gmail.com","password":"Feer1688","domicilio":"en mi casa","nacimiento":"1988-07-23T00:00:00.000Z","eCivil":"binario","inventario":[],"_id":"6685be49127bda23737f2aa5","id":"0ca25461-1622-4818-8c57-c7cf0fd6a331"}
-2024-07-03 18:12:00 [32minfo[39m: [{"_id":"6685be49127bda23737f2aa5","nombre":"Fer","apellido":"Jhovanob","dni":12345678,"telefono":1144114411,"mail":"jhovanobTurroMantico@gmail.com","password":"Feer1688","domicilio":"en mi casa","nacimiento":"1988-07-23T00:00:00.000Z","eCivil":"binario","inventario":[],"id":"0ca25461-1622-4818-8c57-c7cf0fd6a331"}]
-2024-07-03 18:12:33 [31merror[39m: CastError: Cast to ObjectId failed for value "0ca25461-1622-4818-8c57-c7cf0fd6a331" (type string) at path "_id" for model "clientes"
-    at SchemaObjectId.cast (C:\Users\FerM\Desktop\New Api\node_modules\mongoose\lib\schema\objectId.js:250:11)
-    at SchemaType.applySetters (C:\Users\FerM\Desktop\New Api\node_modules\mongoose\lib\schemaType.js:1236:12)
-    at SchemaType.castForQuery (C:\Users\FerM\Desktop\New Api\node_modules\mongoose\lib\schemaType.js:1653:17)
-    at cast (C:\Users\FerM\Desktop\New Api\node_modules\mongoose\lib\cast.js:375:32)
-    at Query.cast (C:\Users\FerM\Desktop\New Api\node_modules\mongoose\lib\query.js:4798:12)
-    at Query._castConditions (C:\Users\FerM\Desktop\New Api\node_modules\mongoose\lib\query.js:2206:10)
-    at model.Query._findOne (C:\Users\FerM\Desktop\New Api\node_modules\mongoose\lib\query.js:2526:8)
-    at model.Query.exec (C:\Users\FerM\Desktop\New Api\node_modules\mongoose\lib\query.js:4342:80)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async ClientesDaoMongoose.readById (file:///C:/Users/FerM/Desktop/New%20Api/src/models/clientes/mongoose/clientes.dao.mongoose.js:55:25)
-2024-07-03 18:14:21 [32minfo[39m: Cargando configuracion:
-2024-07-03 18:14:22 [32minfo[39m: persistiendo Clientes en: mongoDB
-2024-07-03 18:14:22 [32minfo[39m: persistiendo User en: mongoDB
-2024-07-03 18:14:22 [32minfo[39m: Base de datos conectada a MongoDB
-2024-07-03 18:14:28 [32minfo[39m: Cargando configuracion:
-2024-07-03 18:14:29 [32minfo[39m: persistiendo Clientes en: mongoDB
-2024-07-03 18:14:29 [32minfo[39m: persistiendo User en: mongoDB
-2024-07-03 18:14:29 [32minfo[39m: Base de datos conectada a MongoDB
-2024-07-03 18:14:58 [32minfo[39m: {"nombre":"Fer","apellido":"Jhovanob","dni":12345678,"telefono":1144114411,"mail":"jhovanobTurroMantico@gmail.com","password":"Feer1688","domicilio":"en mi casa","nacimiento":"1988-07-23T00:00:00.000Z","eCivil":"binario","inventario":[],"_id":"6685bf52a6d8b52fe55c0ac8"}
-2024-07-03 18:15:16 [32minfo[39m: {"_id":"6685bf52a6d8b52fe55c0ac8","nombre":"Fer","apellido":"Jhovanob","dni":12345678,"telefono":1144114411,"mail":"jhovanobTurroMantico@gmail.com","password":"Feer1688","domicilio":"en mi casa","nacimiento":"1988-07-23T00:00:00.000Z","eCivil":"binario","inventario":[]}
-2024-07-03 18:15:56 [32minfo[39m: Cargando configuracion:
-2024-07-03 18:15:57 [32minfo[39m: persistiendo Clientes en: mongoDB
-2024-07-03 18:15:57 [32minfo[39m: persistiendo User en: mongoDB
-2024-07-03 18:15:57 [32minfo[39m: Base de datos conectada a MongoDB
-2024-07-03 18:17:33 [32minfo[39m: Cargando configuracion:
-2024-07-03 18:17:35 [32minfo[39m: persistiendo Clientes en: mongoDB
-2024-07-03 18:17:35 [32minfo[39m: persistiendo User en: mongoDB
-2024-07-03 18:17:35 [32minfo[39m: Base de datos conectada a MongoDB
-2024-07-03 18:17:43 [32minfo[39m: Cargando configuracion:
-2024-07-03 18:17:44 [32minfo[39m: persistiendo Clientes en: mongoDB
-2024-07-03 18:17:44 [32minfo[39m: persistiendo User en: mongoDB
-2024-07-03 18:17:44 [32minfo[39m: Base de datos conectada a MongoDB
-2024-07-03 18:18:12 [32minfo[39m: Cargando configuracion:
-2024-07-03 18:18:13 [32minfo[39m: persistiendo Clientes en: mongoDB
-2024-07-03 18:18:13 [32minfo[39m: persistiendo User en: mongoDB
-2024-07-03 18:18:13 [32minfo[39m: Base de datos conectada a MongoDB
-2024-07-03 18:18:25 [32minfo[39m: Cargando configuracion:
-2024-07-03 18:18:26 [32minfo[39m: persistiendo Clientes en: mongoDB
-2024-07-03 18:18:26 [32minfo[39m: persistiendo User en: mongoDB
-2024-07-03 18:18:26 [32minfo[39m: Base de datos conectada a MongoDB
+2024-07-08 21:43:20 [32minfo[39m: "Cliente Creado:"
+2024-07-08 21:43:20 [32minfo[39m: {"nombre":"Fera","apellido":"Mendeza","dni":33398661,"telefono":44504028,"mail":"f1er@gmail.com","password":"$2b$10$9.Y7La2iPOhgmV9YFgaMSepX/zM9z8TvedXuVygCxz.9URDEKng5m","domicilio":"laslasalsalsas 111","cuit":"30-33392668-0","ingreso":"2024-07-09T00:43:20.820Z","tiendas":[],"inventario":[],"_id":"668c87a8570624315b982a31","id":"ec1405ad-c4ba-42a3-b5dd-d2c92b35bb98"}
+2024-07-08 21:44:09 [32minfo[39m: "Cliente Creado:"
+2024-07-08 21:44:09 [32minfo[39m: {"nombre":"Fer","apellido":"Mendez","dni":33398668,"telefono":44504058,"mail":"f1erq@gmail.com","password":"$2b$10$7BjUDjxjIaulQ4A/CWOGrugZ3nbn4knCJ61s2RUhdy4CD8gzPGQAa","domicilio":"laslasalsalsas 121","cuit":"30-33312668-0","ingreso":"2024-07-09T00:44:09.199Z","tiendas":[],"inventario":[],"_id":"668c87d9570624315b982a33","id":"a217adb8-278d-4e0f-a25f-476470472f8f"}
+2024-07-08 21:45:52 [32minfo[39m: Cargando configuracion:
+2024-07-08 21:45:52 [32minfo[39m: persistiendo Clientes en: mongoDB
+2024-07-08 21:45:52 [32minfo[39m: Base de datos conectada a MongoDB
+2024-07-08 21:49:16 [32minfo[39m: Cargando configuracion:
+2024-07-08 21:49:17 [32minfo[39m: persistiendo Clientes en: mongoDB
+2024-07-08 21:49:17 [32minfo[39m: Base de datos conectada a MongoDB

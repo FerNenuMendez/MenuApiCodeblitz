@@ -1,3 +1,5 @@
+import { hashSync, compareSync, genSaltSync } from "bcrypt";
+
 export function matches(query) {
     return function (elem) {
         for (const key in query) {
@@ -15,4 +17,14 @@ export function toPOJO(obj) {
 
 export async function capitalize(param) {
     return param.toUpperCase();
+}
+
+export function hashear(frase) {
+    if (!frase) throw new Error('cannot has invalid parameter:' + frase)
+    return hashSync(frase, genSaltSync(10))
+}
+
+export function hasheadaSonIguales(recibida, almacenada) {
+    if (!recibida) throw new Error('cannot hash invalid parameter:' + recibida)
+    return compareSync(recibida, almacenada)
 }

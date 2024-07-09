@@ -52,7 +52,7 @@ class ClientesDaoMongoose {
     }
 
     async readById(id) {
-        const cliente = await this.ClientesModel.findById(id).lean();
+        const cliente = await this.ClientesModel.findOne(id).lean();
         if (!cliente) {
             throw new Error('Cliente not found');
         }
