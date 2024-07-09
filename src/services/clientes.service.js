@@ -50,7 +50,7 @@ class ClientesService {
     async buscar(parametro) {
         const clientes = await this.buscarTodos()
         const clientesDB = clientes.payload
-        const clienteBuscado = buscarPorMail(parametro)
+        const clienteBuscado = buscarPorMail(clientesDB, parametro)
         return clienteBuscado
     }
 
