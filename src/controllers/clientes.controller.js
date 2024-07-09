@@ -26,6 +26,20 @@ export async function getControllerID(req, res, next) {
         next(error)
     }
 }
+
+export async function getControllerMail(req, res, next) {
+    try {
+        const { mail } = req.params;
+        const cliente = await clientesService.buscar(mail)
+        logger.info(JSON.stringify("Cliente Encontrado:"))
+        logger.info(JSON.stringify(cliente))
+        res.result(cliente)
+    } catch (error) {
+        logger.error(error)
+        next(error)
+    }
+}
+
 export async function postController(req, res, next) {
     try {
         const data = req.body;
