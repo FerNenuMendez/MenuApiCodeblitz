@@ -1,5 +1,5 @@
 import { getDaoClientes } from '../models/clientes/clientes.dao.js'
-import { hashear } from '../models/utils/utils.js'
+import { hashear, buscarPorMail } from '../models/utils/utils.js'
 
 import logger from '../middlewares/logger.js'
 
@@ -48,13 +48,10 @@ class ClientesService {
     }
 
     async buscar(parametro) {
-        const query = {};
-        for (const key in parametro) {
-            if (parametro[key] !== undefined) {
-                query[key] = parametro[key];
-            }
-        }
-        return await clientesDao.readMany(query);
+        const clientes = await this.buscarTodos()
+        const clientesDB = clientes.payload
+        const clienteBuscado = buscarPorMail(parametro)
+        return clienteBuscado
     }
 
     async crearUsuario(datosUsuario, id) {

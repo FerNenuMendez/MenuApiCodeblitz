@@ -28,3 +28,12 @@ export function hasheadaSonIguales(recibida, almacenada) {
     if (!recibida) throw new Error('cannot hash invalid parameter:' + recibida)
     return compareSync(recibida, almacenada)
 }
+
+export function buscarPorMail(array, mail) {
+    for (let i = 0; i < array.length; i++) {
+        if (array[i].mail === mail) {
+            return array[i];
+        }
+    }
+    return null; // Retorna null si no se encuentra el objeto
+}
