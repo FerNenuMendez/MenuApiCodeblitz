@@ -49,7 +49,6 @@ class ClientesService {
 
     async buscar(parametro) {
         const clientes = await this.buscarTodos()
-        console.log(clientes)
         const clientesDB = clientes
         const clienteBuscado = buscarPorMail(clientesDB, parametro)
         if (clienteBuscado === undefined) {
