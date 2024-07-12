@@ -11,7 +11,7 @@ if (MODO_EJECUCION === "online") {
     //SINGLETON
     if (!daoClientes) {
         daoClientes = new ClientesDaoMongoose
-        logger.info('persistiendo Clientes en: mongoDB')
+        logger.info('persistiendo Clientes en: MongoDB')
     }
 } else {
     daoClientes = new ClientesDaoFiles(RUTA_CLIENTES_JSON)
