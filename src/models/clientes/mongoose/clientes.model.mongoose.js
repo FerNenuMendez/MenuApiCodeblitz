@@ -16,6 +16,8 @@ export const clientesSchema = new Schema({
     lastLogin: { type: Date },
     nivel: { type: String },
     aux: { type: String },
+    resetPasswordToken: { type: String },
+    resetPasswordExpires: { type: String },
     tiendas: [{}],
     inventario: [{}]
 }, {

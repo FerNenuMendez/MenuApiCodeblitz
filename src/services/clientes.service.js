@@ -15,30 +15,6 @@ class ClientesService {
         return await clientesDao.create(data)
     }
 
-    // async agregarAlInventario(id, data) {
-    //     try {
-    //         logger.info(`Buscando cliente con id: ${id}`);
-    //         const cliente = await this.buscarID(id);
-    //         if (!cliente) {
-    //             logger.error(`Cliente no encontrado con id: ${id}`);
-    //             throw new Error('Cliente no encontrado');
-    //         }
-    //         logger.info(`Cliente encontrado: ${JSON.stringify(cliente)}`);
-
-    //         cliente.inventario.push(data);
-    //         logger.info(`Inventario después de agregar nuevo ítem: ${JSON.stringify(cliente.inventario)}`);
-
-    //         // Usar el campo `id` para la actualización
-    //         const clienteActualizado = await clientesDao.updateOne({ id: id }, { inventario: cliente.inventario });
-    //         logger.info(`Cliente actualizado: ${JSON.stringify(clienteActualizado)}`);
-
-    //         return clienteActualizado;
-    //     } catch (error) {
-    //         logger.error(`Error en agregarAlInventario: ${error.message}`);
-    //         throw error;
-    //     }
-    // }
-
     async buscarTodos() {
         return await clientesDao.readAll();
     }
@@ -62,23 +38,6 @@ class ClientesService {
         const clienteActualizado = await clientesDao.updateOne({ id: `${id}` }, { _userID: nuevoUsuario.id });
         return clienteActualizado;
     }
-
-    // async crearTienda(id, datosTienda) {
-    //     const cliente = await clientesDao.readOne({ id: `${id}`  });
-    //     if (!cliente) {
-    //         logger.error('Cliente no encontrado')
-    //         throw new Error('Cliente no encontrado');
-    //     }
-    //     const nuevaTienda = await tiendasDao.create(datosTienda);
-    //     const usuario = await userDao.readOne({ id: cliente.userID });
-    //     if (!usuario) {
-    //         logger.error('Usuario no encontrado')
-    //         throw new Error('Usuario no encontrado');
-    //     }
-    //     usuario.tiendas.push({ tiendaID: nuevaTienda.id });
-    //     await userDao.updateOne({ id: usuario.id }, { tiendas: usuario.tiendas });
-    //     return nuevaTienda;
-    // }
 
     async darDeBaja(id) {
         const cliente = await clientesDao.readOne({ id: `${id}` });

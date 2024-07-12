@@ -53,20 +53,20 @@ export async function postController(req, res, next) {
     }
 }
 
-export async function inventarioPatchController(req, res, next) {
-    try {
-        const { clienteId } = req.params;
-        const inventarioData = req.body;
-        logger.info(`Añadiendo al inventario del cliente con id: ${clienteId}`);
-        const clienteActualizado = await clientesService.agregarAlInventario(clienteId, inventarioData);
-        logger.info(JSON.stringify("Cliente Actualizado"));
-        logger.info(JSON.stringify(clienteActualizado));
-        res.result(clienteActualizado);
-    } catch (error) {
-        logger.error(error);
-        next(error);
-    }
-}
+// export async function inventarioPatchController(req, res, next) {
+//     try {
+//         const { clienteId } = req.params;
+//         const inventarioData = req.body;
+//         logger.info(`Añadiendo al inventario del cliente con id: ${clienteId}`);
+//         const clienteActualizado = await clientesService.agregarAlInventario(clienteId, inventarioData);
+//         logger.info(JSON.stringify("Cliente Actualizado"));
+//         logger.info(JSON.stringify(clienteActualizado));
+//         res.result(clienteActualizado);
+//     } catch (error) {
+//         logger.error(error);
+//         next(error);
+//     }
+// }
 
 export async function deleteController(req, res, next) {
     const { id } = req.params;
