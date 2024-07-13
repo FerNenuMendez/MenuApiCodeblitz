@@ -31,7 +31,7 @@ export async function getControllerMail(req, res, next) {
     try {
         const { mail } = req.params;
         const cliente = await clientesService.buscar(mail)
-        logger.info(JSON.stringify("Cliente Encontrado:"))
+        logger.info("Cliente Encontrado:")
         logger.info(JSON.stringify(cliente))
         res.result(cliente)
     } catch (error) {
@@ -44,7 +44,20 @@ export async function postController(req, res, next) {
     try {
         const data = req.body;
         const cliente = await clientesService.registrar(data);
-        logger.info(JSON.stringify("Cliente Creado:"))
+        logger.info("Cliente Creado:")
+        logger.info(JSON.stringify(cliente))
+        res.created(cliente)
+    } catch (error) {
+        logger.error(error)
+        next(error)
+    }
+}
+
+export async function postClienteTiendaController(req, res, next) {
+    try {
+        const { id } = req.params
+        const { data } = req.body
+        const cliente = await clientesService.agregarTienda(id, data)
         logger.info(JSON.stringify(cliente))
         res.created(cliente)
     } catch (error) {

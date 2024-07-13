@@ -1,36 +1,53 @@
 import { getDaoClientes } from '../models/clientes/clientes.dao.js'
+import { getDaoTienda } from '../models/tiendas/tienda.dao.js'
 import { hashear, buscarPorMail } from '../models/utils/utils.js'
-
 import logger from '../middlewares/logger.js'
 
 const clientesDao = await getDaoClientes()
-
+const tiendasDao = await getDaoTienda()
 
 
 class ClientesService {
+    async agregarTienda(id, data) {
+        try {
+            const nuevaTienda = await tiendasDao.create(data)
+            logger.info('Tienda creada:', nuevaTienda)
 
-    async registrar(data) {
-        data.ingreso = new Date()
-        data.password = hashear(data.password)
-        return await clientesDao.create(data)
+            const cliente = await clientesDao.readById(id)
+            if (!cliente) {
+                logger.error('Cliente no encontrado')
+                throw new Error('Cliente no encontrado')
+            }
+
+            if (!cliente.tiendas) {
+                cliente.tiendas = [];
+            }
+            cliente.tiendas.push(nuevaTienda._id);
+
+            await clientesDao.updateOne({ id: `${id}` }, { tiendas: cliente.tiendas });
+            return nuevaTienda;
+        } catch (error) {
+            logger.error('Error al agregar tienda:', error);
+            throw new Error('Error al agregar tienda');
+        }
     }
 
-    async buscarTodos() {
-        return await clientesDao.readAll();
+    async buscar(mail) {
+        const clientes = await this.buscarTodos()
+        const clientesDB = clientes
+        const clienteBuscado = buscarPorMail(clientesDB, mail)
+        if (clienteBuscado === undefined) {
+            logger.error('Cliente Undefined')
+        }
+        return clienteBuscado
     }
 
     async buscarID(id) {
         return await clientesDao.readById(id);
     }
 
-    async buscar(parametro) {
-        const clientes = await this.buscarTodos()
-        const clientesDB = clientes
-        const clienteBuscado = buscarPorMail(clientesDB, parametro)
-        if (clienteBuscado === undefined) {
-            logger.error('Cliente Undefined')
-        }
-        return clienteBuscado
+    async buscarTodos() {
+        return await clientesDao.readAll();
     }
 
     async crearUsuario(datosUsuario, id) {
@@ -51,6 +68,13 @@ class ClientesService {
         const clienteEliminado = await clientesDao.deleteOne({ id: `${id}` });
         return clienteEliminado;
     }
+
+    async registrar(data) {
+        data.ingreso = new Date()
+        data.password = hashear(data.password)
+        return await clientesDao.create(data)
+    }
+
 }
 
 
