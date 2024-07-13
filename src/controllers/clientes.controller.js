@@ -53,18 +53,16 @@ export async function postController(req, res, next) {
     }
 }
 
-export async function postClienteTiendaController(req, res, next) {
+export const postClienteTiendaController = async (req, res) => {
     try {
-        const { id } = req.params
-        const { data } = req.body
-        const cliente = await clientesService.agregarTienda(id, data)
-        logger.info(JSON.stringify(cliente))
-        res.created(cliente)
+        const { id } = req.params;
+        const data = req.body;
+        const nuevaTienda = await clientesService.agregarTienda(id, data);
+        res.status(201).json(nuevaTienda);
     } catch (error) {
-        logger.error(error)
-        next(error)
+        res.status(500).json({ error: error.message });
     }
-}
+};
 
 // export async function inventarioPatchController(req, res, next) {
 //     try {

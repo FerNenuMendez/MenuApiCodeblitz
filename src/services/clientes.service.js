@@ -10,14 +10,22 @@ const tiendasDao = await getDaoTienda()
 class ClientesService {
     async agregarTienda(id, data) {
         try {
-            data.ingreso = new Date()
-            const nuevaTienda = await tiendasDao.create(data)
-            logger.info('Tienda creada:', nuevaTienda)
+            if (!data || typeof data !== 'object') {
+                throw new TypeError('Datos de la tienda inválidos');
+            }
 
-            const cliente = await clientesDao.readById(id)
+            // Log the data to inspect its content
+            logger.info('Datos recibidos para la nueva tienda:', data);
+
+            // Set the ingreso property
+            data.ingreso = new Date();
+            const nuevaTienda = await tiendasDao.create(data);
+            logger.info('Tienda creada:', nuevaTienda);
+
+            const cliente = await clientesDao.readById(id);
             if (!cliente) {
-                logger.error('Cliente no encontrado')
-                throw new Error('Cliente no encontrado')
+                logger.error('Cliente no encontrado');
+                throw new Error('Cliente no encontrado');
             }
 
             if (!cliente.tiendas) {
