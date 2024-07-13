@@ -22,7 +22,7 @@ class ClientesService {
             const nuevaTienda = await tiendasDao.create(data);
             logger.info('Tienda creada:', nuevaTienda);
 
-            const cliente = await clientesDao.readById(id);
+            const cliente = await clientesDao.readById({ id: id });
             if (!cliente) {
                 logger.error('Cliente no encontrado');
                 throw new Error('Cliente no encontrado');
