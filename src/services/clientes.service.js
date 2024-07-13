@@ -10,6 +10,7 @@ const tiendasDao = await getDaoTienda()
 class ClientesService {
     async agregarTienda(id, data) {
         try {
+            data.ingreso = new Date()
             const nuevaTienda = await tiendasDao.create(data)
             logger.info('Tienda creada:', nuevaTienda)
 
