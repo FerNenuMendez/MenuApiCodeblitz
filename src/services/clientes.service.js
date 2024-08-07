@@ -13,11 +13,7 @@ class ClientesService {
             if (!data || typeof data !== 'object') {
                 throw new TypeError('Datos de la tienda inválidos');
             }
-
-            // Log the data to inspect its content
             logger.info('Datos recibidos para la nueva tienda:', data);
-
-            // Set the ingreso property
             data.ingreso = new Date();
             const nuevaTienda = await tiendasDao.create(data);
             logger.info('Tienda creada:', nuevaTienda);

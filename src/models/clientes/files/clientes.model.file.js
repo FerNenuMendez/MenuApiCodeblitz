@@ -1,9 +1,9 @@
 
-import { randomUUID } from 'node:crypto';
+
 
 export class Cliente {
-    constructor({ id = randomUUID(), nombre, apellido, dni, telefono, mail, password, domicilio, nacimiento, eCivil, userID, inventario }) {
-        this.id = id;
+    constructor({ nombre, apellido, dni, telefono, mail, password, domicilio, nacimiento, eCivil, userID, inventario }) {
+
         this._nombre = nombre;
         this._apellido = apellido;
         this._dni = dni;
@@ -17,7 +17,7 @@ export class Cliente {
         this._inventario = inventario;
     }
 
-    get id() { return this.id; }
+
     get nombre() { return this._nombre; }
     get apellido() { return this._apellido; }
     get dni() { return this._dni; }
@@ -91,7 +91,6 @@ export class Cliente {
 
     toPOJO() {
         return {
-            id: this.id,
             nombre: this._nombre,
             apellido: this._apellido,
             dni: this._dni,

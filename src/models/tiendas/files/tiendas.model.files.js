@@ -2,8 +2,7 @@ import { randomUUID } from 'node:crypto'
 
 export class Tiendas {
 
-    constructor({ tiendaID = randomUUID(), nombre, logo, foto, descripcion, telefono, mail, domicilio, ingreso, estado, users, productos, inventario }) {
-        this._tiendaID = tiendaID
+    constructor({ nombre, logo, foto, descripcion, telefono, mail, domicilio, ingreso, estado, productos, inventario }) {
         this._nombre = nombre
         this._logo = logo
         this._foto = foto
@@ -11,6 +10,7 @@ export class Tiendas {
         this._telefono = telefono
         this._mail = mail
         this._domicilio = domicilio
+        this._productos = productos
         this._ingreso = ingreso
         this._estado = estado
         this._inventario = inventario
@@ -23,6 +23,7 @@ export class Tiendas {
     get telefono() { return this._telefono }
     get mail() { return this._mail }
     get domicilio() { return this._domicilio }
+    get productos() { return this._productos }
     get ingreso() { return this._ingreso }
     get estado() { return this._estado }
     get inventario() { return this._inventario }
@@ -55,6 +56,10 @@ export class Tiendas {
         if (!value) throw new Error('el domicilio es obligatorio')
         this._domicilio = value
     }
+    set productos(value) {
+        if (!value) throw new Error('el producto es obligatorio')
+        this._productos = value
+    }
     set ingreso(value) {
         if (!value) throw new Error('el ingreso es obligatorio')
         this._ingreso = value
@@ -78,6 +83,7 @@ export class Tiendas {
             telefono: this._telefono,
             mail: this._mail,
             domicilio: this._domicilio,
+            productos: this._productos,
             ingreso: this._ingreso,
             estado: this._estado,
             inventario: this._inventario

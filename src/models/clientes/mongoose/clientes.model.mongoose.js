@@ -1,8 +1,7 @@
-import { Schema } from 'mongoose'
-import { randomUUID } from 'crypto'
+import { Schema, mongoose } from 'mongoose'
+
 
 export const clientesSchema = new Schema({
-    id: { type: String, default: randomUUID, unique: true },
     nombre: { type: String, required: true },
     apellido: { type: String, required: true },
     dni: { type: Number, unique: true, required: true },
@@ -18,7 +17,7 @@ export const clientesSchema = new Schema({
     aux: { type: String },
     resetPasswordToken: { type: String },
     resetPasswordExpires: { type: Date },
-    tiendas: [{}],
+    tiendas: [{ type: mongoose.Schema.Types.ObjectId, ref: 'tiendas' }],
     inventario: [{}]
 }, {
     strict: 'throw',

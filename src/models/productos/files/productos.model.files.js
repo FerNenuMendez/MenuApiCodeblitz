@@ -1,8 +1,8 @@
 import { randomUUID } from 'node:crypto';
 
 export class Producto {
-    constructor({ productoID = randomUUID(), nombre, foto, precio, stock, descripcion, estado, tiendaID, inventario }) {
-        this._productoID = productoID
+    constructor({ nombre, foto, precio, stock, descripcion, estado, tiendaID, inventario }) {
+
         this._nombre = nombre
         this._foto = foto
         this._precio = precio
@@ -13,7 +13,7 @@ export class Producto {
         this._inventario = inventario
     }
 
-    get productoID() { return this._productoID; }
+
     get nombre() { return this._nombre; }
     get foto() { return this._foto; }
     get precio() { return this._precio; }
@@ -23,10 +23,7 @@ export class Producto {
     get tiendaID() { return this._tiendaID; }
     get inventario() { return this._inventario; }
 
-    set productoID(value) {
-        if (!value) throw new Error('el productoID es obligatorio')
-        this._productoID = value
-    }
+
     set nombre(value) {
         if (!value) throw new Error('el nombre es obligatorio')
         this._nombre = value
@@ -62,7 +59,6 @@ export class Producto {
 
     toPOJO() {
         return {
-            productoID: this._productosID,
             nombre: this._nombre,
             foto: this._foto,
             precio: this._precio,
