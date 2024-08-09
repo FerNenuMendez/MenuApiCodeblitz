@@ -12,3 +12,6 @@
     at file:///C:/Users/ferna/OneDrive/Escritorio/MenuApiCodeblitz/src/routers/api.router.js:15:30
 2024-07-11 21:12:22 [31merror[39m: ReferenceError: inventarioPatchController is not defined
     at file:///C:/Users/FerM/Desktop/New%20Api/src/routers/router/clientes.router.js:10:35
+2024-08-09 14:30:49 [31merror[39m: ReferenceError: mongoose is not defined
+    at file:///C:/Users/FerM/Desktop/New%20Api/src/models/tiendas/mongoose/tiendas.model.mongoose.js:12:25
+    at ModuleJob.run (node:internal/modules/esm/module_job:194:25)

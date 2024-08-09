@@ -1,5 +1,5 @@
-import { Schema } from 'mongoose'
-import { randomUUID } from 'crypto'
+import { Schema, mongoose } from 'mongoose'
+
 
 export const tiendasSchema = new Schema({
     nombre: { type: String, required: true },
