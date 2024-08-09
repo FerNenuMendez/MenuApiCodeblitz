@@ -8,34 +8,34 @@ const tiendasDao = await getDaoTienda()
 
 
 class ClientesService {
-    async agregarTienda(id, data) {
-        try {
-            if (!data || typeof data !== 'object') {
-                throw new TypeError('Datos de la tienda inválidos');
-            }
-            logger.info('Datos recibidos para la nueva tienda:', data);
-            data.ingreso = new Date();
-            const nuevaTienda = await tiendasDao.create(data);
-            logger.info('Tienda creada:', nuevaTienda);
+    // async agregarTienda(id, data) {
+    //     try {
+    //         if (!data || typeof data !== 'object') {
+    //             throw new TypeError('Datos de la tienda inválidos');
+    //         }
+    //         logger.info('Datos recibidos para la nueva tienda:', data);
+    //         data.ingreso = new Date();
+    //         const nuevaTienda = await tiendasDao.create(data);
+    //         logger.info('Tienda creada:', nuevaTienda);
 
-            const cliente = await clientesDao.readById({ id: id });
-            if (!cliente) {
-                logger.error('Cliente no encontrado');
-                throw new Error('Cliente no encontrado');
-            }
+    //         const cliente = await clientesDao.readById({ id: id });
+    //         if (!cliente) {
+    //             logger.error('Cliente no encontrado');
+    //             throw new Error('Cliente no encontrado');
+    //         }
 
-            if (!cliente.tiendas) {
-                cliente.tiendas = [];
-            }
-            cliente.tiendas.push(nuevaTienda._id);
+    //         if (!cliente.tiendas) {
+    //             cliente.tiendas = [];
+    //         }
+    //         cliente.tiendas.push(nuevaTienda._id);
 
-            await clientesDao.updateOne({ id: `${id}` }, { tiendas: cliente.tiendas });
-            return nuevaTienda;
-        } catch (error) {
-            logger.error('Error al agregar tienda:', error);
-            throw new Error('Error al agregar tienda');
-        }
-    }
+    //         await clientesDao.updateOne({ id: `${id}` }, { tiendas: cliente.tiendas });
+    //         return nuevaTienda;
+    //     } catch (error) {
+    //         logger.error('Error al agregar tienda:', error);
+    //         throw new Error('Error al agregar tienda');
+    //     }
+    // }
 
     async buscar(mail) {
         const clientes = await this.buscarTodos()
