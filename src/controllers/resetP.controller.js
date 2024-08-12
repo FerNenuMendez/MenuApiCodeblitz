@@ -23,7 +23,7 @@ export const forgotPassword = async (req, res) => {
         // `;
 
         // await sendMail(user.mail, 'Password Reset', message);
-        // logger.info('Mail enviado con exito')
+        logger.info(`${mail}`)
         res.status(200).send('Password reset email sent');
     } catch (err) {
         logger.error('Error al ejecutar forgotpassword')
