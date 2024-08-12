@@ -21,7 +21,11 @@ export const forgotPassword = async (req, res) => {
          <p>You requested a password reset</p>
          <p>Click this <a href="${resetURL}">link</a> to reset your password</p>
          `;
-        await sendEmail(user.mail, 'Password Reset', message);
+        await sendEmail({
+            to: user.mail,
+            subject: 'Restablecer contraseña',
+            html: message,
+        });
         logger.info(`Usuario encontrado: ${JSON.stringify(user, null, 2)}`)
         res.status(200).send('Password reset email sent');
     } catch (err) {
