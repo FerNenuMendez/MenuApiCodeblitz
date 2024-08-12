@@ -43,6 +43,8 @@ class ClientesService {
         console.log(clientesDB)
         logger.info(clientesDB)
         const clienteBuscado = buscarPorMail(clientesDB, mail)
+        console.log(clienteBuscado)
+        logger.info(clienteBuscado)
         return clienteBuscado
     }
 
