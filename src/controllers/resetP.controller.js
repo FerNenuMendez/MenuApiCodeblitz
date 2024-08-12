@@ -22,8 +22,8 @@ export const forgotPassword = async (req, res) => {
         // <p>Click this <a href="${resetURL}">link</a> to reset your password</p>
         // `;
 
-        await sendMail(user.mail, 'Password Reset', message);
-        logger.info('Mail enviado con exito')
+        // await sendMail(user.mail, 'Password Reset', message);
+        // logger.info('Mail enviado con exito')
         res.status(200).send('Password reset email sent');
     } catch (err) {
         logger.error('Error al ejecutar forgotpassword')
