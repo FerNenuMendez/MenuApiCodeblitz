@@ -1,20 +1,19 @@
-import nodemailer from 'nodemailer';
+import dotenv from "dotenv"
+import sgMail from "@sendgrid/mail";
 
-const transporter = nodemailer.createTransport({
-    service: 'Gmail', // Puedes usar otro servicio de email
-    auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS,
-    },
-});
+dotenv.config();
 
-export const sendMail = (to, subject, html) => {
-    const mailOptions = {
-        from: process.env.EMAIL_USER,
-        to,
-        subject,
-        html,
+sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+
+const sendEmail = async (options) => {
+    const msg = {
+        to: options.to,
+        from: process.env.EMAIL_USER,//correo verificado
+        subject: options.subject,
+        html: options.html,
     };
 
-    return transporter.sendMail(mailOptions);
+    await sgMail.send(msg);
 };
+
+export default sendEmail;
