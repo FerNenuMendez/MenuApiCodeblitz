@@ -8,6 +8,7 @@ export const forgotPassword = async (req, res) => {
     try {
         const user = await clientesService.buscar({ mail });
         if (!user) {
+            logger.info(user)
             logger.error('Cliente a restablecer contraseña no encontrado')
             return res.status(404).send('Cliente not found');
         }
