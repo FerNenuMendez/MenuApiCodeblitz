@@ -4,9 +4,9 @@ import { sendMail } from '../middlewares/mailer.js';
 import { clientesService } from "../services/clientes.service.js";
 
 export const forgotPassword = async (req, res) => {
-    const { email } = req.body;
+    const { mail } = req.body;
     try {
-        const user = await clientesService.buscar({ email });
+        const user = await clientesService.buscar({ mail });
         if (!user) {
             logger.error('Cliente a restablecer contraseña no encontrado')
             return res.status(404).send('Cliente not found');
