@@ -6,7 +6,7 @@ import { clientesService } from "../services/clientes.service.js";
 export const forgotPassword = async (req, res) => {
     const { mail } = req.body;
     try {
-        // const user = await clientesService.buscar({ mail });
+        const user = await clientesService.buscar({ mail });
         //  if (!user) {
         //      logger.error('Cliente a restablecer contraseña no encontrado')
         //      return res.status(404).send('Cliente not found');
@@ -23,7 +23,7 @@ export const forgotPassword = async (req, res) => {
         // `;
 
         // await sendMail(user.mail, 'Password Reset', message);
-        logger.info(`${mail}`)
+        logger.info(`${user}`)
         res.status(200).send('Password reset email sent');
     } catch (err) {
         logger.error('Error al ejecutar forgotpassword')
