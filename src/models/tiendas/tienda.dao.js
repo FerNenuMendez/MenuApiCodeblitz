@@ -11,7 +11,7 @@ if (MODO_EJECUCION === "online") {
     //SINGLETON
     if (!daoTienda) {
         daoTienda = new TiendasDaoMongoose
-        logger.info('persistiendo Tiendas en: mongoDB')
+        logger.info('persistiendo Tiendas en: MongoDB')
     }
 } else {
     daoTienda = new TiendasDaoFiles(RUTA_TIENDA_JSON)

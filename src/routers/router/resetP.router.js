@@ -3,7 +3,7 @@ import { forgotPassword, resetPassword } from '../../controllers/resetP.controll
 
 export const resetPRouter = Router()
 
-resetPRouter.post('/forgot-password/', forgotPassword)
+resetPRouter.post('/forgot-password', forgotPassword)
 resetPRouter.post('/reset-password/:token', resetPassword)
 
 resetPRouter.get('/test', (req, res) => {

@@ -7,22 +7,20 @@ export const forgotPassword = async (req, res) => {
     const { mail } = req.body;
     try {
         const user = await clientesService.buscar({ mail });
-        //  if (!user) {
-        //      logger.error('Cliente a restablecer contraseña no encontrado')
-        //      return res.status(404).send('Cliente not found');
-        //  }
-        // const token = crypto.randomBytes(20).toString('hex');
-        // user.resetPasswordToken = token;
-        // user.resetPasswordExpires = Date.now() + 3600000; // 1 hora
-
-        // const resetURL = `http://${req.headers.host}/reset/${token}`;
-        // const message = `
-        // <h1>Password Reset Request</h1>
-        // <p>You requested a password reset</p>
-        // <p>Click this <a href="${resetURL}">link</a> to reset your password</p>
-        // `;
-
-        // await sendMail(user.mail, 'Password Reset', message);
+        if (!user) {
+            logger.error('Cliente a restablecer contraseña no encontrado')
+            return res.status(404).send('Cliente not found');
+        }
+        const token = crypto.randomBytes(20).toString('hex');
+        user.resetPasswordToken = token;
+        user.resetPasswordExpires = Date.now() + 3600000; // 1 hora
+        const resetURL = `http:${req.headers.host}/reset/${token}`;
+        const message = `
+         <h1>Password Reset Request</h1>
+         <p>You requested a password reset</p>
+         <p>Click this <a href="${resetURL}">link</a> to reset your password</p>
+         `;
+        await sendMail(user.mail, 'Password Reset', message);
         logger.info(`${user}`)
         res.status(200).send('Password reset email sent');
     } catch (err) {
