@@ -41,9 +41,6 @@ class ClientesService {
         const clientes = await this.buscarTodos()
         const clientesDB = clientes
         const clienteBuscado = buscarPorMail(clientesDB, mail)
-        if (clienteBuscado === undefined) {
-            logger.error('Cliente Undefined')
-        }
         return clienteBuscado
     }
 
