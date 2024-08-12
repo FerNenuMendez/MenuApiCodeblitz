@@ -36,22 +36,16 @@ export const forgotPassword = async (req, res) => {
 
 export const resetPassword = async (req, res) => {
     const { token } = req.params;
-    const { password, confirmPassword } = req.body;
+    const { password } = req.body;
 
     try {
         const user = await clientesService.buscar({
-            resetPasswordToken: token,
-            resetPasswordExpires: { $gt: Date.now() }
+            //BUSCAR POR MAIL AL USUARIO
         });
 
         if (!user) {
             logger.error('Token no encontrado')
             return res.status(400).send('Invalid or expired token');
-        }
-
-        if (password !== confirmPassword) {
-            logger.error('Passwords no coinciden')
-            return res.status(400).send('Passwords do not match');
         }
 
         user.password = password;
