@@ -8,8 +8,8 @@ export const clientesSchema = new Schema({
     telefono: { type: Number, required: true },
     mail: { type: String, unique: true, required: true },
     password: { type: String, required: true },
+    passwordCheck: { type: String, required: true },
     domicilio: { type: String, required: true },
-    cuit: { type: String, required: true },
     estado: { type: String },
     ingreso: { type: Date },
     lastLogin: { type: Date },
@@ -23,3 +23,5 @@ export const clientesSchema = new Schema({
     strict: 'throw',
     versionKey: false,
 })
+
+// SACAMOS CUIT EN LA PRUEBA
