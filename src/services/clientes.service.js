@@ -37,10 +37,12 @@ class ClientesService {
     //     }
     // }
 
-    async buscar({ mail }) {
-        const clientes = await this.buscarTodos()
-        const clienteBuscado = buscarPorMail(clientes, mail)
-        return clienteBuscado
+    async buscar(mail) {
+        const clientes = await this.buscarTodos();
+        logger.info("Clientes en la base de datos:");
+        logger.info(JSON.stringify(clientes));  // Log para verificar los datos
+        const clienteBuscado = buscarPorMail(clientes, mail);
+        return clienteBuscado;
     }
 
     async buscarID(id) {
