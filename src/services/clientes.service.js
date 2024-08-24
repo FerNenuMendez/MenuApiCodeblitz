@@ -2,6 +2,9 @@ import { getDaoClientes } from '../models/clientes/clientes.dao.js'
 import { getDaoTienda } from '../models/tiendas/tienda.dao.js'
 import { hashear, buscarPorMail } from '../models/utils/utils.js'
 import logger from '../middlewares/logger.js'
+import sendEmail from '../middlewares/mailer.js';
+
+
 
 const clientesDao = await getDaoClientes()
 const tiendasDao = await getDaoTienda()
@@ -39,9 +42,18 @@ class ClientesService {
 
     async buscar(mail) {
         const clientes = await this.buscarTodos();
-        logger.info("Clientes en la base de datos:");
-        logger.info(JSON.stringify(clientes));  // Log para verificar los datos
         const clienteBuscado = buscarPorMail(clientes, mail);
+        const message = `
+        <h1>Bienvenido ${clienteBuscado.nombre} a Emporio!</h1>
+        <p>Con Emporio podras impulsar tu negocio y lograr nuevos clientes</p>
+        
+        `;
+        await sendEmail({
+            to: clienteBuscado.mail,
+            subject: `Bienvenido ${clienteBuscado.nombre}`,
+            html: message,
+        });
+        logger.info("Mail enviado al nuevo usuario")
         return clienteBuscado;
     }
 
