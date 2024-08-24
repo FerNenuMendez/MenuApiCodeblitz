@@ -43,17 +43,6 @@ class ClientesService {
     async buscar(mail) {
         const clientes = await this.buscarTodos();
         const clienteBuscado = buscarPorMail(clientes, mail);
-        // const message = `
-        // <h1>Bienvenido ${clienteBuscado.nombre} a Emporio!</h1>
-        // <p>Con Emporio podras impulsar tu negocio y lograr nuevos clientes</p>
-
-        // `;
-        // await sendEmail({
-        //     to: clienteBuscado.mail,
-        //     subject: `Bienvenido ${clienteBuscado.nombre}`,
-        //     html: message,
-        // });
-        // logger.info("Mail enviado al nuevo usuario")
         return clienteBuscado;
     }
 
