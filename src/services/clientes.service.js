@@ -43,17 +43,17 @@ class ClientesService {
     async buscar(mail) {
         const clientes = await this.buscarTodos();
         const clienteBuscado = buscarPorMail(clientes, mail);
-        const message = `
-        <h1>Bienvenido ${clienteBuscado.nombre} a Emporio!</h1>
-        <p>Con Emporio podras impulsar tu negocio y lograr nuevos clientes</p>
-        
-        `;
-        await sendEmail({
-            to: clienteBuscado.mail,
-            subject: `Bienvenido ${clienteBuscado.nombre}`,
-            html: message,
-        });
-        logger.info("Mail enviado al nuevo usuario")
+        // const message = `
+        // <h1>Bienvenido ${clienteBuscado.nombre} a Emporio!</h1>
+        // <p>Con Emporio podras impulsar tu negocio y lograr nuevos clientes</p>
+
+        // `;
+        // await sendEmail({
+        //     to: clienteBuscado.mail,
+        //     subject: `Bienvenido ${clienteBuscado.nombre}`,
+        //     html: message,
+        // });
+        // logger.info("Mail enviado al nuevo usuario")
         return clienteBuscado;
     }
 
@@ -87,6 +87,16 @@ class ClientesService {
     async registrar(data) {
         data.ingreso = new Date()
         data.password = hashear(data.password)
+        const message = `
+         <h1>Bienvenido ${data.nombre} a Emporio!</h1>
+         <p>Con Emporio podras impulsar tu negocio y lograr nuevos clientes</p>
+
+         `;
+        await sendEmail({
+            to: data.mail,
+            subject: `Bienvenido ${data.nombre}`,
+            html: message,
+        });
         return await clientesDao.create(data)
     }
 
