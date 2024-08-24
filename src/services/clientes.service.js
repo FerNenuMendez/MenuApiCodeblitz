@@ -11,38 +11,15 @@ const tiendasDao = await getDaoTienda()
 
 
 class ClientesService {
-    // async agregarTienda(id, data) {
-    //     try {
-    //         if (!data || typeof data !== 'object') {
-    //             throw new TypeError('Datos de la tienda inválidos');
-    //         }
-    //         logger.info('Datos recibidos para la nueva tienda:', data);
-    //         data.ingreso = new Date();
-    //         const nuevaTienda = await tiendasDao.create(data);
-    //         logger.info('Tienda creada:', nuevaTienda);
 
-    //         const cliente = await clientesDao.readById({ id: id });
-    //         if (!cliente) {
-    //             logger.error('Cliente no encontrado');
-    //             throw new Error('Cliente no encontrado');
-    //         }
-
-    //         if (!cliente.tiendas) {
-    //             cliente.tiendas = [];
-    //         }
-    //         cliente.tiendas.push(nuevaTienda._id);
-
-    //         await clientesDao.updateOne({ id: `${id}` }, { tiendas: cliente.tiendas });
-    //         return nuevaTienda;
-    //     } catch (error) {
-    //         logger.error('Error al agregar tienda:', error);
-    //         throw new Error('Error al agregar tienda');
-    //     }
-    // }
-
-    async buscar(mail) {
+    async buscarLogueo(mail) {
         const clientes = await this.buscarTodos();
         const clienteBuscado = buscarPorMail(clientes, mail);
+        clienteBuscado.lastLogin = new Date()
+        const updateLogin = await clientesDao.update(clienteBuscado._id, { lastLogin: clienteBuscado.lastLogin })
+        if (!updateUser) {
+            throw new Error('Error al actualizar el usuario');
+        }
         return clienteBuscado;
     }
 
@@ -55,7 +32,7 @@ class ClientesService {
     }
 
     async crearUsuario(datosUsuario, id) {
-        const nuevoUsuario = await userDao.create(datosUsuario);
+        const nuevoUsuario = await clientesDao.create(datosUsuario);
         const clienteActualizado = await clientesDao.updateOne({ id: `${id}` }, { _userID: nuevoUsuario.id });
         return clienteActualizado;
     }
@@ -67,7 +44,7 @@ class ClientesService {
             throw new Error('Cliente no encontrado');
         }
         if (cliente._userID) {
-            await userDao.deleteOne({ id: cliente._userID });
+            await clientesDao.deleteOne({ id: cliente._userID });
         }
         const clienteEliminado = await clientesDao.deleteOne({ id: `${id}` });
         return clienteEliminado;

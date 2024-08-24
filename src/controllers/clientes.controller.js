@@ -2,7 +2,7 @@ import { clientesService } from "../services/clientes.service.js";
 import logger from "../middlewares/logger.js"
 
 
-
+//BUSCAR TODOS LOS CLIENTES
 export async function getController(req, res, next) {
     try {
         const clientes = await clientesService.buscarTodos()
@@ -14,7 +14,7 @@ export async function getController(req, res, next) {
         next(error)
     }
 }
-
+//BUSCAR POR ID
 export async function getControllerID(req, res, next) {
     try {
         const { id } = req.params;
@@ -27,11 +27,11 @@ export async function getControllerID(req, res, next) {
         next(error)
     }
 }
-
+//BUSCAR POR MAIL
 export async function getControllerMail(req, res, next) {
     try {
         const { mail } = req.params;
-        const cliente = await clientesService.buscar(mail)
+        const cliente = await clientesService.buscarLogueo(mail)
         logger.info("Cliente Encontrado:")
         logger.info(JSON.stringify(cliente))
         res.result(cliente)
@@ -64,21 +64,6 @@ export const postClienteTiendaController = async (req, res) => {
         res.status(500).json({ error: error.message });
     }
 };
-
-// export async function inventarioPatchController(req, res, next) {
-//     try {
-//         const { clienteId } = req.params;
-//         const inventarioData = req.body;
-//         logger.info(`Añadiendo al inventario del cliente con id: ${clienteId}`);
-//         const clienteActualizado = await clientesService.agregarAlInventario(clienteId, inventarioData);
-//         logger.info(JSON.stringify("Cliente Actualizado"));
-//         logger.info(JSON.stringify(clienteActualizado));
-//         res.result(clienteActualizado);
-//     } catch (error) {
-//         logger.error(error);
-//         next(error);
-//     }
-// }
 
 export async function deleteController(req, res, next) {
     const { id } = req.params;

@@ -26,12 +26,16 @@ class ClientesDaoMongoose {
         return await this.ClientesModel.find(query).lean();
     }
 
-    async updateOne(query, data) {
-        const updatedCliente = await this.ClientesModel.findOneAndUpdate(query, data, { new: true }).lean();
-        if (!updatedCliente) {
-            throw new Error('Cliente not found');
+    async update(id, updateData) {
+        try {
+            const updatedUser = await this.ClientesModel.findByIdAndUpdate(id, updateData, { new: true, runValidators: true }).lean();
+            if (!updatedUser) {
+                throw new Error('Usuario no encontrado');
+            }
+            return updatedUser;
+        } catch (error) {
+            throw new Error('Error al actualizar el usuario');
         }
-        return updatedCliente;
     }
 
     async updateMany(query, data) {

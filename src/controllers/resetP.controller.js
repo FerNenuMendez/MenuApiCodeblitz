@@ -14,7 +14,7 @@ export const forgotPassword = async (req, res) => {
         const token = crypto.randomBytes(20).toString('hex');
         user.resetPasswordToken = token;
         user.resetPasswordExpires = Date.now() + 3600000; // 1 hora
-        const resetURL = `http:${req.headers.host}/reset/${token}`;
+        const resetURL = `http:localhost:3000/pass-rn/${token}`;
         const message = `
          <h1>Has solicitado un cambio de Password</h1>
          <p>Por favor ingrese al siguiente link para resetear su contraseña</p>
