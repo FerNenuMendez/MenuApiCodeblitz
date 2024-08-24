@@ -14,6 +14,7 @@ export async function getController(req, res, next) {
         next(error)
     }
 }
+
 export async function getControllerID(req, res, next) {
     try {
         const { id } = req.params;
@@ -31,7 +32,7 @@ export async function getControllerMail(req, res, next) {
     try {
         const { mail } = req.params;
         const cliente = await clientesService.buscar(mail)
-        cliente.lastLogin = new Date()
+        // cliente.lastLogin = new Date()
         logger.info("Cliente Encontrado:")
         logger.info(JSON.stringify(cliente))
         res.result(cliente)
@@ -40,7 +41,7 @@ export async function getControllerMail(req, res, next) {
         next(error)
     }
 }
-
+//CREAR USUARIO
 export async function postController(req, res, next) {
     try {
         const data = req.body;
@@ -53,7 +54,7 @@ export async function postController(req, res, next) {
         next(error)
     }
 }
-
+//CREAR TIENDA
 export const postClienteTiendaController = async (req, res) => {
     try {
         const { id } = req.params;
