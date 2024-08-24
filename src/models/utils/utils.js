@@ -1,5 +1,5 @@
 import { hashSync, compareSync, genSaltSync } from "bcrypt";
-
+import logger from "../../middlewares/logger.js"
 export function matches(query) {
     return function (elem) {
         for (const key in query) {

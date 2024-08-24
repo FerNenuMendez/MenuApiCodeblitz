@@ -298,3 +298,7 @@
 2024-08-24 13:12:00 [32minfo[39m: persistiendo Clientes en: MongoDB
 2024-08-24 13:12:00 [32minfo[39m: persistiendo Tiendas en: MongoDB
 2024-08-24 13:12:01 [32minfo[39m: Base de datos conectada a MongoDB
+2024-08-24 13:56:07 [32minfo[39m: Cargando configuracion:
+2024-08-24 13:56:08 [32minfo[39m: persistiendo Clientes en: MongoDB
+2024-08-24 13:56:08 [32minfo[39m: persistiendo Tiendas en: MongoDB
+2024-08-24 13:56:09 [32minfo[39m: Base de datos conectada a MongoDB
