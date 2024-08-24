@@ -17,7 +17,7 @@ class ClientesService {
         const clienteBuscado = buscarPorMail(clientes, mail);
         clienteBuscado.lastLogin = new Date()
         const updateLogin = await clientesDao.update(clienteBuscado._id, { lastLogin: clienteBuscado.lastLogin })
-        if (!updateUser) {
+        if (!updateLogin) {
             throw new Error('Error al actualizar el usuario');
         }
         return clienteBuscado;
