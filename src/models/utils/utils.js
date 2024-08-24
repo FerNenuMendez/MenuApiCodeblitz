@@ -33,7 +33,9 @@ export function buscarPorMail(array, mail) {
     if (!Array.isArray(array)) {
         throw new Error("El parámetro 'array' no es un array válido");
     }
+    logger.info("Buscando mail:", mail);
     for (let i = 0; i < array.length; i++) {
+        logger.info(`Comparando ${array[i].mail} con ${mail}`);
         if (array[i].mail === mail) {
             return array[i];
         }
