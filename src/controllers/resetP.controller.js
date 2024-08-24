@@ -16,8 +16,8 @@ export const forgotPassword = async (req, res) => {
         user.resetPasswordExpires = Date.now() + 3600000; // 1 hora
         const resetURL = `http:${req.headers.host}/reset/${token}`;
         const message = `
-         <h1>Password Reset Request</h1>
-         <p>You requested a password reset</p>
+         <h1>Has solicitado un cambio de Password</h1>
+         <p>Por favor ingrese al siguiente link para resetear su contraseña</p>
          <p>Click this <a href="${resetURL}">link</a> to reset your password</p>
          `;
         await sendEmail({

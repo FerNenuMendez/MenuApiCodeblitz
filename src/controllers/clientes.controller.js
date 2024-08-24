@@ -32,7 +32,6 @@ export async function getControllerMail(req, res, next) {
     try {
         const { mail } = req.params;
         const cliente = await clientesService.buscar(mail)
-        // cliente.lastLogin = new Date()
         logger.info("Cliente Encontrado:")
         logger.info(JSON.stringify(cliente))
         res.result(cliente)

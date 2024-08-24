@@ -39,8 +39,7 @@ class ClientesService {
 
     async buscar({ mail }) {
         const clientes = await this.buscarTodos()
-        const clientesDB = clientes
-        const clienteBuscado = buscarPorMail(clientesDB, mail)
+        const clienteBuscado = buscarPorMail(clientes, mail)
         return clienteBuscado
     }
 
