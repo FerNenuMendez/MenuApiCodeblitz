@@ -36,7 +36,7 @@ export const forgotPassword = async (req, res) => {
 };
 
 export const resetPassword = async (req, res) => {
-    const { token } = req.params.token;
+    const { token } = req.params;
     const { password } = req.body;
     try {
         const user = await clientesService.buscarPorToken(token);
