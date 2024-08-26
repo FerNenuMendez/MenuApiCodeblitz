@@ -16,23 +16,13 @@ export const forgotPassword = async (req, res) => {
         }
         const token = crypto.randomBytes(20).toString('hex');
         user.resetPasswordToken = token;
-        user.resetPasswordExpires = Date.now() + 7200000; // 2 hora
+        user.resetPasswordExpires = Date.now() + 7200000; // 2 horas
         await clientesService.actualizarResetPassword(user._id, {
             resetPasswordToken: user.resetPasswordToken,
             resetPasswordExpires: user.resetPasswordExpires,
         });
         sendRecoveryMail(user, token)
-        // const resetURL = `http://localhost:3000/renew/${token}`;
-        // const message = `
-        //  <h1>Has solicitado un cambio de Password</h1>
-        //  <p>Por favor ingrese al siguiente link para resetear su contraseña</p>
-        //  <p>Entra al siguiente <a href="${resetURL}">link</a> para resetear tu password</p>`;
-        // await sendEmail({
-        //     to: user.mail,
-        //     subject: 'Restablecer contraseña',
-        //     html: message,
-        // });
-        res.status(200).send('Password reset email sent');
+        res.status(200).send('Mail de recuperacion de contraseña enviado');
     } catch (err) {
         logger.error(`Error:${err}`)
         res.status(404).send('Usuario no encontrado');
@@ -45,10 +35,6 @@ export const resetPassword = async (req, res) => {
     const { password } = req.body;
     try {
         const user = await clientesService.buscarPorToken(token);
-        // if (tokenExpirado(user.resetPasswordExpires)) {
-        //     logger.error('Token expirado');
-        //     return res.status(400).send('Token expirado');
-        // }
         const newPass = hashear(password)
         await clientesService.actualizarPassword(user._id, newPass);
         logger.info('Contraseña actualizada correctamente');

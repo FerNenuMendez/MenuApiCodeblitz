@@ -57,10 +57,6 @@ class ClientesService {
                 logger.error('Cliente no encontrado');
                 throw new Error('Cliente no encontrado');
             }
-            // if (tokenExpirado(clienteBuscado.resetPasswordToken)) {
-            //     logger.error('Token expirado');
-            //     throw new Error('Token expirado');
-            // }
             return clienteBuscado;
         } catch (error) {
             logger.error('Error en buscarPorToken:', error.message);
@@ -75,12 +71,6 @@ class ClientesService {
     async buscarTodos() {
         return await clientesDao.readAll();
     }
-
-    // async crearUsuario(datosUsuario, id) {
-    //     const nuevoUsuario = await clientesDao.create(datosUsuario);
-    //     const clienteActualizado = await clientesDao.updateOne({ id: `${id}` }, { _userID: nuevoUsuario.id });
-    //     return clienteActualizado;
-    // }
 
     async darDeBaja(id) {
         const cliente = await clientesDao.readOne({ id: `${id}` });
