@@ -12,13 +12,13 @@ const tiendasDao = await getDaoTienda()
 
 class ClientesService {
 
-    async actualizarPassword(userId, newPassword) {
+    async actualizarResetPassword(userId, updateData) {
         try {
-            const updatedUser = await this.userDao.updateOne({ _id: userId }, { password: newPassword });
+            const updatedUser = await clientesDao.update(userId, updateData);
             return updatedUser;
         } catch (error) {
-            logger.error('Error al actualizar la contraseña', error);
-            throw new Error('Error al actualizar la contraseña');
+            logger.error('Error al actualizar resetPassword:', error);
+            throw new Error('Error al actualizar la información de resetPassword');
         }
     }
 
