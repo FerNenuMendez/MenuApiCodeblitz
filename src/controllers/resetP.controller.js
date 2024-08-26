@@ -16,9 +16,10 @@ export const forgotPassword = async (req, res) => {
         const token = crypto.randomBytes(20).toString('hex');
         user.resetPasswordToken = token;
         user.resetPasswordExpires = Date.now() + 3600000; // 1 hora
-        // const updateResetPasswordToken = await clientesDao.update(user._id, { resetPasswordToken: user.resetPasswordToken })
-        //     ()
-        // const updateResetPasswordExpires = await clientesDao.update(user._id, { resetPasswordExpires: user.resetPasswordExpires })
+        await clientesDao.update(user._id, {
+            resetPasswordToken: user.resetPasswordToken,
+            resetPasswordExpires: user.resetPasswordExpires,
+        });
         const resetURL = `http://localhost:3000/renew/${token}`;
         const message = `
          <h1>Has solicitado un cambio de Password</h1>
