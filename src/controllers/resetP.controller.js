@@ -41,10 +41,10 @@ export const resetPassword = async (req, res) => {
     const { password } = req.body;
     try {
         const user = await clientesService.buscarPorToken(token);
-        if (tokenExpirado(user.resetPasswordExpires)) {
-            logger.error('Token expirado');
-            return res.status(400).send('Token expirado');
-        }
+        // if (tokenExpirado(user.resetPasswordExpires)) {
+        //     logger.error('Token expirado');
+        //     return res.status(400).send('Token expirado');
+        // }
         const newPass = hashear(password)
         await clientesService.actualizarPassword(user._id, newPass);
         logger.info('Contraseña actualizada correctamente');

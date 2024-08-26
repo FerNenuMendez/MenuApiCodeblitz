@@ -57,10 +57,10 @@ class ClientesService {
                 logger.error('Cliente no encontrado');
                 throw new Error('Cliente no encontrado');
             }
-            if (tokenExpirado(clienteBuscado.resetPasswordToken)) {
-                logger.error('Token expirado');
-                throw new Error('Token expirado');
-            }
+            // if (tokenExpirado(clienteBuscado.resetPasswordToken)) {
+            //     logger.error('Token expirado');
+            //     throw new Error('Token expirado');
+            // }
             return clienteBuscado;
         } catch (error) {
             logger.error('Error en buscarPorToken:', error.message);
