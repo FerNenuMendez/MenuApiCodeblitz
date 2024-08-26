@@ -25,6 +25,7 @@ class ClientesService {
     async buscarLogueo(mail) {
         const clientes = await this.buscarTodos();
         const clienteBuscado = buscarPorMail(clientes, mail);
+        logger.info(clienteBuscado)
         clienteBuscado.lastLogin = new Date()
         const updateLogin = await clientesDao.update(clienteBuscado._id, { lastLogin: clienteBuscado.lastLogin })
         if (!updateLogin) {
