@@ -41,7 +41,7 @@ export function buscarPorMail(array, mail) {
     return null; // Retorna null si no se encuentra el objeto
 }
 
-export function buscarPorToken(array, token) {
+export function buscarToken(array, token) {
     if (!Array.isArray(array)) {
         throw new Error("El parámetro 'array' no es un array válido");
     }
@@ -51,4 +51,9 @@ export function buscarPorToken(array, token) {
         }
     }
     return null; // Retorna null si no se encuentra el objeto
+}
+
+export async function tokenExpirado(fechaExpiracion) {
+    const ahora = new Date();
+    return ahora > new Date(fechaExpiracion);
 }

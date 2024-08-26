@@ -1,6 +1,6 @@
 import { getDaoClientes } from '../models/clientes/clientes.dao.js'
 import { getDaoTienda } from '../models/tiendas/tienda.dao.js'
-import { hashear, buscarPorMail, buscarPorToken } from '../models/utils/utils.js'
+import { hashear, buscarPorMail, buscarToken, tokenExpirado } from '../models/utils/utils.js'
 import logger from '../middlewares/logger.js'
 import sendEmail from '../middlewares/mailer.js';
 
@@ -11,6 +11,16 @@ const tiendasDao = await getDaoTienda()
 
 
 class ClientesService {
+
+    async actualizarPassword(userId, newPassword) {
+        try {
+            const updatedUser = await this.userDao.updateOne({ _id: userId }, { password: newPassword });
+            return updatedUser;
+        } catch (error) {
+            logger.error('Error al actualizar la contraseña', error);
+            throw new Error('Error al actualizar la contraseña');
+        }
+    }
 
     async buscarLogueo(mail) {
         const clientes = await this.buscarTodos();
@@ -25,10 +35,14 @@ class ClientesService {
 
     async buscarPorToken(token) {
         const clientes = await this.buscarTodos();
-        const clienteBuscado = buscarPorToken(clientes, token)
+        const clienteBuscado = buscarToken(clientes, token)
         if (!clienteBuscado) {
             logger.error('Cliente no encontrado')
             throw new Error('Cliente no encontrado');
+        }
+        if (tokenExpirado(clienteBuscado.resetPasswordTokenFechaExpiracion)) {
+            logger.error('Token expirado');
+            throw new Error('Token expirado');
         }
         return clienteBuscado;
     }
