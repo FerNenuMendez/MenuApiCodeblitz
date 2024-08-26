@@ -30,9 +30,9 @@ class ClientesService {
             logger.error('Cliente no encontrado')
             throw new Error('Cliente no encontrado');
         }
-        logger.info(`Usuario encontrado: ${JSON.stringify(clienteBuscado, null, 2)}`)
         return clienteBuscado;
     }
+
     async buscarID(id) {
         return await clientesDao.readById(id);
     }
@@ -41,11 +41,11 @@ class ClientesService {
         return await clientesDao.readAll();
     }
 
-    async crearUsuario(datosUsuario, id) {
-        const nuevoUsuario = await clientesDao.create(datosUsuario);
-        const clienteActualizado = await clientesDao.updateOne({ id: `${id}` }, { _userID: nuevoUsuario.id });
-        return clienteActualizado;
-    }
+    // async crearUsuario(datosUsuario, id) {
+    //     const nuevoUsuario = await clientesDao.create(datosUsuario);
+    //     const clienteActualizado = await clientesDao.updateOne({ id: `${id}` }, { _userID: nuevoUsuario.id });
+    //     return clienteActualizado;
+    // }
 
     async darDeBaja(id) {
         const cliente = await clientesDao.readOne({ id: `${id}` });
@@ -65,9 +65,7 @@ class ClientesService {
         data.password = hashear(data.password)
         const message = `
          <h1>Bienvenido ${data.nombre} a Emporio!</h1>
-         <p>Con Emporio podras impulsar tu negocio y lograr nuevos clientes</p>
-
-         `;
+         <p>Con Emporio podras impulsar tu negocio y lograr nuevos clientes</p>`;
         await sendEmail({
             to: data.mail,
             subject: `Bienvenido ${data.nombre}`,
@@ -76,6 +74,15 @@ class ClientesService {
         return await clientesDao.create(data)
     }
 
+    async updatearData(id, campo, data) {
+        if (!id || !campo) {
+            throw new Error("ID y campo son necesarios para actualizar un cliente");
+        }
+        const updateData = {};
+        updateData[campo] = data;
+        const clienteActualizado = await clientesDao.update(id, updateData);
+        return clienteActualizado;
+    }
 }
 
 

@@ -2,6 +2,7 @@ import crypto from 'crypto';
 import logger from "../middlewares/logger.js"
 import sendEmail from '../middlewares/mailer.js';
 import { clientesService } from "../services/clientes.service.js";
+import { hashear } from '../models/utils/utils.js';
 
 export const forgotPassword = async (req, res) => {
     const { mail } = req.body;
@@ -40,15 +41,14 @@ export const resetPassword = async (req, res) => {
     const { password } = req.body;
     try {
         const user = await clientesService.buscarPorToken(token);
-
-        // if (!user) {
-        //     logger.error('Token no encontrado')
-        //     return res.status(400).send('Invalid or expired token');
-        // }
-
-        logger.info(`Password: ${JSON.stringify(password)}`)
-        logger.info(`User: ${JSON.stringify(user)}`)
-        res.result(user);
+        if (!user) {
+            logger.error('Token no encontrado')
+            return res.status(400).send('Invalid or expired token');
+        }
+        const newPassword = hashear(password)
+        const newUserPass = await clientesService.updatearData(user._id, password, newPassword)
+        logger.info(`User: ${JSON.stringify(newUserPass)}`)
+        res.result(newUserPass);
     } catch (err) {
         logger.error('Error al ejecutar resetPassword')
         res.status(500).send('Server error');
