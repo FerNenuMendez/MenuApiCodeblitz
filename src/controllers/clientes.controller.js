@@ -64,7 +64,7 @@ export const postClienteTiendaController = async (req, res) => {
         res.status(500).json({ error: error.message });
     }
 };
-
+//ELIMINAR CLIENTES
 export async function deleteController(req, res, next) {
     const { id } = req.params;
     try {

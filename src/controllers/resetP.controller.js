@@ -1,9 +1,11 @@
 import crypto from 'crypto';
 import logger from "../middlewares/logger.js"
-import sendEmail from '../middlewares/mailer.js';
 import { clientesService } from "../services/clientes.service.js";
 import { hashear, tokenExpirado } from '../models/utils/utils.js';
+import { sendRecoveryMail } from '../middlewares/recoveryMail.js';
 
+
+//SOLICITAR LINK DE RECUPERO
 export const forgotPassword = async (req, res) => {
     const { mail } = req.body;
     try {
@@ -19,16 +21,17 @@ export const forgotPassword = async (req, res) => {
             resetPasswordToken: user.resetPasswordToken,
             resetPasswordExpires: user.resetPasswordExpires,
         });
-        const resetURL = `http://localhost:3000/renew/${token}`;
-        const message = `
-         <h1>Has solicitado un cambio de Password</h1>
-         <p>Por favor ingrese al siguiente link para resetear su contraseña</p>
-         <p>Entra al siguiente <a href="${resetURL}">link</a> para resetear tu password</p>`;
-        await sendEmail({
-            to: user.mail,
-            subject: 'Restablecer contraseña',
-            html: message,
-        });
+        sendRecoveryMail(user, token)
+        // const resetURL = `http://localhost:3000/renew/${token}`;
+        // const message = `
+        //  <h1>Has solicitado un cambio de Password</h1>
+        //  <p>Por favor ingrese al siguiente link para resetear su contraseña</p>
+        //  <p>Entra al siguiente <a href="${resetURL}">link</a> para resetear tu password</p>`;
+        // await sendEmail({
+        //     to: user.mail,
+        //     subject: 'Restablecer contraseña',
+        //     html: message,
+        // });
         res.status(200).send('Password reset email sent');
     } catch (err) {
         logger.error(`Error:${err}`)
@@ -36,6 +39,7 @@ export const forgotPassword = async (req, res) => {
     }
 };
 
+// COMPROBAR TOKEN Y CAMBIAR PASSWORD
 export const resetPassword = async (req, res) => {
     const { token } = req.params;
     const { password } = req.body;
