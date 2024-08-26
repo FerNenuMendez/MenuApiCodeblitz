@@ -1,5 +1,5 @@
-import logger from "./logger";
-import sendEmail from "./mailer";
+import logger from "./logger.js";
+import sendEmail from "./mailer.js";
 
 
 export async function sendRecoveryMail(user, token) {
