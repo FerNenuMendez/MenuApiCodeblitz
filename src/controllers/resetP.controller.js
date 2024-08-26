@@ -45,12 +45,12 @@ export const resetPassword = async (req, res) => {
         //     logger.error('Token no encontrado')
         //     return res.status(400).send('Invalid or expired token');
         // }
-        // user.password = password;
-        // user.resetPasswordToken = undefined;
-        // user.resetPasswordExpires = undefined;
-        // const newPassword = await clientesDao.update(user._id, { password: user.password })
-        // const updateResetPasswordToken = await clientesDao.update(user._id, { resetPasswordToken: user.resetPasswordToken })
-        // const updateResetPasswordExpires = await clientesDao.update(user._id, { resetPasswordExpires: user.resetPasswordExpires })
+        user.password = password;
+        user.resetPasswordToken = undefined;
+        user.resetPasswordExpires = undefined;
+        const newPassword = await clientesDao.update(user._id, { password: user.password })
+        const updateResetPasswordToken = await clientesDao.update(user._id, { resetPasswordToken: user.resetPasswordToken })
+        const updateResetPasswordExpires = await clientesDao.update(user._id, { resetPasswordExpires: user.resetPasswordExpires })
         logger.info(`Password: ${JSON.stringify(password)}`)
         logger.info(`User: ${JSON.stringify(user)}`)
         res.status(200).send('Password has been reset');
