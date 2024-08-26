@@ -8,7 +8,6 @@ export const forgotPassword = async (req, res) => {
     const { mail } = req.body;
     try {
         const user = await clientesService.buscarLogueo(mail);
-        logger.info(`Usuario encontrado: ${JSON.stringify(user, null, 2)}`)
         if (!user) {
             logger.error('Cliente a restablecer contraseña no encontrado')
             return res.status(404).send('Cliente not found');

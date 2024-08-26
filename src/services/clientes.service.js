@@ -16,10 +16,9 @@ class ClientesService {
         try {
             const updateData = {
                 password: newPasswordHashed,
-                resetPasswordToken: null,  // Limpiar el token una vez utilizado
-                resetPasswordTokenFechaExpiracion: null // Limpiar la fecha de expiración del token
+                resetPasswordToken: null,
+                resetPasswordExpires: null
             };
-
             const updatedUser = await clientesDao.update(userId, updateData);
             return updatedUser;
         } catch (error) {
