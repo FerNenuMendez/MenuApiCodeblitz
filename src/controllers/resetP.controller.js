@@ -48,7 +48,7 @@ export const resetPassword = async (req, res) => {
 
         logger.info(`Password: ${JSON.stringify(password)}`)
         logger.info(`User: ${JSON.stringify(user)}`)
-        res.status(200).send('Password has been reset');
+        res.result(user);
     } catch (err) {
         logger.error('Error al ejecutar resetPassword')
         res.status(500).send('Server error');
