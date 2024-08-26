@@ -15,7 +15,7 @@ export const forgotPassword = async (req, res) => {
         }
         const token = crypto.randomBytes(20).toString('hex');
         user.resetPasswordToken = token;
-        user.resetPasswordExpires = Date.now() + 3600000; // 1 hora
+        user.resetPasswordExpires = Date.now() + 7200000; // 2 hora
         await clientesService.actualizarResetPassword(user._id, {
             resetPasswordToken: user.resetPasswordToken,
             resetPasswordExpires: user.resetPasswordExpires,
