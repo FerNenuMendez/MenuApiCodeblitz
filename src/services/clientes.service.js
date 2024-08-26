@@ -27,8 +27,10 @@ class ClientesService {
         const clientes = await this.buscarTodos();
         const clienteBuscado = buscarPorToken(clientes, token)
         if (!clienteBuscado) {
+            logger.error('Cliente no encontrado')
             throw new Error('Cliente no encontrado');
         }
+        logger.info(`Usuario encontrado: ${JSON.stringify(clienteBuscado, null, 2)}`)
         return clienteBuscado;
     }
     async buscarID(id) {
