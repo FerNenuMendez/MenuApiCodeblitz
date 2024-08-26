@@ -14,11 +14,11 @@ export const forgotPassword = async (req, res) => {
         const token = crypto.randomBytes(20).toString('hex');
         user.resetPasswordToken = token;
         user.resetPasswordExpires = Date.now() + 3600000; // 1 hora
-        const resetURL = `http:localhost:3000/pass-rn/${token}`;
+        const resetURL = `http://localhost:3000/renew/${token}`;
         const message = `
          <h1>Has solicitado un cambio de Password</h1>
          <p>Por favor ingrese al siguiente link para resetear su contraseña</p>
-         <p>Click this <a href="${resetURL}">link</a> to reset your password</p>
+         <p>Entra al siguiente <a href="${resetURL}">link</a> para resetear tu password</p>
          `;
         await sendEmail({
             to: user.mail,
