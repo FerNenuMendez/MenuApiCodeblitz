@@ -7,7 +7,7 @@ import { hashear, tokenExpirado } from '../models/utils/utils.js';
 export const forgotPassword = async (req, res) => {
     const { mail } = req.body;
     try {
-        const user = await clientesService.buscarLogueo(mail);
+        const user = await clientesService.buscarLogueo({ mail });
         if (!user) {
             logger.error('Cliente a restablecer contraseña no encontrado')
             return res.status(404).send('Cliente not found');
