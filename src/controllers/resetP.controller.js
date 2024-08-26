@@ -29,7 +29,7 @@ export const forgotPassword = async (req, res) => {
         res.status(200).send('Password reset email sent');
     } catch (err) {
         logger.error('Error al ejecutar forgotpassword')
-        res.status(500).send('Server error');
+        res.status(404).send('Usuario no encontrado');
     }
 };
 
@@ -38,7 +38,7 @@ export const resetPassword = async (req, res) => {
     const { password } = req.body;
 
     try {
-        const user = await clientesService.buscar({
+        const user = await clientesService.buscarLogueo({
             //BUSCAR POR MAIL AL USUARIO
         });
 
