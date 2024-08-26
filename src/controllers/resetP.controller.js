@@ -8,6 +8,7 @@ export const forgotPassword = async (req, res) => {
     const { mail } = req.body;
     try {
         const user = await clientesService.buscarLogueo({ mail });
+        logger.info(`Usuario encontrado: ${JSON.stringify(user, null, 2)}`)
         if (!user) {
             logger.error('Cliente a restablecer contraseña no encontrado')
             return res.status(404).send('Cliente not found');
@@ -15,8 +16,9 @@ export const forgotPassword = async (req, res) => {
         const token = crypto.randomBytes(20).toString('hex');
         user.resetPasswordToken = token;
         user.resetPasswordExpires = Date.now() + 3600000; // 1 hora
-        const updateResetPasswordToken = await clientesDao.update(user._id, { resetPasswordToken: user.resetPasswordToken })
-        const updateResetPasswordExpires = await clientesDao.update(user._id, { resetPasswordExpires: user.resetPasswordExpires })
+        // const updateResetPasswordToken = await clientesDao.update(user._id, { resetPasswordToken: user.resetPasswordToken })
+        //     ()
+        // const updateResetPasswordExpires = await clientesDao.update(user._id, { resetPasswordExpires: user.resetPasswordExpires })
         const resetURL = `http://localhost:3000/renew/${token}`;
         const message = `
          <h1>Has solicitado un cambio de Password</h1>
@@ -28,7 +30,6 @@ export const forgotPassword = async (req, res) => {
             subject: 'Restablecer contraseña',
             html: message,
         });
-        logger.info(`Usuario encontrado: ${JSON.stringify(user, null, 2)}`)
         res.status(200).send('Password reset email sent');
     } catch (err) {
         logger.error(`Error:${err}`)
