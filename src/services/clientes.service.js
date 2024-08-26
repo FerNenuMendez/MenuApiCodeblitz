@@ -12,6 +12,22 @@ const tiendasDao = await getDaoTienda()
 
 class ClientesService {
 
+    async actualizarPassword(userId, newPasswordHashed) {
+        try {
+            const updateData = {
+                password: newPasswordHashed,
+                resetPasswordToken: null,  // Limpiar el token una vez utilizado
+                resetPasswordTokenFechaExpiracion: null // Limpiar la fecha de expiración del token
+            };
+
+            const updatedUser = await clientesDao.update(userId, updateData);
+            return updatedUser;
+        } catch (error) {
+            logger.error('Error al actualizar la contraseña:', error.message);
+            throw new Error('Error al actualizar la contraseña');
+        }
+    }
+
     async actualizarResetPassword(userId, updateData) {
         try {
             const updatedUser = await clientesDao.update(userId, updateData);
@@ -35,17 +51,22 @@ class ClientesService {
     }
 
     async buscarPorToken(token) {
-        const clientes = await this.buscarTodos();
-        const clienteBuscado = buscarToken(clientes, token)
-        if (!clienteBuscado) {
-            logger.error('Cliente no encontrado')
-            throw new Error('Cliente no encontrado');
+        try {
+            const clientes = await this.buscarTodos();
+            const clienteBuscado = buscarToken(clientes, token);
+            if (!clienteBuscado) {
+                logger.error('Cliente no encontrado');
+                throw new Error('Cliente no encontrado');
+            }
+            if (tokenExpirado(clienteBuscado.resetPasswordTokenFechaExpiracion)) {
+                logger.error('Token expirado');
+                throw new Error('Token expirado');
+            }
+            return clienteBuscado;
+        } catch (error) {
+            logger.error('Error en buscarPorToken:', error.message);
+            throw error;
         }
-        if (tokenExpirado(clienteBuscado.resetPasswordTokenFechaExpiracion)) {
-            logger.error('Token expirado');
-            throw new Error('Token expirado');
-        }
-        return clienteBuscado;
     }
 
     async buscarID(id) {

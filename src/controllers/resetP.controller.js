@@ -24,8 +24,7 @@ export const forgotPassword = async (req, res) => {
         const message = `
          <h1>Has solicitado un cambio de Password</h1>
          <p>Por favor ingrese al siguiente link para resetear su contraseña</p>
-         <p>Entra al siguiente <a href="${resetURL}">link</a> para resetear tu password</p>
-         `;
+         <p>Entra al siguiente <a href="${resetURL}">link</a> para resetear tu password</p>`;
         await sendEmail({
             to: user.mail,
             subject: 'Restablecer contraseña',
