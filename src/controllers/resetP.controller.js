@@ -31,7 +31,7 @@ export const forgotPassword = async (req, res) => {
         logger.info(`Usuario encontrado: ${JSON.stringify(user, null, 2)}`)
         res.status(200).send('Password reset email sent');
     } catch (err) {
-        logger.error('Error al ejecutar forgotpassword')
+        logger.error(`Error:${JSON.stringify(err, null, 2)}`)
         res.status(404).send('Usuario no encontrado');
     }
 };
