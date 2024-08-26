@@ -14,6 +14,8 @@ export const forgotPassword = async (req, res) => {
         const token = crypto.randomBytes(20).toString('hex');
         user.resetPasswordToken = token;
         user.resetPasswordExpires = Date.now() + 3600000; // 1 hora
+        const updateResetPasswordToken = await clientesDao.update(user._id, { resetPasswordToken: user.resetPasswordToken })
+        const updateResetPasswordExpires = await clientesDao.update(user._id, { resetPasswordExpires: user.resetPasswordExpires })
         const resetURL = `http://localhost:3000/renew/${token}`;
         const message = `
          <h1>Has solicitado un cambio de Password</h1>
@@ -34,22 +36,20 @@ export const forgotPassword = async (req, res) => {
 };
 
 export const resetPassword = async (req, res) => {
-    const { token } = req.params;
+    const { token } = req.params.token;
     const { password } = req.body;
-
     try {
-        const user = await clientesService.buscarLogueo({
-            //BUSCAR POR MAIL AL USUARIO
-        });
-
+        const user = await clientesService.buscarPorToken(token);
         if (!user) {
             logger.error('Token no encontrado')
             return res.status(400).send('Invalid or expired token');
         }
-
         user.password = password;
         user.resetPasswordToken = undefined;
         user.resetPasswordExpires = undefined;
+        const newPassword = await clientesDao.update(user._id, { password: user.password })
+        const updateResetPasswordToken = await clientesDao.update(user._id, { resetPasswordToken: user.resetPasswordToken })
+        const updateResetPasswordExpires = await clientesDao.update(user._id, { resetPasswordExpires: user.resetPasswordExpires })
         logger.info('Contraseña restablecida con exito')
         res.status(200).send('Password has been reset');
     } catch (err) {

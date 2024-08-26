@@ -1,6 +1,6 @@
 import { getDaoClientes } from '../models/clientes/clientes.dao.js'
 import { getDaoTienda } from '../models/tiendas/tienda.dao.js'
-import { hashear, buscarPorMail } from '../models/utils/utils.js'
+import { hashear, buscarPorMail, buscarPorToken } from '../models/utils/utils.js'
 import logger from '../middlewares/logger.js'
 import sendEmail from '../middlewares/mailer.js';
 
@@ -23,6 +23,14 @@ class ClientesService {
         return clienteBuscado;
     }
 
+    async buscarPorToken(token) {
+        const clientes = await this.buscarTodos();
+        const clienteBuscado = buscarPorToken(clientes, token)
+        if (!clienteBuscado) {
+            throw new Error('Cliente no encontrado');
+        }
+        return clienteBuscado;
+    }
     async buscarID(id) {
         return await clientesDao.readById(id);
     }
