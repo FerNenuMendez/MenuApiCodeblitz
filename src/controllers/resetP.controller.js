@@ -50,7 +50,7 @@ export const resetPassword = async (req, res) => {
         logger.info(`User: ${JSON.stringify(newUserPass)}`)
         res.result(newUserPass);
     } catch (err) {
-        logger.error('Error al ejecutar resetPassword')
+        logger.error(`Error: ${JSON.stringify(err, null, 2)}`)
         res.status(500).send('Server error');
     }
 };
