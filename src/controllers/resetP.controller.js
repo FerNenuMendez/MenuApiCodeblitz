@@ -38,7 +38,7 @@ export const resetPassword = async (req, res) => {
         const newPass = hashear(password)
         await clientesService.actualizarPassword(user._id, newPass);
         logger.info('Contraseña actualizada correctamente');
-        res.status(200).send('Password reset successfully');
+        res.status(200).send('Password cambiada correctamente');
     } catch (err) {
         logger.error('Error al ejecutar resetPassword')
         res.status(500).send('Server error');
