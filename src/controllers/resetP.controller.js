@@ -33,8 +33,8 @@ export const forgotPassword = async (req, res) => {
 export const resetPassword = async (req, res) => {
     const { token } = req.params;
     const { password } = req.body;
-    logger.info(`Token encontrado: ${JSON.stringify(token, null, 2)}`)
-    logger.info(`Password encontrado: ${JSON.stringify(password, null, 2)}`)
+    logger.info(`Token encontrado:(${token}, null, 2)`)
+    logger.info(`Password encontrado: (${password}, null, 2)`)
     try {
         const user = await clientesService.buscarPorToken(token);
         const newPass = hashear(password)
