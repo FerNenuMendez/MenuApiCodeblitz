@@ -8,7 +8,6 @@ import { sendRecoveryMail } from '../middlewares/recoveryMail.js';
 //SOLICITAR LINK DE RECUPERO
 export const forgotPassword = async (req, res) => {
     const { mail } = req.body;
-    logger.info(`Correo recibido en forgotPassword: ${mail}`);
     try {
         const user = await clientesService.buscarLogueo(mail);
         if (!user) {
