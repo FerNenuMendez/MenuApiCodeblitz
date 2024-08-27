@@ -2,7 +2,7 @@ import logger from "./logger.js";
 import sendEmail from "./mailer.js";
 
 
-export async function sendRecoveryMail({ user, token }) {
+export async function sendRecoveryMail(user, token) {
     try {
         const resetURL = `http://localhost:3000/renew/${token}`;
         const message = `
