@@ -1,18 +1,49 @@
 export function manejoDeErrores(error, req, res, next) {
-  res.status(400)
-  res.json({ status: 'Bad Request', error: error.message, message: "Hubo un error en el servidor, intentelo mas tarde. Si el error persiste contacte al proveedor del servicio." }),
-    res.status(401)
-  res.json({ status: 'Unauthorized', error: error.message, message: "Usted no posee autorizacion para hacer realizar esta accion." }),
-    res.status(404)
-  res.json({ status: 'Not Found', error: error.message, message: "Servidor no encontrado." }),
-    res.status(407)
-  res.json({ status: 'Authentication Required', error: error.message, message: "Necesita autorizacion para realizar esta accion." }),
-    res.status(408)
-  res.json({ status: 'Request Timeout', error: error.message, message: "Hubo un error en el servidor, intentelo mas tarde. Si el error persiste contacte al proveedor del servicio." }),
-    res.status(500)
-  res.json({ status: 'Internal Server Error', error: error.message, message: "Hubo un error en el servidor, intentelo mas tarde. Si el error persiste contacte al proveedor del servicio." }),
-    res.status(503)
-  res.json({ status: 'Service Unavailable', error: error.message, message: "Hubo un error en el servidor, intentelo mas tarde. Si el error persiste contacte al proveedor del servicio." }),
-    res.status(522)
-  res.json({ status: 'Connection Timed Out', error: error.message, message: "Hubo un error en el servidor, intentelo mas tarde. Si el error persiste contacte al proveedor del servicio." })
+  let statusCode;
+  let errorMessage;
+
+  switch (error.status) {
+    case 400:
+      statusCode = 400;
+      errorMessage = "Bad Request";
+      break;
+    case 401:
+      statusCode = 401;
+      errorMessage = "Unauthorized";
+      break;
+    case 404:
+      statusCode = 404;
+      errorMessage = "Not Found";
+      break;
+    case 407:
+      statusCode = 407;
+      errorMessage = "Authentication Required";
+      break;
+    case 408:
+      statusCode = 408;
+      errorMessage = "Request Timeout";
+      break;
+    case 500:
+      statusCode = 500;
+      errorMessage = "Internal Server Error";
+      break;
+    case 503:
+      statusCode = 503;
+      errorMessage = "Service Unavailable";
+      break;
+    case 522:
+      statusCode = 522;
+      errorMessage = "Connection Timed Out";
+      break;
+    default:
+      statusCode = 500; // Default to 500 Internal Server Error
+      errorMessage = "Internal Server Error";
+      break;
+  }
+
+  res.status(statusCode).json({
+    status: errorMessage,
+    error: error.message,
+    message: "Hubo un error en la base de datos."
+  });
 }
