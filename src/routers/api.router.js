@@ -8,7 +8,7 @@ import { resetPRouter } from './router/resetP.router.js'
 export const apiRouter = Router()
 
 apiRouter.use(respuestasMejoradas)
-apiRouter.use(manejoDeErrores)
+// apiRouter.use(manejoDeErrores)
 apiRouter.use(json())
 apiRouter.use(urlencoded({ extended: true }))
 
