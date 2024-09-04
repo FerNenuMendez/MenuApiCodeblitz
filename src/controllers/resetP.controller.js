@@ -6,7 +6,7 @@ import { sendRecoveryMail } from '../middlewares/recoveryMail.js';
 
 
 //SOLICITAR LINK DE RECUPERO
-export const forgotPassword = async (req, res) => {
+export const forgotPassword = async (req, res, next) => {
     const { mail } = req.body;
     try {
         const user = await clientesService.buscarLogueo(mail);
@@ -30,7 +30,7 @@ export const forgotPassword = async (req, res) => {
 };
 
 // COMPROBAR TOKEN Y CAMBIAR PASSWORD
-export const resetPassword = async (req, res) => {
+export const resetPassword = async (req, res, next) => {
     const { token } = req.params;
     const { password } = req.body;
     logger.info(`Token encontrado:(${token}, null, 2)`)

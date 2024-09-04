@@ -11,7 +11,7 @@ export async function getController(req, res, next) {
         res.result(clientes)
     } catch (error) {
         logger.error(error)
-        res.status(404).json({ error: error.message, message: message })
+        next(error)
     }
 }
 //BUSCAR POR ID
@@ -54,7 +54,7 @@ export async function postController(req, res, next) {
     }
 }
 //CREAR TIENDA
-export const postClienteTiendaController = async (req, res) => {
+export const postClienteTiendaController = async (req, res, next) => {
     try {
         const { id } = req.params;
         const data = req.body;
