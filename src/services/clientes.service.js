@@ -58,8 +58,8 @@ class ClientesService {
             const clientes = await this.buscarTodos();
             const clienteBuscado = buscarToken(clientes, token);
             if (!clienteBuscado) {
-                logger.error('Cliente no encontrado');
-                throw new Error('Cliente no encontrado');
+                logger.info(`Usuario no encontrado con el mail: ${token}`);
+                return null; // Retorna null si no se encuentra el cliente
             }
             return clienteBuscado;
         } catch (error) {
