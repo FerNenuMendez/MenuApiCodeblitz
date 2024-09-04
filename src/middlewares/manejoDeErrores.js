@@ -1,3 +1,5 @@
+import logger from "./logger";
+
 export function manejoDeErrores(error, req, res, next) {
   let statusCode;
   let errorMessage;
@@ -40,7 +42,7 @@ export function manejoDeErrores(error, req, res, next) {
       errorMessage = "Internal Server Error";
       break;
   }
-
+  logger.error(statusCode)
   res.status(statusCode).json({
     status: errorMessage,
     error: error.message,
