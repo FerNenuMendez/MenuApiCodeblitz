@@ -24,8 +24,8 @@ export const forgotPassword = async (req, res) => {
         sendRecoveryMail(user, token)
         res.status(200).send('Mail de recuperacion de contraseña enviado');
     } catch (error) {
-        logger.error(`Error:${err}`)
-        res.status(404).json({ error: error.message, message: message })
+        logger.error(`Error:${error}`)
+        next(error)
     }
 };
 
@@ -42,7 +42,7 @@ export const resetPassword = async (req, res) => {
         logger.info('Contraseña actualizada correctamente');
         res.status(200).send('Password cambiada correctamente');
     } catch (error) {
-        logger.error('Error al ejecutar resetPassword')
-        res.status(500).json({ error: error.message, message: message });
+        logger.error(`Error:${error}`)
+        next(error)
     }
 };
