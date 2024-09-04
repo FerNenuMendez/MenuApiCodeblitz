@@ -11,7 +11,7 @@ export async function getController(req, res, next) {
         res.result(clientes)
     } catch (error) {
         logger.error(error)
-        next(error)
+        res.status(404).json({ error: error.message, message: message })
     }
 }
 //BUSCAR POR ID
@@ -24,7 +24,7 @@ export async function getControllerID(req, res, next) {
         res.result(cliente)
     } catch (error) {
         logger.error(error)
-        next(error)
+        res.status(404).json({ error: error.message, message: message })
     }
 }
 //BUSCAR POR MAIL
@@ -37,7 +37,7 @@ export async function getControllerMail(req, res, next) {
         res.result(cliente)
     } catch (error) {
         logger.error(error)
-        next(error)
+        res.status(404).json({ error: error.message, message: message })
     }
 }
 //CREAR USUARIO
@@ -50,7 +50,7 @@ export async function postController(req, res, next) {
         res.created(cliente)
     } catch (error) {
         logger.error(error)
-        next(error)
+        res.status(400).json({ error: error.message, message: message })
     }
 }
 //CREAR TIENDA
@@ -59,9 +59,10 @@ export const postClienteTiendaController = async (req, res) => {
         const { id } = req.params;
         const data = req.body;
         const nuevaTienda = await clientesService.agregarTienda(id, data);
-        res.status(201).json(nuevaTienda);
+        res.created(nuevaTienda);
     } catch (error) {
-        res.status(500).json({ error: error.message });
+        logger.error(error)
+        res.status(500).json({ error: error.message, message: message })
     }
 };
 //ELIMINAR CLIENTES
@@ -74,6 +75,6 @@ export async function deleteController(req, res, next) {
         res.deleted(cliente)
     } catch {
         logger.error(error)
-        next(error)
+        res.status(500).json({ error: error.message, message: message })
     }
 }
