@@ -22,7 +22,7 @@ export const forgotPassword = async (req, res, next) => {
             resetPasswordExpires: user.resetPasswordExpires,
         });
         sendRecoveryMail(user, token)
-        res.status(200).send('Mail de recuperacion de contraseña enviado');
+        res.status(200).send('Mail de recuperación de contraseña enviado');
     } catch (error) {
         logger.error(`Error:${error}`)
         next(error)
