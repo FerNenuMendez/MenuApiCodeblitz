@@ -12,7 +12,7 @@ export const forgotPassword = async (req, res, next) => {
         const user = await clientesService.buscarLogueo(mail);
         if (!user) {
             logger.error('Cliente a restablecer contraseña no encontrado')
-            return res.status(404).send('Cliente not found');
+            return res.status(404);
         }
         const token = crypto.randomBytes(20).toString('hex');
         user.resetPasswordToken = token;
