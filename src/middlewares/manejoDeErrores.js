@@ -41,9 +41,5 @@ export function manejoDeErrores(error, req, res, next) {
       break;
   }
 
-  res.status(statusCode).json({
-    status: errorMessage,
-    error: error.message,
-    message: "Hubo un error en la base de datos."
-  });
+  res.status(statusCode)
 }

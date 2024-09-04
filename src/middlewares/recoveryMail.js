@@ -13,7 +13,7 @@ export async function sendRecoveryMail(user, token) {
             subject: 'Restablecer contraseña',
             html: message,
         });
-        logger.info(`Mail enviado a ${user.mail}`)
+        logger.info(`Mail utilizado: ${user.mail}`)
 
     } catch (error) {
         logger.error(`Error:${err}`)
