@@ -40,6 +40,10 @@ class ClientesService {
     async buscarLogueo(mail) {
         const clientes = await this.buscarTodos();
         const clienteBuscado = buscarPorMail(clientes, mail);
+        if (!clienteBuscado) {
+            logger.info(`Usuario no encontrado con el mail: ${mail}`);
+            return null; // Retorna null si no se encuentra el cliente
+        }
         logger.info(`Usuario encontrado: ${JSON.stringify(clienteBuscado, null, 2)}`)
         clienteBuscado.lastLogin = new Date()
         const updateLogin = await clientesDao.update(clienteBuscado._id, { lastLogin: clienteBuscado.lastLogin })
