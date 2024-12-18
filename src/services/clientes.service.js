@@ -12,6 +12,17 @@ const tiendasDao = await getDaoTienda()
 
 class ClientesService {
 
+    async agregarTienda(id, data) {
+        const user = await clientesService.buscarID(id)
+        data.userID = id
+        data.ingreso = new Date()
+        data.estado = "Activa"
+        const nuevaTienda = await tiendasDao.create(data)
+        user.tiendas.push(nuevaTienda._id)
+        const userUpdate = await clientesDao.update(id, { tiendas: user.tiendas })
+        return userUpdate
+    }
+
     async actualizarPassword(userId, newPasswordHashed) {
         try {
             const updateData = {
