@@ -13,7 +13,7 @@ const tiendasDao = await getDaoTienda()
 class ClientesService {
 
     async agregarTienda(id, data) {
-        const user = await clientesService.readById(id)
+        const user = await clientesDao.readById(id)
         data.userID = id
         data.ingreso = new Date()
         data.estado = "Activa"
