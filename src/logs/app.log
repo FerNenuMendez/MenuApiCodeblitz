@@ -418,3 +418,127 @@
 2024-12-18 12:52:30 [32minfo[39m: persistiendo Clientes en: MongoDB
 2024-12-18 12:52:30 [32minfo[39m: persistiendo Tiendas en: MongoDB
 2024-12-18 12:52:31 [32minfo[39m: Base de datos conectada a MongoDB
+2024-12-18 12:53:53 [32minfo[39m: Cargando configuracion:
+2024-12-18 12:53:54 [32minfo[39m: persistiendo Clientes en: MongoDB
+2024-12-18 12:53:54 [32minfo[39m: persistiendo Tiendas en: MongoDB
+2024-12-18 12:53:55 [32minfo[39m: Base de datos conectada a MongoDB
+2024-12-18 14:17:19 [31merror[39m: ObjectParameterError: Parameter "filter" to findOne() must be an object, got "6762e1e9f77bcb872a2335e8" (type string)
+    at Query.findOne (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\mongoose\lib\query.js:2603:16)
+    at Function.findOne (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\mongoose\lib\model.js:2389:13)
+    at ClientesDaoMongoose.readById (file:///C:/Users/FerM/Desktop/Emporio/New%20Api/src/models/clientes/mongoose/clientes.dao.mongoose.js:59:50)
+    at ClientesService.agregarTienda (file:///C:/Users/FerM/Desktop/Emporio/New%20Api/src/services/clientes.service.js:16:40)
+    at postClienteTiendaController (file:///C:/Users/FerM/Desktop/Emporio/New%20Api/src/controllers/clientes.controller.js:61:51)
+    at Layer.handle [as handle_request] (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\FerM\Desktop\Emporio\New Api\node_modules\express\lib\router\index.js:284:15
+2024-12-18 14:26:25 [32minfo[39m: Cargando configuracion:
+2024-12-18 14:26:27 [32minfo[39m: persistiendo Clientes en: MongoDB
+2024-12-18 14:26:27 [32minfo[39m: persistiendo Tiendas en: MongoDB
+2024-12-18 14:26:28 [32minfo[39m: Base de datos conectada a MongoDB
+2024-12-18 14:27:56 [31merror[39m: ReferenceError: mongoose is not defined
+    at ClientesService.agregarTienda (file:///C:/Users/FerM/Desktop/Emporio/New%20Api/src/services/clientes.service.js:16:56)
+    at postClienteTiendaController (file:///C:/Users/FerM/Desktop/Emporio/New%20Api/src/controllers/clientes.controller.js:61:51)
+    at Layer.handle [as handle_request] (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\FerM\Desktop\Emporio\New Api\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\express\lib\router\index.js:376:14)
+    at Function.process_params (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\express\lib\router\index.js:421:3)
+2024-12-18 14:28:18 [32minfo[39m: Cargando configuracion:
+2024-12-18 14:28:19 [32minfo[39m: persistiendo Clientes en: MongoDB
+2024-12-18 14:28:19 [32minfo[39m: persistiendo Tiendas en: MongoDB
+2024-12-18 14:28:21 [32minfo[39m: Base de datos conectada a MongoDB
+2024-12-18 14:28:28 [32minfo[39m: Cargando configuracion:
+2024-12-18 14:28:28 [32minfo[39m: persistiendo Clientes en: MongoDB
+2024-12-18 14:28:28 [32minfo[39m: persistiendo Tiendas en: MongoDB
+2024-12-18 14:28:29 [32minfo[39m: Base de datos conectada a MongoDB
+2024-12-18 14:28:33 [31merror[39m: TypeError: Class constructor ObjectId cannot be invoked without 'new'
+    at ClientesService.agregarTienda (file:///C:/Users/FerM/Desktop/Emporio/New%20Api/src/services/clientes.service.js:17:71)
+    at postClienteTiendaController (file:///C:/Users/FerM/Desktop/Emporio/New%20Api/src/controllers/clientes.controller.js:61:51)
+    at Layer.handle [as handle_request] (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\FerM\Desktop\Emporio\New Api\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\express\lib\router\index.js:376:14)
+    at Function.process_params (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\express\lib\router\index.js:421:3)
+2024-12-18 14:30:03 [32minfo[39m: Cargando configuracion:
+2024-12-18 14:30:03 [32minfo[39m: persistiendo Clientes en: MongoDB
+2024-12-18 14:30:03 [32minfo[39m: persistiendo Tiendas en: MongoDB
+2024-12-18 14:30:04 [32minfo[39m: Base de datos conectada a MongoDB
+2024-12-18 14:30:08 [31merror[39m: TypeError: Class constructor ObjectId cannot be invoked without 'new'
+    at ClientesService.agregarTienda (file:///C:/Users/FerM/Desktop/Emporio/New%20Api/src/services/clientes.service.js:17:39)
+    at postClienteTiendaController (file:///C:/Users/FerM/Desktop/Emporio/New%20Api/src/controllers/clientes.controller.js:61:51)
+    at Layer.handle [as handle_request] (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\FerM\Desktop\Emporio\New Api\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\express\lib\router\index.js:376:14)
+    at Function.process_params (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\express\lib\router\index.js:421:3)
+2024-12-18 14:30:16 [32minfo[39m: Cargando configuracion:
+2024-12-18 14:30:16 [32minfo[39m: persistiendo Clientes en: MongoDB
+2024-12-18 14:30:16 [32minfo[39m: persistiendo Tiendas en: MongoDB
+2024-12-18 14:30:17 [32minfo[39m: Base de datos conectada a MongoDB
+2024-12-18 14:30:20 [31merror[39m: TypeError: Class constructor ObjectId cannot be invoked without 'new'
+    at ClientesService.agregarTienda (file:///C:/Users/FerM/Desktop/Emporio/New%20Api/src/services/clientes.service.js:17:39)
+    at postClienteTiendaController (file:///C:/Users/FerM/Desktop/Emporio/New%20Api/src/controllers/clientes.controller.js:61:51)
+    at Layer.handle [as handle_request] (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\FerM\Desktop\Emporio\New Api\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\express\lib\router\index.js:376:14)
+    at Function.process_params (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\express\lib\router\index.js:421:3)
+2024-12-18 14:30:32 [32minfo[39m: Cargando configuracion:
+2024-12-18 14:30:33 [32minfo[39m: persistiendo Clientes en: MongoDB
+2024-12-18 14:30:33 [32minfo[39m: persistiendo Tiendas en: MongoDB
+2024-12-18 14:30:34 [32minfo[39m: Base de datos conectada a MongoDB
+2024-12-18 14:30:37 [31merror[39m: ValidationError: tiendas validation failed: domicilio: Path `domicilio` is required., nombre: Path `nombre` is required.
+    at Document.invalidate (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\mongoose\lib\document.js:3289:32)
+    at C:\Users\FerM\Desktop\Emporio\New Api\node_modules\mongoose\lib\document.js:3050:17
+    at C:\Users\FerM\Desktop\Emporio\New Api\node_modules\mongoose\lib\schemaType.js:1388:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+2024-12-18 14:31:48 [32minfo[39m: Cargando configuracion:
+2024-12-18 14:31:48 [32minfo[39m: persistiendo Clientes en: MongoDB
+2024-12-18 14:31:48 [32minfo[39m: persistiendo Tiendas en: MongoDB
+2024-12-18 14:31:50 [32minfo[39m: Base de datos conectada a MongoDB
+2024-12-18 14:32:01 [32minfo[39m: Cargando configuracion:
+2024-12-18 14:32:01 [32minfo[39m: persistiendo Clientes en: MongoDB
+2024-12-18 14:32:01 [32minfo[39m: persistiendo Tiendas en: MongoDB
+2024-12-18 14:32:02 [32minfo[39m: Base de datos conectada a MongoDB
+2024-12-18 14:32:13 [31merror[39m: TypeError: Class constructor ObjectId cannot be invoked without 'new'
+    at ClientesService.agregarTienda (file:///C:/Users/FerM/Desktop/Emporio/New%20Api/src/services/clientes.service.js:17:39)
+    at postClienteTiendaController (file:///C:/Users/FerM/Desktop/Emporio/New%20Api/src/controllers/clientes.controller.js:61:51)
+    at Layer.handle [as handle_request] (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\FerM\Desktop\Emporio\New Api\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\express\lib\router\index.js:376:14)
+    at Function.process_params (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\express\lib\router\index.js:421:3)
+2024-12-18 14:32:25 [32minfo[39m: Cargando configuracion:
+2024-12-18 14:32:26 [32minfo[39m: persistiendo Clientes en: MongoDB
+2024-12-18 14:32:26 [32minfo[39m: persistiendo Tiendas en: MongoDB
+2024-12-18 14:32:27 [32minfo[39m: Base de datos conectada a MongoDB
+2024-12-18 14:32:30 [31merror[39m: MongoServerError: E11000 duplicate key error collection: ApiMenuInteractivo.tiendas index: mail_1 dup key: { mail: null }
+    at InsertOneOperation.execute (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\mongodb\lib\operations\insert.js:51:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async executeOperation (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\mongodb\lib\operations\execute_operation.js:136:16)
+    at async Collection.insertOne (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\mongodb\lib\collection.js:155:16)
+2024-12-18 14:44:04 [32minfo[39m: Cargando configuracion:
+2024-12-18 14:44:04 [32minfo[39m: persistiendo Clientes en: MongoDB
+2024-12-18 14:44:04 [32minfo[39m: persistiendo Tiendas en: MongoDB
+2024-12-18 14:44:06 [32minfo[39m: Base de datos conectada a MongoDB
+2024-12-18 14:46:37 [32minfo[39m: Cargando configuracion:
+2024-12-18 14:46:37 [32minfo[39m: persistiendo Clientes en: MongoDB
+2024-12-18 14:46:37 [32minfo[39m: persistiendo Tiendas en: MongoDB
+2024-12-18 14:46:38 [32minfo[39m: Base de datos conectada a MongoDB

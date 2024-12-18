@@ -1,3 +1,4 @@
+import mongoose from 'mongoose'
 import { getDaoClientes } from '../models/clientes/clientes.dao.js'
 import { getDaoTienda } from '../models/tiendas/tienda.dao.js'
 import { hashear, buscarPorMail, buscarToken, tokenExpirado } from '../models/utils/utils.js'
@@ -13,14 +14,15 @@ const tiendasDao = await getDaoTienda()
 class ClientesService {
 
     async agregarTienda(id, data) {
-        const user = await clientesDao.readById(id);
+        const idUser = new mongoose.Types.ObjectId(id)
+        const user = await clientesDao.readById({ _id: idUser });
         data.userID = id
         data.ingreso = new Date()
         data.estado = "Activa"
         const nuevaTienda = await tiendasDao.create(data)
         user.tiendas.push(nuevaTienda._id)
         const userUpdate = await clientesDao.update(id, { tiendas: user.tiendas })
-        return userUpdate
+        return nuevaTienda
     }
 
     async actualizarPassword(userId, newPasswordHashed) {
