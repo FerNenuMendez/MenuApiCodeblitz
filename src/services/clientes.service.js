@@ -50,6 +50,30 @@ class ClientesService {
         }
     }
 
+    async borrarTienda(idUser, idTienda) {
+        const user = await clientesDao.readById({ _id: idUser })
+        if (!user) {
+            throw new Error(`Usuario con ID ${idUser} no encontrado`);
+        }
+        logger.info(`Borrando tienda con ID: ${idTienda} del usuario con ID: ${idUser}`);
+        const tiendaABorrar = await tiendasDao.deleteOne({ _id: idTienda })
+        if (!tiendaABorrar) {
+            throw new Error(`Tienda con ID ${idTienda} no encontrada`);
+        }
+        const nuevaTiendas = user.tiendas.filter(obj => obj._id.toString() !== idTienda.toString())
+        const updateUser = await clientesDao.update(idUser, { tiendas: nuevaTiendas })
+        if (!updateUser) {
+            throw new Error('Error al actualizar el Inventario con el nuevo item');
+        }
+        logger.info(
+            `Tienda con ID ${idTienda._id} eliminada exitosamente del usuario con ID ${idUser}`
+        );
+        return {
+            message: "Tienda eliminada exitosamente",
+            tiendaEliminada: idTienda,
+        };
+    }
+
     async buscarLogueo(mail) {
         const clientes = await this.buscarTodos();
         const clienteBuscado = buscarPorMail(clientes, mail);

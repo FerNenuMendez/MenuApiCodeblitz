@@ -21,6 +21,11 @@ class TiendaService {
         const userUpdate = await clientesService.updatearData(id, tiendas, user.tiendas)
         return userUpdate
     }
+    async borrarTienda(idUser, idTienda) {
+        const user = await clientesService.buscarID(idUser)
+        const tiendaABorrar = await tiendasDao.deleteOne({ id: idTienda })
+        console.log(tiendaABorrar)
+    }
 }
 
 export const tiendaService = new TiendaService()

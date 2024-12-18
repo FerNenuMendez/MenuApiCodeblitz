@@ -40,7 +40,7 @@ export async function getControllerMail(req, res, next) {
         next(error)
     }
 }
-//CREAR USUARIO
+//CREAR CLIENTES
 export async function postController(req, res, next) {
     try {
         const data = req.body;
@@ -53,18 +53,6 @@ export async function postController(req, res, next) {
         next(error)
     }
 }
-//CREAR TIENDA
-export const postClienteTiendaController = async (req, res, next) => {
-    try {
-        const { id } = req.params;
-        const data = req.body;
-        const nuevaTienda = await clientesService.agregarTienda(id, data);
-        res.created(nuevaTienda);
-    } catch (error) {
-        logger.error(error)
-        next(error)
-    }
-};
 //ELIMINAR CLIENTES
 export async function deleteController(req, res, next) {
     const { id } = req.params;
@@ -78,3 +66,27 @@ export async function deleteController(req, res, next) {
         next(error)
     }
 }
+//CREAR TIENDA
+export async function postClienteTiendaController(req, res, next) {
+    try {
+        const { id } = req.params;
+        const data = req.body;
+        const nuevaTienda = await clientesService.agregarTienda(id, data);
+        res.created(nuevaTienda);
+    } catch (error) {
+        logger.error(error)
+        next(error)
+    }
+};
+//ELIMINAR TIENDA
+export async function deleteTiendaController(req, res, next) {
+    try {
+        const { id } = req.params;
+        const idTienda = req.body
+        const tiendaABorrar = await clientesService.borrarTienda(id, idTienda)
+        res.deleted(tiendaABorrar)
+    } catch (error) {
+        logger.error(error)
+        next(error)
+    }
+} 

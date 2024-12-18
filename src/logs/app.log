@@ -542,3 +542,395 @@
 2024-12-18 14:46:37 [32minfo[39m: persistiendo Clientes en: MongoDB
 2024-12-18 14:46:37 [32minfo[39m: persistiendo Tiendas en: MongoDB
 2024-12-18 14:46:38 [32minfo[39m: Base de datos conectada a MongoDB
+2024-12-18 18:37:48 [32minfo[39m: Cargando configuracion:
+2024-12-18 18:37:48 [32minfo[39m: persistiendo Clientes en: MongoDB
+2024-12-18 18:37:48 [32minfo[39m: persistiendo Tiendas en: MongoDB
+2024-12-18 18:37:50 [32minfo[39m: Base de datos conectada a MongoDB
+2024-12-18 18:53:48 [32minfo[39m: Cargando configuracion:
+2024-12-18 18:53:48 [32minfo[39m: persistiendo Clientes en: MongoDB
+2024-12-18 18:53:48 [32minfo[39m: persistiendo Tiendas en: MongoDB
+2024-12-18 18:53:49 [32minfo[39m: Base de datos conectada a MongoDB
+2024-12-18 18:53:53 [31merror[39m: TypeError: mongoose.Types is not a constructor
+    at ClientesService.agregarTienda (file:///C:/Users/FerM/Desktop/Emporio/New%20Api/src/services/clientes.service.js:17:24)
+    at postClienteTiendaController (file:///C:/Users/FerM/Desktop/Emporio/New%20Api/src/controllers/clientes.controller.js:61:51)
+    at Layer.handle [as handle_request] (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\FerM\Desktop\Emporio\New Api\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\express\lib\router\index.js:376:14)
+    at Function.process_params (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\express\lib\router\index.js:421:3)
+2024-12-18 18:54:05 [32minfo[39m: Cargando configuracion:
+2024-12-18 18:54:05 [32minfo[39m: persistiendo Clientes en: MongoDB
+2024-12-18 18:54:05 [32minfo[39m: persistiendo Tiendas en: MongoDB
+2024-12-18 18:54:06 [32minfo[39m: Base de datos conectada a MongoDB
+2024-12-18 18:54:51 [32minfo[39m: Cargando configuracion:
+2024-12-18 18:54:51 [32minfo[39m: persistiendo Clientes en: MongoDB
+2024-12-18 18:54:51 [32minfo[39m: persistiendo Tiendas en: MongoDB
+2024-12-18 18:54:52 [32minfo[39m: Base de datos conectada a MongoDB
+2024-12-18 18:57:51 [32minfo[39m: Cargando configuracion:
+2024-12-18 18:57:51 [32minfo[39m: persistiendo Clientes en: MongoDB
+2024-12-18 18:57:51 [32minfo[39m: persistiendo Tiendas en: MongoDB
+2024-12-18 18:57:53 [32minfo[39m: Base de datos conectada a MongoDB
+2024-12-18 18:58:07 [32minfo[39m: Cargando configuracion:
+2024-12-18 18:58:08 [32minfo[39m: persistiendo Clientes en: MongoDB
+2024-12-18 18:58:08 [32minfo[39m: persistiendo Tiendas en: MongoDB
+2024-12-18 18:58:08 [32minfo[39m: Base de datos conectada a MongoDB
+2024-12-18 18:58:14 [32minfo[39m: Cargando configuracion:
+2024-12-18 18:58:14 [32minfo[39m: persistiendo Clientes en: MongoDB
+2024-12-18 18:58:14 [32minfo[39m: persistiendo Tiendas en: MongoDB
+2024-12-18 18:58:15 [32minfo[39m: Base de datos conectada a MongoDB
+2024-12-18 18:58:31 [32minfo[39m: Cargando configuracion:
+2024-12-18 18:58:31 [32minfo[39m: persistiendo Clientes en: MongoDB
+2024-12-18 18:58:31 [32minfo[39m: persistiendo Tiendas en: MongoDB
+2024-12-18 18:58:32 [32minfo[39m: Base de datos conectada a MongoDB
+2024-12-18 18:58:41 [32minfo[39m: Cargando configuracion:
+2024-12-18 18:58:41 [32minfo[39m: persistiendo Clientes en: MongoDB
+2024-12-18 18:58:41 [32minfo[39m: persistiendo Tiendas en: MongoDB
+2024-12-18 18:58:43 [32minfo[39m: Base de datos conectada a MongoDB
+2024-12-18 18:59:12 [32minfo[39m: Cargando configuracion:
+2024-12-18 18:59:12 [32minfo[39m: persistiendo Clientes en: MongoDB
+2024-12-18 18:59:12 [32minfo[39m: persistiendo Tiendas en: MongoDB
+2024-12-18 18:59:13 [32minfo[39m: Base de datos conectada a MongoDB
+2024-12-18 18:59:41 [32minfo[39m: Cargando configuracion:
+2024-12-18 18:59:41 [32minfo[39m: persistiendo Clientes en: MongoDB
+2024-12-18 18:59:41 [32minfo[39m: persistiendo Tiendas en: MongoDB
+2024-12-18 18:59:42 [32minfo[39m: Base de datos conectada a MongoDB
+2024-12-18 18:59:45 [32minfo[39m: Cargando configuracion:
+2024-12-18 18:59:45 [32minfo[39m: persistiendo Clientes en: MongoDB
+2024-12-18 18:59:45 [32minfo[39m: persistiendo Tiendas en: MongoDB
+2024-12-18 18:59:46 [32minfo[39m: Base de datos conectada a MongoDB
+2024-12-18 19:01:04 [32minfo[39m: Cargando configuracion:
+2024-12-18 19:01:04 [32minfo[39m: persistiendo Clientes en: MongoDB
+2024-12-18 19:01:04 [32minfo[39m: persistiendo Tiendas en: MongoDB
+2024-12-18 19:01:05 [32minfo[39m: Base de datos conectada a MongoDB
+2024-12-18 19:01:17 [32minfo[39m: Cargando configuracion:
+2024-12-18 19:01:17 [32minfo[39m: persistiendo Clientes en: MongoDB
+2024-12-18 19:01:17 [32minfo[39m: persistiendo Tiendas en: MongoDB
+2024-12-18 19:01:18 [32minfo[39m: Base de datos conectada a MongoDB
+2024-12-18 19:01:37 [32minfo[39m: Cargando configuracion:
+2024-12-18 19:01:37 [32minfo[39m: persistiendo Clientes en: MongoDB
+2024-12-18 19:01:37 [32minfo[39m: persistiendo Tiendas en: MongoDB
+2024-12-18 19:01:38 [32minfo[39m: Base de datos conectada a MongoDB
+2024-12-18 19:03:26 [32minfo[39m: Cargando configuracion:
+2024-12-18 19:03:26 [32minfo[39m: persistiendo Clientes en: MongoDB
+2024-12-18 19:03:26 [32minfo[39m: persistiendo Tiendas en: MongoDB
+2024-12-18 19:03:28 [32minfo[39m: Base de datos conectada a MongoDB
+2024-12-18 19:03:33 [32minfo[39m: Cargando configuracion:
+2024-12-18 19:03:33 [32minfo[39m: persistiendo Clientes en: MongoDB
+2024-12-18 19:03:33 [32minfo[39m: persistiendo Tiendas en: MongoDB
+2024-12-18 19:03:34 [32minfo[39m: Base de datos conectada a MongoDB
+2024-12-18 19:03:53 [32minfo[39m: Cargando configuracion:
+2024-12-18 19:03:53 [32minfo[39m: persistiendo Clientes en: MongoDB
+2024-12-18 19:03:53 [32minfo[39m: persistiendo Tiendas en: MongoDB
+2024-12-18 19:03:54 [32minfo[39m: Base de datos conectada a MongoDB
+2024-12-18 19:06:10 [32minfo[39m: Cargando configuracion:
+2024-12-18 19:06:10 [32minfo[39m: persistiendo Clientes en: MongoDB
+2024-12-18 19:06:10 [32minfo[39m: persistiendo Tiendas en: MongoDB
+2024-12-18 19:06:11 [32minfo[39m: Base de datos conectada a MongoDB
+2024-12-18 19:08:59 [32minfo[39m: Cargando configuracion:
+2024-12-18 19:08:59 [32minfo[39m: persistiendo Clientes en: MongoDB
+2024-12-18 19:08:59 [32minfo[39m: persistiendo Tiendas en: MongoDB
+2024-12-18 19:09:00 [32minfo[39m: Base de datos conectada a MongoDB
+2024-12-18 19:09:37 [32minfo[39m: Cargando configuracion:
+2024-12-18 19:09:37 [32minfo[39m: persistiendo Clientes en: MongoDB
+2024-12-18 19:09:37 [32minfo[39m: persistiendo Tiendas en: MongoDB
+2024-12-18 19:09:38 [32minfo[39m: Base de datos conectada a MongoDB
+2024-12-18 19:16:17 [32minfo[39m: Cargando configuracion:
+2024-12-18 19:16:18 [32minfo[39m: persistiendo Clientes en: MongoDB
+2024-12-18 19:16:18 [32minfo[39m: persistiendo Tiendas en: MongoDB
+2024-12-18 19:16:19 [32minfo[39m: Base de datos conectada a MongoDB
+2024-12-18 19:17:41 [32minfo[39m: Cargando configuracion:
+2024-12-18 19:17:41 [32minfo[39m: persistiendo Clientes en: MongoDB
+2024-12-18 19:17:41 [32minfo[39m: persistiendo Tiendas en: MongoDB
+2024-12-18 19:17:42 [32minfo[39m: Base de datos conectada a MongoDB
+2024-12-18 19:44:23 [32minfo[39m: Cargando configuracion:
+2024-12-18 19:44:23 [32minfo[39m: persistiendo Clientes en: MongoDB
+2024-12-18 19:44:23 [32minfo[39m: persistiendo Tiendas en: MongoDB
+2024-12-18 19:44:24 [32minfo[39m: Base de datos conectada a MongoDB
+2024-12-18 19:45:53 [31merror[39m: TypeError: clientesDao.buscarID is not a function
+    at ClientesService.borrarTienda (file:///C:/Users/FerM/Desktop/Emporio/New%20Api/src/services/clientes.service.js:54:40)
+    at deleteTiendaController (file:///C:/Users/FerM/Desktop/Emporio/New%20Api/src/controllers/clientes.controller.js:86:53)
+    at Layer.handle [as handle_request] (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\FerM\Desktop\Emporio\New Api\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\express\lib\router\index.js:376:14)
+    at Function.process_params (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\express\lib\router\index.js:421:3)
+2024-12-18 19:46:28 [32minfo[39m: Cargando configuracion:
+2024-12-18 19:46:29 [32minfo[39m: persistiendo Clientes en: MongoDB
+2024-12-18 19:46:29 [32minfo[39m: persistiendo Tiendas en: MongoDB
+2024-12-18 19:46:30 [32minfo[39m: Base de datos conectada a MongoDB
+2024-12-18 19:46:32 [31merror[39m: ObjectParameterError: Parameter "filter" to findOne() must be an object, got "6762e1e9f77bcb872a2335e8" (type string)
+    at Query.findOne (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\mongoose\lib\query.js:2603:16)
+    at Function.findOne (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\mongoose\lib\model.js:2389:13)
+    at ClientesDaoMongoose.readById (file:///C:/Users/FerM/Desktop/Emporio/New%20Api/src/models/clientes/mongoose/clientes.dao.mongoose.js:59:50)
+    at ClientesService.borrarTienda (file:///C:/Users/FerM/Desktop/Emporio/New%20Api/src/services/clientes.service.js:54:40)
+    at deleteTiendaController (file:///C:/Users/FerM/Desktop/Emporio/New%20Api/src/controllers/clientes.controller.js:86:53)
+    at Layer.handle [as handle_request] (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\FerM\Desktop\Emporio\New Api\node_modules\express\lib\router\index.js:284:15
+2024-12-18 19:47:21 [32minfo[39m: Cargando configuracion:
+2024-12-18 19:47:21 [32minfo[39m: persistiendo Clientes en: MongoDB
+2024-12-18 19:47:21 [32minfo[39m: persistiendo Tiendas en: MongoDB
+2024-12-18 19:47:22 [32minfo[39m: Base de datos conectada a MongoDB
+2024-12-18 19:47:53 [32minfo[39m: Cargando configuracion:
+2024-12-18 19:47:53 [32minfo[39m: persistiendo Clientes en: MongoDB
+2024-12-18 19:47:53 [32minfo[39m: persistiendo Tiendas en: MongoDB
+2024-12-18 19:47:55 [32minfo[39m: Base de datos conectada a MongoDB
+2024-12-18 19:54:16 [32minfo[39m: Cargando configuracion:
+2024-12-18 19:54:16 [32minfo[39m: persistiendo Clientes en: MongoDB
+2024-12-18 19:54:16 [32minfo[39m: persistiendo Tiendas en: MongoDB
+2024-12-18 19:54:17 [32minfo[39m: Base de datos conectada a MongoDB
+2024-12-18 19:54:35 [32minfo[39m: Cargando configuracion:
+2024-12-18 19:54:35 [32minfo[39m: persistiendo Clientes en: MongoDB
+2024-12-18 19:54:35 [32minfo[39m: persistiendo Tiendas en: MongoDB
+2024-12-18 19:54:36 [32minfo[39m: Base de datos conectada a MongoDB
+2024-12-18 19:55:46 [32minfo[39m: Cargando configuracion:
+2024-12-18 19:55:46 [32minfo[39m: persistiendo Clientes en: MongoDB
+2024-12-18 19:55:46 [32minfo[39m: persistiendo Tiendas en: MongoDB
+2024-12-18 19:55:48 [32minfo[39m: Base de datos conectada a MongoDB
+2024-12-18 19:59:49 [31merror[39m: CastError: Cast to ObjectId failed for value "{ idTienda: '6763515e3f3016a6982368d1' }" (type Object) at path "_id" for model "tiendas"
+    at SchemaObjectId.cast (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\mongoose\lib\schema\objectId.js:250:11)
+    at SchemaType.applySetters (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\mongoose\lib\schemaType.js:1236:12)
+    at SchemaType.castForQuery (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\mongoose\lib\schemaType.js:1653:17)
+    at cast (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\mongoose\lib\cast.js:304:34)
+    at Query.cast (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\mongoose\lib\query.js:4798:12)
+    at Query._castConditions (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\mongoose\lib\query.js:2206:10)
+    at model.Query._findOneAndDelete (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\mongoose\lib\query.js:3433:8)
+    at model.Query.exec (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\mongoose\lib\query.js:4342:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async TiendasDaoMongoose.deleteOne (file:///C:/Users/FerM/Desktop/Emporio/New%20Api/src/models/tiendas/mongoose/tiendas.dao.mongoose.js:42:16)
+2024-12-18 20:00:07 [32minfo[39m: Cargando configuracion:
+2024-12-18 20:00:07 [32minfo[39m: persistiendo Clientes en: MongoDB
+2024-12-18 20:00:07 [32minfo[39m: persistiendo Tiendas en: MongoDB
+2024-12-18 20:00:08 [32minfo[39m: Base de datos conectada a MongoDB
+2024-12-18 20:00:10 [31merror[39m: CastError: Cast to ObjectId failed for value "{ idTienda: '6763515e3f3016a6982368d1' }" (type Object) at path "_id" for model "tiendas"
+    at SchemaObjectId.cast (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\mongoose\lib\schema\objectId.js:250:11)
+    at SchemaType.applySetters (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\mongoose\lib\schemaType.js:1236:12)
+    at SchemaType.castForQuery (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\mongoose\lib\schemaType.js:1653:17)
+    at cast (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\mongoose\lib\cast.js:304:34)
+    at Query.cast (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\mongoose\lib\query.js:4798:12)
+    at Query._castConditions (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\mongoose\lib\query.js:2206:10)
+    at model.Query._findOneAndDelete (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\mongoose\lib\query.js:3433:8)
+    at model.Query.exec (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\mongoose\lib\query.js:4342:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async TiendasDaoMongoose.deleteOne (file:///C:/Users/FerM/Desktop/Emporio/New%20Api/src/models/tiendas/mongoose/tiendas.dao.mongoose.js:42:16)
+2024-12-18 20:01:38 [32minfo[39m: Cargando configuracion:
+2024-12-18 20:01:38 [32minfo[39m: persistiendo Clientes en: MongoDB
+2024-12-18 20:01:38 [32minfo[39m: persistiendo Tiendas en: MongoDB
+2024-12-18 20:01:39 [32minfo[39m: Base de datos conectada a MongoDB
+2024-12-18 20:01:41 [31merror[39m: BSONError: Argument passed in does not match the accepted types
+    at new ObjectId (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\bson\lib\bson.cjs:2365:19)
+    at ClientesService.borrarTienda (file:///C:/Users/FerM/Desktop/Emporio/New%20Api/src/services/clientes.service.js:55:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async deleteTiendaController (file:///C:/Users/FerM/Desktop/Emporio/New%20Api/src/controllers/clientes.controller.js:86:31)
+2024-12-18 20:02:31 [32minfo[39m: Cargando configuracion:
+2024-12-18 20:02:32 [32minfo[39m: persistiendo Clientes en: MongoDB
+2024-12-18 20:02:32 [32minfo[39m: persistiendo Tiendas en: MongoDB
+2024-12-18 20:02:33 [32minfo[39m: Base de datos conectada a MongoDB
+2024-12-18 20:02:35 [31merror[39m: CastError: Cast to ObjectId failed for value "{ idTienda: '6763515e3f3016a6982368d1' }" (type Object) at path "_id" for model "tiendas"
+    at SchemaObjectId.cast (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\mongoose\lib\schema\objectId.js:250:11)
+    at SchemaType.applySetters (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\mongoose\lib\schemaType.js:1236:12)
+    at SchemaType.castForQuery (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\mongoose\lib\schemaType.js:1653:17)
+    at cast (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\mongoose\lib\cast.js:304:34)
+    at Query.cast (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\mongoose\lib\query.js:4798:12)
+    at Query._castConditions (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\mongoose\lib\query.js:2206:10)
+    at model.Query._findOneAndDelete (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\mongoose\lib\query.js:3433:8)
+    at model.Query.exec (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\mongoose\lib\query.js:4342:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async TiendasDaoMongoose.deleteOne (file:///C:/Users/FerM/Desktop/Emporio/New%20Api/src/models/tiendas/mongoose/tiendas.dao.mongoose.js:42:16)
+2024-12-18 20:07:41 [32minfo[39m: Cargando configuracion:
+2024-12-18 20:07:41 [32minfo[39m: persistiendo Clientes en: MongoDB
+2024-12-18 20:07:41 [32minfo[39m: persistiendo Tiendas en: MongoDB
+2024-12-18 20:07:42 [32minfo[39m: Base de datos conectada a MongoDB
+2024-12-18 20:08:05 [32minfo[39m: Cargando configuracion:
+2024-12-18 20:08:05 [32minfo[39m: persistiendo Clientes en: MongoDB
+2024-12-18 20:08:05 [32minfo[39m: persistiendo Tiendas en: MongoDB
+2024-12-18 20:08:06 [32minfo[39m: Base de datos conectada a MongoDB
+2024-12-18 20:08:47 [32minfo[39m: Cargando configuracion:
+2024-12-18 20:08:47 [32minfo[39m: persistiendo Clientes en: MongoDB
+2024-12-18 20:08:47 [32minfo[39m: persistiendo Tiendas en: MongoDB
+2024-12-18 20:08:48 [32minfo[39m: Base de datos conectada a MongoDB
+2024-12-18 20:11:23 [32minfo[39m: Cargando configuracion:
+2024-12-18 20:11:23 [32minfo[39m: persistiendo Clientes en: MongoDB
+2024-12-18 20:11:23 [32minfo[39m: persistiendo Tiendas en: MongoDB
+2024-12-18 20:11:25 [32minfo[39m: Base de datos conectada a MongoDB
+2024-12-18 20:11:41 [32minfo[39m: Cargando configuracion:
+2024-12-18 20:11:41 [32minfo[39m: persistiendo Clientes en: MongoDB
+2024-12-18 20:11:41 [32minfo[39m: persistiendo Tiendas en: MongoDB
+2024-12-18 20:11:42 [32minfo[39m: Base de datos conectada a MongoDB
+2024-12-18 20:12:50 [32minfo[39m: Cargando configuracion:
+2024-12-18 20:12:50 [32minfo[39m: persistiendo Clientes en: MongoDB
+2024-12-18 20:12:50 [32minfo[39m: persistiendo Tiendas en: MongoDB
+2024-12-18 20:12:52 [32minfo[39m: Base de datos conectada a MongoDB
+2024-12-18 20:13:39 [32minfo[39m: Borrando tienda con ID: [object Object] del usuario con ID: 6762e1e9f77bcb872a2335e8
+2024-12-18 20:13:39 [31merror[39m: TypeError: clientesDao.updateOne is not a function
+    at ClientesService.borrarTienda (file:///C:/Users/FerM/Desktop/Emporio/New%20Api/src/services/clientes.service.js:63:58)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async deleteTiendaController (file:///C:/Users/FerM/Desktop/Emporio/New%20Api/src/controllers/clientes.controller.js:86:31)
+2024-12-18 20:14:30 [32minfo[39m: Cargando configuracion:
+2024-12-18 20:14:30 [32minfo[39m: persistiendo Clientes en: MongoDB
+2024-12-18 20:14:30 [32minfo[39m: persistiendo Tiendas en: MongoDB
+2024-12-18 20:14:31 [32minfo[39m: Base de datos conectada a MongoDB
+2024-12-18 20:14:36 [32minfo[39m: Borrando tienda con ID: [object Object] del usuario con ID: 6762e1e9f77bcb872a2335e8
+2024-12-18 20:14:36 [31merror[39m: Error: Tienda con ID [object Object] no encontrada
+    at ClientesService.borrarTienda (file:///C:/Users/FerM/Desktop/Emporio/New%20Api/src/services/clientes.service.js:61:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async deleteTiendaController (file:///C:/Users/FerM/Desktop/Emporio/New%20Api/src/controllers/clientes.controller.js:86:31)
+2024-12-18 20:14:58 [32minfo[39m: Cargando configuracion:
+2024-12-18 20:14:58 [32minfo[39m: persistiendo Clientes en: MongoDB
+2024-12-18 20:14:58 [32minfo[39m: persistiendo Tiendas en: MongoDB
+2024-12-18 20:14:59 [32minfo[39m: Base de datos conectada a MongoDB
+2024-12-18 20:15:51 [32minfo[39m: Borrando tienda con ID: [object Object] del usuario con ID: 6762e1e9f77bcb872a2335e8
+2024-12-18 20:15:51 [32minfo[39m: Tienda con ID [object Object] eliminada exitosamente del usuario con ID 6762e1e9f77bcb872a2335e8
+2024-12-18 20:17:02 [32minfo[39m: Cargando configuracion:
+2024-12-18 20:17:02 [32minfo[39m: persistiendo Clientes en: MongoDB
+2024-12-18 20:17:02 [32minfo[39m: persistiendo Tiendas en: MongoDB
+2024-12-18 20:17:03 [32minfo[39m: Base de datos conectada a MongoDB
+2024-12-18 20:18:45 [32minfo[39m: Borrando tienda con ID: [object Object] del usuario con ID: 6762e1e9f77bcb872a2335e8
+2024-12-18 20:18:45 [32minfo[39m: "Tienda con ID [object Object] eliminada exitosamente del usuario con ID 6762e1e9f77bcb872a2335e8"
+2024-12-18 20:23:20 [32minfo[39m: Cargando configuracion:
+2024-12-18 20:23:20 [32minfo[39m: persistiendo Clientes en: MongoDB
+2024-12-18 20:23:20 [32minfo[39m: persistiendo Tiendas en: MongoDB
+2024-12-18 20:23:21 [32minfo[39m: Base de datos conectada a MongoDB
+2024-12-18 20:23:34 [32minfo[39m: Cargando configuracion:
+2024-12-18 20:23:34 [32minfo[39m: persistiendo Clientes en: MongoDB
+2024-12-18 20:23:34 [32minfo[39m: persistiendo Tiendas en: MongoDB
+2024-12-18 20:23:34 [32minfo[39m: Base de datos conectada a MongoDB
+2024-12-18 20:23:44 [32minfo[39m: Cargando configuracion:
+2024-12-18 20:23:45 [32minfo[39m: persistiendo Clientes en: MongoDB
+2024-12-18 20:23:45 [32minfo[39m: persistiendo Tiendas en: MongoDB
+2024-12-18 20:23:47 [32minfo[39m: Cargando configuracion:
+2024-12-18 20:23:47 [32minfo[39m: persistiendo Clientes en: MongoDB
+2024-12-18 20:23:47 [32minfo[39m: persistiendo Tiendas en: MongoDB
+2024-12-18 20:23:48 [32minfo[39m: Base de datos conectada a MongoDB
+2024-12-18 20:24:02 [32minfo[39m: Cargando configuracion:
+2024-12-18 20:24:02 [32minfo[39m: persistiendo Clientes en: MongoDB
+2024-12-18 20:24:02 [32minfo[39m: persistiendo Tiendas en: MongoDB
+2024-12-18 20:24:03 [32minfo[39m: Base de datos conectada a MongoDB
+2024-12-18 20:24:07 [32minfo[39m: Cargando configuracion:
+2024-12-18 20:24:07 [32minfo[39m: persistiendo Clientes en: MongoDB
+2024-12-18 20:24:07 [32minfo[39m: persistiendo Tiendas en: MongoDB
+2024-12-18 20:24:08 [32minfo[39m: Base de datos conectada a MongoDB
+2024-12-18 20:24:09 [31merror[39m: Error al borrar la tienda: ObjectId is not defined
+2024-12-18 20:24:09 [31merror[39m: Error: ObjectId is not defined
+    at ClientesService.borrarTienda (file:///C:/Users/FerM/Desktop/Emporio/New%20Api/src/services/clientes.service.js:84:19)
+    at deleteTiendaController (file:///C:/Users/FerM/Desktop/Emporio/New%20Api/src/controllers/clientes.controller.js:86:53)
+    at Layer.handle [as handle_request] (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\FerM\Desktop\Emporio\New Api\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\express\lib\router\index.js:376:14)
+    at Function.process_params (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\express\lib\router\index.js:421:3)
+2024-12-18 20:24:48 [32minfo[39m: Cargando configuracion:
+2024-12-18 20:24:48 [32minfo[39m: persistiendo Clientes en: MongoDB
+2024-12-18 20:24:48 [32minfo[39m: persistiendo Tiendas en: MongoDB
+2024-12-18 20:24:49 [32minfo[39m: Base de datos conectada a MongoDB
+2024-12-18 20:24:54 [31merror[39m: Error al borrar la tienda: Argument passed in does not match the accepted types
+2024-12-18 20:24:54 [31merror[39m: Error: Argument passed in does not match the accepted types
+    at ClientesService.borrarTienda (file:///C:/Users/FerM/Desktop/Emporio/New%20Api/src/services/clientes.service.js:84:19)
+    at deleteTiendaController (file:///C:/Users/FerM/Desktop/Emporio/New%20Api/src/controllers/clientes.controller.js:86:53)
+    at Layer.handle [as handle_request] (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\FerM\Desktop\Emporio\New Api\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\express\lib\router\index.js:376:14)
+    at Function.process_params (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\express\lib\router\index.js:421:3)
+2024-12-18 20:25:40 [32minfo[39m: Cargando configuracion:
+2024-12-18 20:25:40 [32minfo[39m: persistiendo Clientes en: MongoDB
+2024-12-18 20:25:40 [32minfo[39m: persistiendo Tiendas en: MongoDB
+2024-12-18 20:25:41 [32minfo[39m: Base de datos conectada a MongoDB
+2024-12-18 20:25:50 [32minfo[39m: Cargando configuracion:
+2024-12-18 20:25:51 [32minfo[39m: persistiendo Clientes en: MongoDB
+2024-12-18 20:25:51 [32minfo[39m: persistiendo Tiendas en: MongoDB
+2024-12-18 20:25:52 [32minfo[39m: Base de datos conectada a MongoDB
+2024-12-18 20:26:28 [32minfo[39m: Cargando configuracion:
+2024-12-18 20:26:29 [32minfo[39m: persistiendo Clientes en: MongoDB
+2024-12-18 20:26:29 [32minfo[39m: persistiendo Tiendas en: MongoDB
+2024-12-18 20:26:30 [32minfo[39m: Base de datos conectada a MongoDB
+2024-12-18 20:26:37 [32minfo[39m: Cargando configuracion:
+2024-12-18 20:26:37 [32minfo[39m: persistiendo Clientes en: MongoDB
+2024-12-18 20:26:37 [32minfo[39m: persistiendo Tiendas en: MongoDB
+2024-12-18 20:26:38 [32minfo[39m: Base de datos conectada a MongoDB
+2024-12-18 20:28:08 [32minfo[39m: Cargando configuracion:
+2024-12-18 20:28:08 [32minfo[39m: persistiendo Clientes en: MongoDB
+2024-12-18 20:28:08 [32minfo[39m: persistiendo Tiendas en: MongoDB
+2024-12-18 20:28:09 [32minfo[39m: Base de datos conectada a MongoDB
+2024-12-18 20:28:17 [32minfo[39m: Cargando configuracion:
+2024-12-18 20:28:17 [32minfo[39m: persistiendo Clientes en: MongoDB
+2024-12-18 20:28:17 [32minfo[39m: persistiendo Tiendas en: MongoDB
+2024-12-18 20:28:18 [32minfo[39m: Base de datos conectada a MongoDB
+2024-12-18 20:28:23 [32minfo[39m: Borrando tienda con ID: [object Object] del usuario con ID: 6762e1e9f77bcb872a2335e8
+2024-12-18 20:28:36 [32minfo[39m: Borrando tienda con ID: [object Object] del usuario con ID: 6762e1e9f77bcb872a2335e8
+2024-12-18 20:30:08 [32minfo[39m: Cargando configuracion:
+2024-12-18 20:30:08 [32minfo[39m: persistiendo Clientes en: MongoDB
+2024-12-18 20:30:08 [32minfo[39m: persistiendo Tiendas en: MongoDB
+2024-12-18 20:30:09 [32minfo[39m: Base de datos conectada a MongoDB
+2024-12-18 20:30:22 [32minfo[39m: Cargando configuracion:
+2024-12-18 20:30:22 [32minfo[39m: persistiendo Clientes en: MongoDB
+2024-12-18 20:30:22 [32minfo[39m: persistiendo Tiendas en: MongoDB
+2024-12-18 20:30:23 [32minfo[39m: Base de datos conectada a MongoDB
+2024-12-18 20:30:32 [32minfo[39m: Borrando tienda con ID: [object Object] del usuario con ID: 6762e1e9f77bcb872a2335e8
+2024-12-18 20:30:44 [32minfo[39m: Cargando configuracion:
+2024-12-18 20:30:44 [32minfo[39m: persistiendo Clientes en: MongoDB
+2024-12-18 20:30:44 [32minfo[39m: persistiendo Tiendas en: MongoDB
+2024-12-18 20:30:45 [32minfo[39m: Base de datos conectada a MongoDB
+2024-12-18 20:30:46 [32minfo[39m: Borrando tienda con ID: [object Object] del usuario con ID: 6762e1e9f77bcb872a2335e8
+2024-12-18 20:36:12 [32minfo[39m: Cargando configuracion:
+2024-12-18 20:36:12 [32minfo[39m: persistiendo Clientes en: MongoDB
+2024-12-18 20:36:12 [32minfo[39m: persistiendo Tiendas en: MongoDB
+2024-12-18 20:36:13 [32minfo[39m: Base de datos conectada a MongoDB
+2024-12-18 20:37:25 [32minfo[39m: Cargando configuracion:
+2024-12-18 20:37:25 [32minfo[39m: persistiendo Clientes en: MongoDB
+2024-12-18 20:37:25 [32minfo[39m: persistiendo Tiendas en: MongoDB
+2024-12-18 20:37:26 [32minfo[39m: Base de datos conectada a MongoDB
+2024-12-18 20:38:33 [32minfo[39m: Cargando configuracion:
+2024-12-18 20:38:33 [32minfo[39m: persistiendo Clientes en: MongoDB
+2024-12-18 20:38:33 [32minfo[39m: persistiendo Tiendas en: MongoDB
+2024-12-18 20:38:34 [32minfo[39m: Base de datos conectada a MongoDB
+2024-12-18 20:39:02 [32minfo[39m: Cargando configuracion:
+2024-12-18 20:39:03 [32minfo[39m: persistiendo Clientes en: MongoDB
+2024-12-18 20:39:03 [32minfo[39m: persistiendo Tiendas en: MongoDB
+2024-12-18 20:39:04 [32minfo[39m: Base de datos conectada a MongoDB
+2024-12-18 20:39:16 [32minfo[39m: Cargando configuracion:
+2024-12-18 20:39:17 [32minfo[39m: persistiendo Clientes en: MongoDB
+2024-12-18 20:39:17 [32minfo[39m: persistiendo Tiendas en: MongoDB
+2024-12-18 20:39:18 [32minfo[39m: Base de datos conectada a MongoDB
+2024-12-18 20:39:37 [32minfo[39m: Borrando tienda con ID: [object Object] del usuario con ID: 6762e1e9f77bcb872a2335e8
+2024-12-18 20:39:38 [32minfo[39m: Tienda con ID [object Object] eliminada exitosamente del usuario con ID 6762e1e9f77bcb872a2335e8
+2024-12-18 20:40:19 [32minfo[39m: Cargando configuracion:
+2024-12-18 20:40:20 [32minfo[39m: persistiendo Clientes en: MongoDB
+2024-12-18 20:40:20 [32minfo[39m: persistiendo Tiendas en: MongoDB
+2024-12-18 20:40:21 [32minfo[39m: Base de datos conectada a MongoDB
+2024-12-18 20:40:41 [32minfo[39m: Borrando tienda con ID: [object Object] del usuario con ID: 6762e1e9f77bcb872a2335e8
+2024-12-18 20:40:41 [32minfo[39m: Tienda con ID (JSON.Stringify([object Object])) eliminada exitosamente del usuario con ID 6762e1e9f77bcb872a2335e8
+2024-12-18 20:40:52 [32minfo[39m: Cargando configuracion:
+2024-12-18 20:40:52 [32minfo[39m: persistiendo Clientes en: MongoDB
+2024-12-18 20:40:52 [32minfo[39m: persistiendo Tiendas en: MongoDB
+2024-12-18 20:40:54 [32minfo[39m: Base de datos conectada a MongoDB
+2024-12-18 20:41:23 [32minfo[39m: Cargando configuracion:
+2024-12-18 20:41:23 [32minfo[39m: persistiendo Clientes en: MongoDB
+2024-12-18 20:41:23 [32minfo[39m: persistiendo Tiendas en: MongoDB
+2024-12-18 20:41:24 [32minfo[39m: Base de datos conectada a MongoDB
+2024-12-18 20:41:32 [32minfo[39m: Cargando configuracion:
+2024-12-18 20:41:32 [32minfo[39m: persistiendo Clientes en: MongoDB
+2024-12-18 20:41:32 [32minfo[39m: persistiendo Tiendas en: MongoDB
+2024-12-18 20:41:34 [32minfo[39m: Base de datos conectada a MongoDB
+2024-12-18 20:41:47 [32minfo[39m: Borrando tienda con ID: [object Object] del usuario con ID: 6762e1e9f77bcb872a2335e8
+2024-12-18 20:41:47 [32minfo[39m: Tienda con ID {"_id":"67635daffdd7a59d592e7c29"} eliminada exitosamente del usuario con ID 6762e1e9f77bcb872a2335e8
+2024-12-18 20:42:17 [32minfo[39m: Cargando configuracion:
+2024-12-18 20:42:17 [32minfo[39m: persistiendo Clientes en: MongoDB
+2024-12-18 20:42:17 [32minfo[39m: persistiendo Tiendas en: MongoDB
+2024-12-18 20:42:18 [32minfo[39m: Base de datos conectada a MongoDB
+2024-12-18 20:42:34 [32minfo[39m: Borrando tienda con ID: [object Object] del usuario con ID: 6762e1e9f77bcb872a2335e8
+2024-12-18 20:42:34 [32minfo[39m: Tienda con ID 67635ddbfdd7a59d592e7c2d eliminada exitosamente del usuario con ID 6762e1e9f77bcb872a2335e8

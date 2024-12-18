@@ -15,7 +15,7 @@ apiRouter.use(urlencoded({ extended: true }))
 
 apiRouter.use('/clientes', clientesRouter)
 apiRouter.use('/password', resetPRouter)
-apiRouter.use('/tiendas', tiendasRouter)
+
 
 
 
