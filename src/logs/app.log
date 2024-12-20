@@ -934,3 +934,182 @@
 2024-12-18 20:42:18 [32minfo[39m: Base de datos conectada a MongoDB
 2024-12-18 20:42:34 [32minfo[39m: Borrando tienda con ID: [object Object] del usuario con ID: 6762e1e9f77bcb872a2335e8
 2024-12-18 20:42:34 [32minfo[39m: Tienda con ID 67635ddbfdd7a59d592e7c2d eliminada exitosamente del usuario con ID 6762e1e9f77bcb872a2335e8
+2024-12-20 12:42:31 [32minfo[39m: Cargando configuracion:
+2024-12-20 12:42:31 [32minfo[39m: persistiendo Clientes en: MongoDB
+2024-12-20 12:42:31 [32minfo[39m: persistiendo Tiendas en: MongoDB
+2024-12-20 12:42:32 [32minfo[39m: Base de datos conectada a MongoDB
+2024-12-20 12:42:56 [31merror[39m: ReferenceError: id is not defined
+    at ClientesService.borrarTienda (file:///C:/Users/FerM/Desktop/Emporio/New%20Api/src/services/clientes.service.js:54:56)
+    at deleteTiendaController (file:///C:/Users/FerM/Desktop/Emporio/New%20Api/src/controllers/clientes.controller.js:86:53)
+    at Layer.handle [as handle_request] (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\FerM\Desktop\Emporio\New Api\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\express\lib\router\index.js:376:14)
+    at Function.process_params (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\express\lib\router\index.js:421:3)
+2024-12-20 12:44:09 [32minfo[39m: Cargando configuracion:
+2024-12-20 12:44:10 [32minfo[39m: persistiendo Clientes en: MongoDB
+2024-12-20 12:44:10 [32minfo[39m: persistiendo Tiendas en: MongoDB
+2024-12-20 12:44:11 [32minfo[39m: Base de datos conectada a MongoDB
+2024-12-20 12:44:19 [32minfo[39m: Borrando tienda con ID: [object Object] del usuario con ID: 6762e1e9f77bcb872a2335e8
+2024-12-20 12:44:19 [31merror[39m: CastError: Cast to ObjectId failed for value "{ idTienda: '676586ea06cf06529eceadd0' }" (type Object) at path "_id" for model "tiendas"
+    at SchemaObjectId.cast (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\mongoose\lib\schema\objectId.js:250:11)
+    at SchemaType.applySetters (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\mongoose\lib\schemaType.js:1236:12)
+    at SchemaType.castForQuery (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\mongoose\lib\schemaType.js:1653:17)
+    at cast (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\mongoose\lib\cast.js:304:34)
+    at Query.cast (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\mongoose\lib\query.js:4798:12)
+    at Query._castConditions (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\mongoose\lib\query.js:2206:10)
+    at model.Query._findOneAndDelete (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\mongoose\lib\query.js:3433:8)
+    at model.Query.exec (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\mongoose\lib\query.js:4342:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async TiendasDaoMongoose.deleteOne (file:///C:/Users/FerM/Desktop/Emporio/New%20Api/src/models/tiendas/mongoose/tiendas.dao.mongoose.js:42:16)
+2024-12-20 12:44:54 [32minfo[39m: Cargando configuracion:
+2024-12-20 12:44:54 [32minfo[39m: persistiendo Clientes en: MongoDB
+2024-12-20 12:44:54 [32minfo[39m: persistiendo Tiendas en: MongoDB
+2024-12-20 12:44:56 [32minfo[39m: Base de datos conectada a MongoDB
+2024-12-20 12:45:01 [32minfo[39m: Borrando tienda con ID: [object Object] del usuario con ID: 6762e1e9f77bcb872a2335e8
+2024-12-20 12:45:01 [31merror[39m: Error: Tienda con ID [object Object] no encontrada
+    at ClientesService.borrarTienda (file:///C:/Users/FerM/Desktop/Emporio/New%20Api/src/services/clientes.service.js:61:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async deleteTiendaController (file:///C:/Users/FerM/Desktop/Emporio/New%20Api/src/controllers/clientes.controller.js:86:31)
+2024-12-20 12:45:18 [32minfo[39m: Cargando configuracion:
+2024-12-20 12:45:18 [32minfo[39m: persistiendo Clientes en: MongoDB
+2024-12-20 12:45:18 [32minfo[39m: persistiendo Tiendas en: MongoDB
+2024-12-20 12:45:19 [32minfo[39m: Base de datos conectada a MongoDB
+2024-12-20 12:45:28 [32minfo[39m: Borrando tienda con ID: [object Object] del usuario con ID: 6762e1e9f77bcb872a2335e8
+2024-12-20 12:45:28 [31merror[39m: Error: Tienda con ID undefined no encontrada
+    at ClientesService.borrarTienda (file:///C:/Users/FerM/Desktop/Emporio/New%20Api/src/services/clientes.service.js:61:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async deleteTiendaController (file:///C:/Users/FerM/Desktop/Emporio/New%20Api/src/controllers/clientes.controller.js:86:31)
+2024-12-20 12:46:01 [32minfo[39m: Cargando configuracion:
+2024-12-20 12:46:01 [32minfo[39m: persistiendo Clientes en: MongoDB
+2024-12-20 12:46:01 [32minfo[39m: persistiendo Tiendas en: MongoDB
+2024-12-20 12:46:02 [32minfo[39m: Base de datos conectada a MongoDB
+2024-12-20 12:46:05 [32minfo[39m: Borrando tienda con ID: [object Object] del usuario con ID: 6762e1e9f77bcb872a2335e8
+2024-12-20 12:46:05 [31merror[39m: CastError: Cast to ObjectId failed for value "{ idTienda: '676586ea06cf06529eceadd0' }" (type Object) at path "_id" for model "tiendas"
+    at SchemaObjectId.cast (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\mongoose\lib\schema\objectId.js:250:11)
+    at SchemaType.applySetters (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\mongoose\lib\schemaType.js:1236:12)
+    at SchemaType.castForQuery (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\mongoose\lib\schemaType.js:1653:17)
+    at cast (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\mongoose\lib\cast.js:304:34)
+    at Query.cast (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\mongoose\lib\query.js:4798:12)
+    at Query._castConditions (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\mongoose\lib\query.js:2206:10)
+    at model.Query._findOneAndDelete (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\mongoose\lib\query.js:3433:8)
+    at model.Query.exec (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\mongoose\lib\query.js:4342:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async TiendasDaoMongoose.deleteOne (file:///C:/Users/FerM/Desktop/Emporio/New%20Api/src/models/tiendas/mongoose/tiendas.dao.mongoose.js:42:16)
+2024-12-20 12:46:28 [32minfo[39m: Cargando configuracion:
+2024-12-20 12:46:28 [32minfo[39m: persistiendo Clientes en: MongoDB
+2024-12-20 12:46:28 [32minfo[39m: persistiendo Tiendas en: MongoDB
+2024-12-20 12:46:29 [32minfo[39m: Base de datos conectada a MongoDB
+2024-12-20 12:47:21 [32minfo[39m: Borrando tienda con ID: [object Object] del usuario con ID: 6762e1e9f77bcb872a2335e8
+2024-12-20 12:47:21 [31merror[39m: CastError: Cast to ObjectId failed for value "{ idTienda: '676586ea06cf06529eceadd0' }" (type Object) at path "_id" for model "tiendas"
+    at SchemaObjectId.cast (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\mongoose\lib\schema\objectId.js:250:11)
+    at SchemaType.applySetters (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\mongoose\lib\schemaType.js:1236:12)
+    at SchemaType.castForQuery (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\mongoose\lib\schemaType.js:1653:17)
+    at cast (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\mongoose\lib\cast.js:304:34)
+    at Query.cast (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\mongoose\lib\query.js:4798:12)
+    at Query._castConditions (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\mongoose\lib\query.js:2206:10)
+    at model.Query._findOneAndDelete (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\mongoose\lib\query.js:3433:8)
+    at model.Query.exec (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\mongoose\lib\query.js:4342:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async TiendasDaoMongoose.deleteOne (file:///C:/Users/FerM/Desktop/Emporio/New%20Api/src/models/tiendas/mongoose/tiendas.dao.mongoose.js:42:16)
+2024-12-20 12:48:02 [32minfo[39m: Cargando configuracion:
+2024-12-20 12:48:02 [32minfo[39m: persistiendo Clientes en: MongoDB
+2024-12-20 12:48:02 [32minfo[39m: persistiendo Tiendas en: MongoDB
+2024-12-20 12:48:04 [32minfo[39m: Base de datos conectada a MongoDB
+2024-12-20 12:48:07 [32minfo[39m: Borrando tienda con ID: [object Object] del usuario con ID: 6762e1e9f77bcb872a2335e8
+2024-12-20 12:48:07 [31merror[39m: Error: Tienda con ID [object Object] no encontrada
+    at ClientesService.borrarTienda (file:///C:/Users/FerM/Desktop/Emporio/New%20Api/src/services/clientes.service.js:62:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async deleteTiendaController (file:///C:/Users/FerM/Desktop/Emporio/New%20Api/src/controllers/clientes.controller.js:86:31)
+2024-12-20 12:48:20 [32minfo[39m: Cargando configuracion:
+2024-12-20 12:48:21 [32minfo[39m: persistiendo Clientes en: MongoDB
+2024-12-20 12:48:21 [32minfo[39m: persistiendo Tiendas en: MongoDB
+2024-12-20 12:48:22 [32minfo[39m: Base de datos conectada a MongoDB
+2024-12-20 12:58:47 [32minfo[39m: Cargando configuracion:
+2024-12-20 12:58:47 [32minfo[39m: persistiendo Clientes en: MongoDB
+2024-12-20 12:58:48 [32minfo[39m: persistiendo Tiendas en: MongoDB
+2024-12-20 12:58:49 [32minfo[39m: Base de datos conectada a MongoDB
+2024-12-20 12:58:53 [32minfo[39m: Borrando tienda con ID: [object Object] del usuario con ID: 6762e1e9f77bcb872a2335e8
+2024-12-20 12:58:53 [31merror[39m: CastError: Cast to ObjectId failed for value "{ idTienda: '676586ea06cf06529eceadd0' }" (type Object) at path "_id" for model "tiendas"
+    at SchemaObjectId.cast (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\mongoose\lib\schema\objectId.js:250:11)
+    at SchemaType.applySetters (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\mongoose\lib\schemaType.js:1236:12)
+    at SchemaType.castForQuery (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\mongoose\lib\schemaType.js:1653:17)
+    at cast (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\mongoose\lib\cast.js:304:34)
+    at Query.cast (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\mongoose\lib\query.js:4798:12)
+    at Query._castConditions (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\mongoose\lib\query.js:2206:10)
+    at model.Query._findOneAndDelete (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\mongoose\lib\query.js:3433:8)
+    at model.Query.exec (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\mongoose\lib\query.js:4342:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async TiendasDaoMongoose.deleteOne (file:///C:/Users/FerM/Desktop/Emporio/New%20Api/src/models/tiendas/mongoose/tiendas.dao.mongoose.js:42:16)
+2024-12-20 12:59:14 [32minfo[39m: Cargando configuracion:
+2024-12-20 12:59:15 [32minfo[39m: persistiendo Clientes en: MongoDB
+2024-12-20 12:59:15 [32minfo[39m: persistiendo Tiendas en: MongoDB
+2024-12-20 12:59:16 [32minfo[39m: Base de datos conectada a MongoDB
+2024-12-20 12:59:18 [32minfo[39m: Borrando tienda con ID: [object Object] del usuario con ID: 6762e1e9f77bcb872a2335e8
+2024-12-20 12:59:18 [31merror[39m: CastError: Cast to ObjectId failed for value "{ idTienda: '676586ea06cf06529eceadd0' }" (type Object) at path "_id" for model "tiendas"
+    at SchemaObjectId.cast (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\mongoose\lib\schema\objectId.js:250:11)
+    at SchemaType.applySetters (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\mongoose\lib\schemaType.js:1236:12)
+    at SchemaType.castForQuery (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\mongoose\lib\schemaType.js:1653:17)
+    at cast (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\mongoose\lib\cast.js:304:34)
+    at Query.cast (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\mongoose\lib\query.js:4798:12)
+    at Query._castConditions (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\mongoose\lib\query.js:2206:10)
+    at model.Query._findOneAndDelete (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\mongoose\lib\query.js:3433:8)
+    at model.Query.exec (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\mongoose\lib\query.js:4342:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async TiendasDaoMongoose.deleteOne (file:///C:/Users/FerM/Desktop/Emporio/New%20Api/src/models/tiendas/mongoose/tiendas.dao.mongoose.js:42:16)
+2024-12-20 12:59:54 [32minfo[39m: Cargando configuracion:
+2024-12-20 12:59:54 [32minfo[39m: persistiendo Clientes en: MongoDB
+2024-12-20 12:59:54 [32minfo[39m: persistiendo Tiendas en: MongoDB
+2024-12-20 12:59:55 [32minfo[39m: Base de datos conectada a MongoDB
+2024-12-20 13:00:03 [32minfo[39m: Borrando tienda con ID: [object Object] del usuario con ID: 6762e1e9f77bcb872a2335e8
+2024-12-20 13:00:03 [31merror[39m: CastError: Cast to ObjectId failed for value "{ idTienda: '676586ea06cf06529eceadd0' }" (type Object) at path "_id" for model "tiendas"
+    at SchemaObjectId.cast (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\mongoose\lib\schema\objectId.js:250:11)
+    at SchemaType.applySetters (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\mongoose\lib\schemaType.js:1236:12)
+    at SchemaType.castForQuery (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\mongoose\lib\schemaType.js:1653:17)
+    at cast (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\mongoose\lib\cast.js:304:34)
+    at Query.cast (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\mongoose\lib\query.js:4798:12)
+    at Query._castConditions (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\mongoose\lib\query.js:2206:10)
+    at model.Query._findOneAndDelete (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\mongoose\lib\query.js:3433:8)
+    at model.Query.exec (C:\Users\FerM\Desktop\Emporio\New Api\node_modules\mongoose\lib\query.js:4342:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async TiendasDaoMongoose.deleteOne (file:///C:/Users/FerM/Desktop/Emporio/New%20Api/src/models/tiendas/mongoose/tiendas.dao.mongoose.js:42:16)
+2024-12-20 13:00:20 [32minfo[39m: Cargando configuracion:
+2024-12-20 13:00:20 [32minfo[39m: persistiendo Clientes en: MongoDB
+2024-12-20 13:00:20 [32minfo[39m: persistiendo Tiendas en: MongoDB
+2024-12-20 13:00:21 [32minfo[39m: Base de datos conectada a MongoDB
+2024-12-20 13:00:29 [32minfo[39m: Cargando configuracion:
+2024-12-20 13:00:30 [32minfo[39m: persistiendo Clientes en: MongoDB
+2024-12-20 13:00:30 [32minfo[39m: persistiendo Tiendas en: MongoDB
+2024-12-20 13:00:31 [32minfo[39m: Base de datos conectada a MongoDB
+2024-12-20 13:00:36 [32minfo[39m: Borrando tienda con ID: [object Object] del usuario con ID: 6762e1e9f77bcb872a2335e8
+2024-12-20 13:00:36 [32minfo[39m: Tienda con ID undefined eliminada exitosamente del usuario con ID 6762e1e9f77bcb872a2335e8
+2024-12-20 13:00:57 [32minfo[39m: Cargando configuracion:
+2024-12-20 13:00:57 [32minfo[39m: persistiendo Clientes en: MongoDB
+2024-12-20 13:00:57 [32minfo[39m: persistiendo Tiendas en: MongoDB
+2024-12-20 13:00:59 [32minfo[39m: Base de datos conectada a MongoDB
+2024-12-20 13:01:42 [32minfo[39m: Cargando configuracion:
+2024-12-20 13:01:42 [32minfo[39m: persistiendo Clientes en: MongoDB
+2024-12-20 13:01:42 [32minfo[39m: persistiendo Tiendas en: MongoDB
+2024-12-20 13:01:43 [32minfo[39m: Base de datos conectada a MongoDB
+2024-12-20 13:01:55 [32minfo[39m: Cargando configuracion:
+2024-12-20 13:01:55 [32minfo[39m: persistiendo Clientes en: MongoDB
+2024-12-20 13:01:55 [32minfo[39m: persistiendo Tiendas en: MongoDB
+2024-12-20 13:01:56 [32minfo[39m: Base de datos conectada a MongoDB
+2024-12-20 13:02:03 [32minfo[39m: Borrando tienda con ID: [object Object] del usuario con ID: 6762e1e9f77bcb872a2335e8
+2024-12-20 13:02:03 [31merror[39m: Error: Tienda con ID 676586ea06cf06529eceadd0 no encontrada
+    at ClientesService.borrarTienda (file:///C:/Users/FerM/Desktop/Emporio/New%20Api/src/services/clientes.service.js:62:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async deleteTiendaController (file:///C:/Users/FerM/Desktop/Emporio/New%20Api/src/controllers/clientes.controller.js:86:31)
+2024-12-20 13:02:21 [32minfo[39m: Cargando configuracion:
+2024-12-20 13:02:21 [32minfo[39m: persistiendo Clientes en: MongoDB
+2024-12-20 13:02:21 [32minfo[39m: persistiendo Tiendas en: MongoDB
+2024-12-20 13:02:22 [32minfo[39m: Base de datos conectada a MongoDB
+2024-12-20 13:06:22 [32minfo[39m: Cargando configuracion:
+2024-12-20 13:06:22 [32minfo[39m: persistiendo Clientes en: MongoDB
+2024-12-20 13:06:22 [32minfo[39m: persistiendo Tiendas en: MongoDB
+2024-12-20 13:06:23 [32minfo[39m: Base de datos conectada a MongoDB
+2024-12-20 13:06:59 [32minfo[39m: Borrando tienda con ID: 676595ab944f50995dc0eba2 del usuario con ID: 6762e1e9f77bcb872a2335e8
+2024-12-20 13:06:59 [32minfo[39m: Tienda con ID 676595ab944f50995dc0eba2 eliminada exitosamente del usuario con ID 6762e1e9f77bcb872a2335e8
