@@ -51,27 +51,27 @@ class ClientesService {
     }
 
     async borrarTienda(idUser, idTienda) {
-        console.log(idTienda)
+        console.log(idTienda.idTT)
         const user = await clientesDao.readById({ _id: idUser })
         if (!user) {
             throw new Error(`Usuario con ID ${idUser} no encontrado`);
         }
-        logger.info(`Borrando tienda con ID: ${idTienda.id} del usuario con ID: ${idUser}`);
-        const tiendaABorrar = await tiendasDao.deleteOne({ _id: idTienda.id })
+        logger.info(`Borrando tienda con ID: ${idTienda.idT} del usuario con ID: ${idUser}`);
+        const tiendaABorrar = await tiendasDao.deleteOne({ _id: idTienda.idT })
         if (!tiendaABorrar) {
-            throw new Error(`Tienda con ID ${idTienda.id} no encontrada`);
+            throw new Error(`Tienda con ID ${idTienda.idT} no encontrada`);
         }
-        const nuevaTiendas = user.tiendas.filter(obj => obj._id.toString() !== idTienda.id.toString())
+        const nuevaTiendas = user.tiendas.filter(obj => obj._id.toString() !== idTienda.idT.toString())
         const updateUser = await clientesDao.update(idUser, { tiendas: nuevaTiendas })
         if (!updateUser) {
             throw new Error('Error al actualizar el Inventario con el nuevo item');
         }
         logger.info(
-            `Tienda con ID ${idTienda.id} eliminada exitosamente del usuario con ID ${idUser}`
+            `Tienda con ID ${idTienda.idT} eliminada exitosamente del usuario con ID ${idUser}`
         );
         return {
             message: "Tienda eliminada exitosamente",
-            tiendaEliminada: idTienda.id,
+            tiendaEliminada: idTienda.idT,
         };
     }
 
