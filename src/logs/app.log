@@ -1113,3 +1113,15 @@
 2024-12-20 13:06:23 [32minfo[39m: Base de datos conectada a MongoDB
 2024-12-20 13:06:59 [32minfo[39m: Borrando tienda con ID: 676595ab944f50995dc0eba2 del usuario con ID: 6762e1e9f77bcb872a2335e8
 2024-12-20 13:06:59 [32minfo[39m: Tienda con ID 676595ab944f50995dc0eba2 eliminada exitosamente del usuario con ID 6762e1e9f77bcb872a2335e8
+2024-12-20 17:49:09 [32minfo[39m: Cargando configuracion:
+2024-12-20 17:49:10 [32minfo[39m: persistiendo Clientes en: MongoDB
+2024-12-20 17:49:10 [32minfo[39m: persistiendo Tiendas en: MongoDB
+2024-12-20 17:49:11 [32minfo[39m: Base de datos conectada a MongoDB
+2024-12-20 17:50:06 [32minfo[39m: Borrando tienda con ID: 67659706a5965b39a5085b8e del usuario con ID: 6762e1e9f77bcb872a2335e8
+2024-12-20 17:50:06 [32minfo[39m: Tienda con ID 67659706a5965b39a5085b8e eliminada exitosamente del usuario con ID 6762e1e9f77bcb872a2335e8
+2024-12-20 17:50:43 [32minfo[39m: Borrando tienda con ID: 6765d7001ea3b5a60f8eaafb del usuario con ID: 6762e1e9f77bcb872a2335e8
+2024-12-20 17:50:43 [32minfo[39m: Tienda con ID 6765d7001ea3b5a60f8eaafb eliminada exitosamente del usuario con ID 6762e1e9f77bcb872a2335e8
+2024-12-20 18:48:31 [32minfo[39m: Cargando configuracion:
+2024-12-20 18:48:32 [32minfo[39m: persistiendo Clientes en: MongoDB
+2024-12-20 18:48:32 [32minfo[39m: persistiendo Tiendas en: MongoDB
+2024-12-20 18:48:33 [32minfo[39m: Base de datos conectada a MongoDB
