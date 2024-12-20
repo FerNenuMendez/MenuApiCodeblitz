@@ -24,7 +24,7 @@ class TiendaService {
     async borrarTienda(idUser, idTienda) {
         const user = await clientesService.buscarID(idUser)
         const tiendaABorrar = await tiendasDao.deleteOne({ id: idTienda })
-        console.log(tiendaABorrar)
+
     }
 }
 
