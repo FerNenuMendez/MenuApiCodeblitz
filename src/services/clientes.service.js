@@ -51,7 +51,7 @@ class ClientesService {
     }
 
     async borrarTienda(idUser, idTienda) {
-        console.log(idTienda.id)
+        console.log(idTienda)
         const user = await clientesDao.readById({ _id: idUser })
         if (!user) {
             throw new Error(`Usuario con ID ${idUser} no encontrado`);
